@@ -42,23 +42,49 @@ set_property IOSTANDARD LVDS [get_ports sysclk_in_p]
 
 # VC707
 # ISERDES Input
-# FMC1_HPC_LA02_P
-set_property PACKAGE_PIN P41 [get_ports data_in_p]
-set_property IOSTANDARD LVDS [get_ports data_in_p]
-set_property DIFF_TERM TRUE [get_ports data_in_p]
-# FMC1_HPC_LA02_N
-set_property PACKAGE_PIN N41 [get_ports data_in_n]
+
+#FMC_IN_6_P on Hardware (mistake on FMC layout)
+# FMC1_HPC_LA33_N
+#set_property PACKAGE_PIN T31 [get_ports data_in_n]
+#set_property IOSTANDARD LVDS [get_ports data_in_n]
+#set_property DIFF_TERM TRUE [get_ports data_in_n]
+#FMC_IN_6_N
+# FMC1_HPC_LA33_P
+#set_property PACKAGE_PIN U31 [get_ports data_in_p]
+#set_property IOSTANDARD LVDS [get_ports data_in_p]
+#set_property DIFF_TERM TRUE [get_ports data_in_p]
+
+#FMC_IN_5_P on Hardware (mistake on FMC layout)
+# FMC1_HPC_LA30_N
+set_property PACKAGE_PIN V31 [get_ports data_in_n]
 set_property IOSTANDARD LVDS [get_ports data_in_n]
 set_property DIFF_TERM TRUE [get_ports data_in_n]
+#FMC_IN_5_N
+# FMC1_HPC_LA30_P
+set_property PACKAGE_PIN V30 [get_ports data_in_p]
+set_property IOSTANDARD LVDS [get_ports data_in_p]
+set_property DIFF_TERM TRUE [get_ports data_in_p]
 
 # VC707
-# ISERDES Input
-# FMC1_HPC_LA24_P
-set_property PACKAGE_PIN R30 [get_ports data_out_p]
-set_property IOSTANDARD LVDS [get_ports data_out_p]
-# FMC1_HPC_LA24_N
-set_property PACKAGE_PIN P31 [get_ports data_out_n]
+# OSERDES Input
+
+# FMC_OUT_6_N on Hardware (mistake on FMC layout) 
+# FMC1_HPC_LA11_P
+#set_property PACKAGE_PIN F40 [get_ports data_out_p]
+#set_property IOSTANDARD LVDS [get_ports data_out_p]
+# FMC_OUT_6_P on Hardware
+# FMC1_HPC_LA11_N
+#set_property PACKAGE_PIN F41 [get_ports data_out_n]
+#set_property IOSTANDARD LVDS [get_ports data_out_n]
+
+# FMC_OUT_5_P on Hardware (mistake on FMC layout) 
+# FMC1_HPC_LA12_N
+set_property PACKAGE_PIN P40 [get_ports data_out_n]
 set_property IOSTANDARD LVDS [get_ports data_out_n]
+# FMC_OUT_5_N on Hardware
+# FMC1_HPC_LA12_P
+set_property PACKAGE_PIN R40 [get_ports data_out_p]
+set_property IOSTANDARD LVDS [get_ports data_out_p]
 
 # Rx->TX clock internal 
 #USER SMA CLOCK
@@ -128,18 +154,19 @@ set_property IOSTANDARD LVDS [get_ports data_out_n]
 #set_property PACKAGE_PIN AA27 [get_ports {debug[3]}]
 #set_property IOSTANDARD LVCMOS25 [get_ports {debug[3]}]
 
+# VC707
 #GPIO LCD
-# set_property PACKAGE_PIN AA13 [get_ports LCD_DB4_LS]
-# set_property IOSTANDARD LVCMOS15 [get_ports LCD_DB4_LS]
-# set_property PACKAGE_PIN AA10 [get_ports LCD_DB5_LS]
-# set_property IOSTANDARD LVCMOS15 [get_ports LCD_DB5_LS]
-# set_property PACKAGE_PIN AA11 [get_ports LCD_DB6_LS]
-# set_property IOSTANDARD LVCMOS15 [get_ports LCD_DB6_LS]
-# set_property PACKAGE_PIN Y10 [get_ports LCD_DB7_LS]
-# set_property IOSTANDARD LVCMOS15 [get_ports LCD_DB7_LS]
-# set_property PACKAGE_PIN AB10 [get_ports LCD_E_LS]
-# set_property IOSTANDARD LVCMOS15 [get_ports LCD_E_LS]
-# set_property PACKAGE_PIN Y11 [get_ports LCD_RS_LS]
-# set_property IOSTANDARD LVCMOS15 [get_ports LCD_RS_LS]
-# set_property PACKAGE_PIN AB13 [get_ports LCD_RW_LS]
-# set_property IOSTANDARD LVCMOS15 [get_ports LCD_RW_LS]
+ set_property PACKAGE_PIN AT42 [get_ports LCD_DB4_LS]
+ set_property IOSTANDARD LVCMOS18 [get_ports LCD_DB4_LS]
+ set_property PACKAGE_PIN AR38 [get_ports LCD_DB5_LS]
+ set_property IOSTANDARD LVCMOS18 [get_ports LCD_DB5_LS]
+ set_property PACKAGE_PIN AR39 [get_ports LCD_DB6_LS]
+ set_property IOSTANDARD LVCMOS18 [get_ports LCD_DB6_LS]
+ set_property PACKAGE_PIN AN40 [get_ports LCD_DB7_LS]
+ set_property IOSTANDARD LVCMOS18 [get_ports LCD_DB7_LS]
+ set_property PACKAGE_PIN AT40 [get_ports LCD_E_LS]
+ set_property IOSTANDARD LVCMOS18 [get_ports LCD_E_LS]
+ set_property PACKAGE_PIN AN41 [get_ports LCD_RS_LS]
+ set_property IOSTANDARD LVCMOS18 [get_ports LCD_RS_LS]
+ set_property PACKAGE_PIN AR42 [get_ports LCD_RW_LS]
+ set_property IOSTANDARD LVCMOS18 [get_ports LCD_RW_LS]

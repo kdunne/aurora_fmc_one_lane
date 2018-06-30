@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Mon Jun 25 17:39:12 2018
+-- Date        : Mon Jun 25 17:39:09 2018
 -- Host        : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
--- Command     : write_vhdl -force -mode synth_stub
---               /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top ila_1 -prefix
+--               ila_1_ ila_1_stub.vhdl
 -- Design      : ila_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7vx485tffg1761-2
