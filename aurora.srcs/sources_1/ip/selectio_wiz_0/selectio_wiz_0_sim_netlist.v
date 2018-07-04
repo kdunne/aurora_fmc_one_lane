@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-// Date        : Mon Jun 25 17:42:56 2018
+// Date        : Mon Jul  2 15:16:31 2018
 // Host        : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
 // Command     : write_verilog -force -mode funcsim
 //               /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/selectio_wiz_0/selectio_wiz_0_sim_netlist.v
@@ -12,93 +12,216 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* DEV_W = "1" *) (* SYS_W = "1" *) 
+(* DEV_W = "8" *) (* SYS_W = "1" *) 
 (* NotValidForBitStream *)
 module selectio_wiz_0
-   (data_in_from_pins,
+   (data_in_from_pins_p,
+    data_in_from_pins_n,
     data_in_to_device,
+    in_delay_reset,
+    in_delay_data_ce,
+    in_delay_data_inc,
+    delay_locked,
+    ref_clock,
+    bitslip,
     clk_in,
-    clk_out,
+    clk_div_in,
     io_reset);
-  input [0:0]data_in_from_pins;
-  output [0:0]data_in_to_device;
+  input [0:0]data_in_from_pins_p;
+  input [0:0]data_in_from_pins_n;
+  output [7:0]data_in_to_device;
+  input in_delay_reset;
+  input [0:0]in_delay_data_ce;
+  input [0:0]in_delay_data_inc;
+  output delay_locked;
+  input ref_clock;
+  input [0:0]bitslip;
   input clk_in;
-  output clk_out;
+  input clk_div_in;
   input io_reset;
 
-  (* IBUF_LOW_PWR *) (* IOSTANDARD = "LVCMOS18" *) wire clk_in;
-  wire clk_out;
-  (* IBUF_LOW_PWR *) (* IOSTANDARD = "LVCMOS18" *) wire [0:0]data_in_from_pins;
-  wire [0:0]data_in_to_device;
+  wire [0:0]bitslip;
+  wire clk_div_in;
+  wire clk_in;
+  (* DIFF_TERM = 0 *) (* IBUF_LOW_PWR *) (* IOSTANDARD = "LVDS" *) wire [0:0]data_in_from_pins_n;
+  (* DIFF_TERM = 0 *) (* IBUF_LOW_PWR *) (* IOSTANDARD = "LVDS" *) wire [0:0]data_in_from_pins_p;
+  wire [7:0]data_in_to_device;
+  wire delay_locked;
+  wire [0:0]in_delay_data_ce;
+  wire [0:0]in_delay_data_inc;
+  wire in_delay_reset;
   wire io_reset;
+  wire ref_clock;
 
-  (* DEV_W = "1" *) 
+  (* DEV_W = "8" *) 
   (* SYS_W = "1" *) 
+  (* num_serial_bits = "8" *) 
   selectio_wiz_0_selectio_wiz_0_selectio_wiz inst
-       (.clk_in(clk_in),
-        .clk_out(clk_out),
-        .data_in_from_pins(data_in_from_pins),
+       (.bitslip(bitslip),
+        .clk_div_in(clk_div_in),
+        .clk_in(clk_in),
+        .data_in_from_pins_n(data_in_from_pins_n),
+        .data_in_from_pins_p(data_in_from_pins_p),
         .data_in_to_device(data_in_to_device),
-        .io_reset(io_reset));
+        .delay_locked(delay_locked),
+        .in_delay_data_ce(in_delay_data_ce),
+        .in_delay_data_inc(in_delay_data_inc),
+        .in_delay_reset(in_delay_reset),
+        .io_reset(io_reset),
+        .ref_clock(ref_clock));
 endmodule
 
-(* DEV_W = "1" *) (* ORIG_REF_NAME = "selectio_wiz_0_selectio_wiz" *) (* SYS_W = "1" *) 
+(* DEV_W = "8" *) (* ORIG_REF_NAME = "selectio_wiz_0_selectio_wiz" *) (* SYS_W = "1" *) 
+(* num_serial_bits = "8" *) 
 module selectio_wiz_0_selectio_wiz_0_selectio_wiz
-   (data_in_from_pins,
+   (data_in_from_pins_p,
+    data_in_from_pins_n,
     data_in_to_device,
+    in_delay_reset,
+    in_delay_data_ce,
+    in_delay_data_inc,
+    delay_locked,
+    ref_clock,
+    bitslip,
     clk_in,
-    clk_out,
+    clk_div_in,
     io_reset);
-  input [0:0]data_in_from_pins;
-  output [0:0]data_in_to_device;
+  input [0:0]data_in_from_pins_p;
+  input [0:0]data_in_from_pins_n;
+  output [7:0]data_in_to_device;
+  input in_delay_reset;
+  input [0:0]in_delay_data_ce;
+  input [0:0]in_delay_data_inc;
+  output delay_locked;
+  input ref_clock;
+  input [0:0]bitslip;
   input clk_in;
-  output clk_out;
+  input clk_div_in;
   input io_reset;
 
+  wire [0:0]bitslip;
+  wire clk_div_in;
   wire clk_in;
-  wire clk_in_int;
-  wire clk_out;
-  wire [0:0]data_in_from_pins;
+  wire data_in_from_pins_delay;
   wire data_in_from_pins_int;
-  wire [0:0]data_in_to_device;
+  wire [0:0]data_in_from_pins_n;
+  wire [0:0]data_in_from_pins_p;
+  wire [7:0]data_in_to_device;
+  wire delay_locked;
+  wire [0:0]in_delay_data_ce;
+  wire [0:0]in_delay_data_inc;
+  wire in_delay_reset;
   wire io_reset;
+  wire ref_clock;
+  wire ref_clock_bufg;
+  wire [4:0]\NLW_pins[0].idelaye2_bus_CNTVALUEOUT_UNCONNECTED ;
+  wire \NLW_pins[0].iserdese2_master_O_UNCONNECTED ;
+  wire \NLW_pins[0].iserdese2_master_SHIFTOUT1_UNCONNECTED ;
+  wire \NLW_pins[0].iserdese2_master_SHIFTOUT2_UNCONNECTED ;
 
   (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFR #(
-    .BUFR_DIVIDE("BYPASS"),
+  (* IODELAY_GROUP = "selectio_wiz_0_group" *) 
+  IDELAYCTRL #(
     .SIM_DEVICE("7SERIES")) 
-    clkout_buf_inst
-       (.CE(1'b1),
-        .CLR(1'b0),
-        .I(clk_in_int),
-        .O(clk_out));
+    delayctrl
+       (.RDY(delay_locked),
+        .REFCLK(ref_clock_bufg),
+        .RST(io_reset));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* CAPACITANCE = "DONT_CARE" *) 
   (* IBUF_DELAY_VALUE = "0" *) 
   (* IFD_DELAY_VALUE = "AUTO" *) 
-  IBUF ibuf_clk_inst
-       (.I(clk_in),
-        .O(clk_in_int));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  (* IOB = "TRUE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \pins[0].fdre_in_inst 
-       (.C(clk_out),
-        .CE(1'b1),
-        .D(data_in_from_pins_int),
-        .Q(data_in_to_device),
-        .R(io_reset));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  (* CAPACITANCE = "DONT_CARE" *) 
-  (* IBUF_DELAY_VALUE = "0" *) 
-  (* IFD_DELAY_VALUE = "AUTO" *) 
-  IBUF \pins[0].ibuf_inst 
-       (.I(data_in_from_pins),
+  IBUFDS \pins[0].ibufds_inst 
+       (.I(data_in_from_pins_p),
+        .IB(data_in_from_pins_n),
         .O(data_in_from_pins_int));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  (* IODELAY_GROUP = "selectio_wiz_0_group" *) 
+  (* SIM_DELAY_D = "0" *) 
+  IDELAYE2 #(
+    .CINVCTRL_SEL("FALSE"),
+    .DELAY_SRC("IDATAIN"),
+    .HIGH_PERFORMANCE_MODE("FALSE"),
+    .IDELAY_TYPE("VARIABLE"),
+    .IDELAY_VALUE(0),
+    .IS_C_INVERTED(1'b0),
+    .IS_DATAIN_INVERTED(1'b0),
+    .IS_IDATAIN_INVERTED(1'b0),
+    .PIPE_SEL("FALSE"),
+    .REFCLK_FREQUENCY(200.000000),
+    .SIGNAL_PATTERN("DATA")) 
+    \pins[0].idelaye2_bus 
+       (.C(clk_div_in),
+        .CE(in_delay_data_ce),
+        .CINVCTRL(1'b0),
+        .CNTVALUEIN({1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .CNTVALUEOUT(\NLW_pins[0].idelaye2_bus_CNTVALUEOUT_UNCONNECTED [4:0]),
+        .DATAIN(1'b0),
+        .DATAOUT(data_in_from_pins_delay),
+        .IDATAIN(data_in_from_pins_int),
+        .INC(in_delay_data_inc),
+        .LD(in_delay_reset),
+        .LDPIPEEN(1'b0),
+        .REGRST(io_reset));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  ISERDESE2 #(
+    .DATA_RATE("SDR"),
+    .DATA_WIDTH(8),
+    .DYN_CLKDIV_INV_EN("FALSE"),
+    .DYN_CLK_INV_EN("FALSE"),
+    .INIT_Q1(1'b0),
+    .INIT_Q2(1'b0),
+    .INIT_Q3(1'b0),
+    .INIT_Q4(1'b0),
+    .INTERFACE_TYPE("NETWORKING"),
+    .IOBDELAY("IFD"),
+    .IS_CLKB_INVERTED(1'b1),
+    .IS_CLKDIVP_INVERTED(1'b0),
+    .IS_CLKDIV_INVERTED(1'b0),
+    .IS_CLK_INVERTED(1'b0),
+    .IS_D_INVERTED(1'b0),
+    .IS_OCLKB_INVERTED(1'b0),
+    .IS_OCLK_INVERTED(1'b0),
+    .NUM_CE(2),
+    .OFB_USED("FALSE"),
+    .SERDES_MODE("MASTER"),
+    .SRVAL_Q1(1'b0),
+    .SRVAL_Q2(1'b0),
+    .SRVAL_Q3(1'b0),
+    .SRVAL_Q4(1'b0)) 
+    \pins[0].iserdese2_master 
+       (.BITSLIP(bitslip),
+        .CE1(1'b1),
+        .CE2(1'b1),
+        .CLK(clk_in),
+        .CLKB(clk_in),
+        .CLKDIV(clk_div_in),
+        .CLKDIVP(1'b0),
+        .D(1'b0),
+        .DDLY(data_in_from_pins_delay),
+        .DYNCLKDIVSEL(1'b0),
+        .DYNCLKSEL(1'b0),
+        .O(\NLW_pins[0].iserdese2_master_O_UNCONNECTED ),
+        .OCLK(1'b0),
+        .OCLKB(1'b0),
+        .OFB(1'b0),
+        .Q1(data_in_to_device[7]),
+        .Q2(data_in_to_device[6]),
+        .Q3(data_in_to_device[5]),
+        .Q4(data_in_to_device[4]),
+        .Q5(data_in_to_device[3]),
+        .Q6(data_in_to_device[2]),
+        .Q7(data_in_to_device[1]),
+        .Q8(data_in_to_device[0]),
+        .RST(io_reset),
+        .SHIFTIN1(1'b0),
+        .SHIFTIN2(1'b0),
+        .SHIFTOUT1(\NLW_pins[0].iserdese2_master_SHIFTOUT1_UNCONNECTED ),
+        .SHIFTOUT2(\NLW_pins[0].iserdese2_master_SHIFTOUT2_UNCONNECTED ));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG ref_clk_bufg
+       (.I(ref_clock),
+        .O(ref_clock_bufg));
 endmodule
 `ifndef GLBL
 `define GLBL

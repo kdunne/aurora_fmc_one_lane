@@ -1,8 +1,8 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-// Date        : Thu Jun 28 15:50:48 2018
-// Host        : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
+// Date        : Tue Jul  3 13:48:43 2018
+// Host        : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.10 (Carbon)
 // Command     : write_verilog -force -mode funcsim
 //               /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5_sim_netlist.v
 // Design      : clk_wiz_5
@@ -82,11 +82,11 @@ module clk_wiz_5_clk_wiz_5_clk_wiz
   (* BOX_TYPE = "PRIMITIVE" *) 
   PLLE2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT(6),
+    .CLKFBOUT_MULT(25),
     .CLKFBOUT_PHASE(0.000000),
-    .CLKIN1_PERIOD(5.000000),
+    .CLKIN1_PERIOD(6.250000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE(3),
+    .CLKOUT0_DIVIDE(5),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT1_DIVIDE(1),
@@ -105,7 +105,7 @@ module clk_wiz_5_clk_wiz_5_clk_wiz
     .CLKOUT5_DUTY_CYCLE(0.500000),
     .CLKOUT5_PHASE(0.000000),
     .COMPENSATION("ZHOLD"),
-    .DIVCLK_DIVIDE(1),
+    .DIVCLK_DIVIDE(4),
     .IS_CLKINSEL_INVERTED(1'b0),
     .IS_PWRDWN_INVERTED(1'b0),
     .IS_RST_INVERTED(1'b0),

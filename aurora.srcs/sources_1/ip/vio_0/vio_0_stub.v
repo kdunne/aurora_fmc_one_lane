@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-// Date        : Mon Jun 25 17:38:23 2018
+// Date        : Mon Jul  2 16:55:39 2018
 // Host        : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
 // Command     : write_verilog -force -mode synth_stub
 //               /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/vio_0/vio_0_stub.v
@@ -16,10 +16,10 @@
 (* X_CORE_INFO = "vio,Vivado 2017.4" *)
 module vio_0(clk, probe_out0, probe_out1, probe_out2, 
   probe_out3)
-/* synthesis syn_black_box black_box_pad_pin="clk,probe_out0[0:0],probe_out1[4:0],probe_out2[0:0],probe_out3[0:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="clk,probe_out0[0:0],probe_out1[0:0],probe_out2[0:0],probe_out3[0:0]" */;
   input clk;
   output [0:0]probe_out0;
-  output [4:0]probe_out1;
+  output [0:0]probe_out1;
   output [0:0]probe_out2;
   output [0:0]probe_out3;
 endmodule

@@ -56,11 +56,11 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out1____80.000______0.000______50.0______113.197____105.563
-// clk_out2____20.000______0.000______50.0______150.107____105.563
-// clk_out3_____5.000______0.000______50.0______197.874____105.563
-// clk_out4___200.000______0.000______50.0_______94.528____105.563
-// clk_out5____50.000______0.000______50.0______124.683____105.563
+// clk_out1___160.000______0.000______50.0_______96.862_____82.655
+// clk_out2____80.000______0.000______50.0______110.678_____82.655
+// clk_out3____20.000______0.000______50.0______146.346_____82.655
+// clk_out4____50.000______0.000______50.0______121.478_____82.655
+// clk_out5___200.000______0.000______50.0_______92.799_____82.655
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -69,7 +69,7 @@
 
 `timescale 1ps/1ps
 
-(* CORE_GENERATION_INFO = "clk_wiz_1,clk_wiz_v5_4_3_0,{component_name=clk_wiz_1,use_phase_alignment=true,use_min_o_jitter=true,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=5,clkin1_period=5.000,clkin2_period=10.0,use_power_down=false,use_reset=true,use_locked=true,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=true}" *)
+(* CORE_GENERATION_INFO = "clk_wiz_1,clk_wiz_v5_4_3_0,{component_name=clk_wiz_1,use_phase_alignment=true,use_min_o_jitter=true,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=5,clkin1_period=5.000,clkin2_period=10.0,use_power_down=false,use_reset=true,use_locked=true,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
 
 module clk_wiz_1 
  (

@@ -57,10 +57,18 @@
   selectio_wiz_0 
   instance_name
  (
-   .data_in_from_pins(data_in_from_pins), // input [0:0] data_in_from_pins
-   .data_in_to_device(data_in_to_device), // output [0:0] data_in_to_device
+   .data_in_from_pins_p(data_in_from_pins_p), // input [0:0] data_in_from_pins_p
+   .data_in_from_pins_n(data_in_from_pins_n), // input [0:0] data_in_from_pins_n
+   .data_in_to_device(data_in_to_device), // output [7:0] data_in_to_device
+   .in_delay_reset(in_delay_reset), // input in_delay_reset                    
+   .in_delay_data_ce(in_delay_data_ce), // input [0  :0] in_delay_data_ce      
+   .in_delay_data_inc(in_delay_data_inc), // input [0  :0] in_delay_data_inc     
+ 
+   .delay_locked(delay_locked), // output delay_locked                      
+   .ref_clock(ref_clock), // input ref_clock                         
+   .bitslip(bitslip), // input bitslip                           
    .clk_in(clk_in), // input clk_in                            
-   .clk_out(clk_out), // output clk_out
+   .clk_div_in(clk_div_in), // input clk_div_in                        
    .io_reset(io_reset) // input io_reset
 ); 
 

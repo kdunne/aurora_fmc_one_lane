@@ -1,14 +1,14 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Fri Jun 29 17:55:49 2018
+-- Date        : Mon Jun 25 13:01:35 2018
 -- Host        : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
 -- Command     : write_vhdl -force -mode funcsim
---               /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3_sim_netlist.vhdl
+--               /home/pixdaq/git/cern_cable_test/aurora/sma_one_lane_1280/aurora_rx_slim_xapp/aurora_rx.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3_sim_netlist.vhdl
 -- Design      : clk_wiz_3
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
--- Device      : xc7vx485tffg1761-2
+-- Device      : xc7k325tffg900-2
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -19,7 +19,6 @@ entity clk_wiz_3_clk_wiz_3_clk_wiz is
     clk_out1 : out STD_LOGIC;
     clk_out2 : out STD_LOGIC;
     clk_out3 : out STD_LOGIC;
-    clk_out4 : out STD_LOGIC;
     reset : in STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1_p : in STD_LOGIC;
@@ -34,7 +33,6 @@ architecture STRUCTURE of clk_wiz_3_clk_wiz_3_clk_wiz is
   signal clk_out1_clk_wiz_3 : STD_LOGIC;
   signal clk_out2_clk_wiz_3 : STD_LOGIC;
   signal clk_out3_clk_wiz_3 : STD_LOGIC;
-  signal clk_out4_clk_wiz_3 : STD_LOGIC;
   signal clkfbout_buf_clk_wiz_3 : STD_LOGIC;
   signal clkfbout_clk_wiz_3 : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED : STD_LOGIC;
@@ -43,6 +41,7 @@ architecture STRUCTURE of clk_wiz_3_clk_wiz_3_clk_wiz is
   signal NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED : STD_LOGIC;
+  signal NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT4_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED : STD_LOGIC;
@@ -62,7 +61,6 @@ architecture STRUCTURE of clk_wiz_3_clk_wiz_3_clk_wiz is
   attribute BOX_TYPE of clkout1_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of clkout2_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of clkout3_buf : label is "PRIMITIVE";
-  attribute BOX_TYPE of clkout4_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of mmcm_adv_inst : label is "PRIMITIVE";
 begin
 clkf_buf: unisim.vcomponents.BUFG
@@ -93,11 +91,6 @@ clkout3_buf: unisim.vcomponents.BUFG
      port map (
       I => clk_out3_clk_wiz_3,
       O => clk_out3
-    );
-clkout4_buf: unisim.vcomponents.BUFG
-     port map (
-      I => clk_out4_clk_wiz_3,
-      O => clk_out4
     );
 mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
     generic map(
@@ -165,7 +158,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKOUT1B => NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED,
       CLKOUT2 => clk_out3_clk_wiz_3,
       CLKOUT2B => NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED,
-      CLKOUT3 => clk_out4_clk_wiz_3,
+      CLKOUT3 => NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED,
       CLKOUT3B => NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED,
       CLKOUT4 => NLW_mmcm_adv_inst_CLKOUT4_UNCONNECTED,
       CLKOUT5 => NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED,
@@ -195,7 +188,6 @@ entity clk_wiz_3 is
     clk_out1 : out STD_LOGIC;
     clk_out2 : out STD_LOGIC;
     clk_out3 : out STD_LOGIC;
-    clk_out4 : out STD_LOGIC;
     reset : in STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1_p : in STD_LOGIC;
@@ -214,7 +206,6 @@ inst: entity work.clk_wiz_3_clk_wiz_3_clk_wiz
       clk_out1 => clk_out1,
       clk_out2 => clk_out2,
       clk_out3 => clk_out3,
-      clk_out4 => clk_out4,
       locked => locked,
       reset => reset
     );

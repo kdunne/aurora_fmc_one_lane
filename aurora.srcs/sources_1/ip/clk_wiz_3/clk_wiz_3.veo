@@ -58,7 +58,6 @@
 // clk_out1___640.000______0.000______50.0______102.510____154.081
 // clk_out2___160.000______0.000______50.0______128.042____154.081
 // clk_out3____40.000______0.000______50.0______161.245____154.081
-// clk_out4__1280.000______0.000______50.0_______91.858____154.081
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -77,7 +76,6 @@
     .clk_out1(clk_out1),     // output clk_out1
     .clk_out2(clk_out2),     // output clk_out2
     .clk_out3(clk_out3),     // output clk_out3
-    .clk_out4(clk_out4),     // output clk_out4
     // Status and control signals
     .reset(reset), // input reset
     .locked(locked),       // output locked

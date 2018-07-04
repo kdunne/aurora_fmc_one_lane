@@ -57,10 +57,12 @@
   cmd_iserdes 
   instance_name
  (
-   .data_in_from_pins(data_in_from_pins), // input [0:0] data_in_from_pins
-   .data_in_to_device(data_in_to_device), // output [0:0] data_in_to_device
+   .data_in_from_pins_p(data_in_from_pins_p), // input [0:0] data_in_from_pins_p
+   .data_in_from_pins_n(data_in_from_pins_n), // input [0:0] data_in_from_pins_n
+   .data_in_to_device(data_in_to_device), // output [7:0] data_in_to_device
+   .bitslip(bitslip), // input bitslip                           
    .clk_in(clk_in), // input clk_in                            
-   .clk_out(clk_out), // output clk_out
+   .clk_div_in(clk_div_in), // input clk_div_in                        
    .io_reset(io_reset) // input io_reset
 ); 
 
