@@ -71,7 +71,7 @@
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_INTERFACE_TYPE">NETWORKING</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_NOTES">None</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_SELIO_ACTIVE_EDGE">SDR</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_SELIO_BUS_IN_DELAY">VARIABLE</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_SELIO_BUS_IN_DELAY">VAR_LOADABLE</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_SELIO_BUS_IN_TAP">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_SELIO_BUS_OUT_DELAY">NONE</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_SELIO_BUS_OUT_TAP">0</spirit:configurableElementValue>
@@ -122,7 +122,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.INTERFACE_TYPE">NETWORKING</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.NOTES">None</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SELIO_ACTIVE_EDGE">SDR</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SELIO_BUS_IN_DELAY">VARIABLE</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SELIO_BUS_IN_DELAY">VAR_LOADABLE</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SELIO_BUS_IN_TAP">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SELIO_BUS_OUT_DELAY">NONE</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SELIO_BUS_OUT_TAP">0</spirit:configurableElementValue>

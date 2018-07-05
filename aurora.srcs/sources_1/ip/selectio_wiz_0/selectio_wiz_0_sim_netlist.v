@@ -1,8 +1,8 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-// Date        : Mon Jul  2 15:16:31 2018
-// Host        : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
+// Date        : Thu Jul  5 11:23:06 2018
+// Host        : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.10 (Carbon)
 // Command     : write_verilog -force -mode funcsim
 //               /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/selectio_wiz_0/selectio_wiz_0_sim_netlist.v
 // Design      : selectio_wiz_0
@@ -21,6 +21,8 @@ module selectio_wiz_0
     in_delay_reset,
     in_delay_data_ce,
     in_delay_data_inc,
+    in_delay_tap_in,
+    in_delay_tap_out,
     delay_locked,
     ref_clock,
     bitslip,
@@ -33,6 +35,8 @@ module selectio_wiz_0
   input in_delay_reset;
   input [0:0]in_delay_data_ce;
   input [0:0]in_delay_data_inc;
+  input [4:0]in_delay_tap_in;
+  output [4:0]in_delay_tap_out;
   output delay_locked;
   input ref_clock;
   input [0:0]bitslip;
@@ -50,6 +54,8 @@ module selectio_wiz_0
   wire [0:0]in_delay_data_ce;
   wire [0:0]in_delay_data_inc;
   wire in_delay_reset;
+  wire [4:0]in_delay_tap_in;
+  wire [4:0]in_delay_tap_out;
   wire io_reset;
   wire ref_clock;
 
@@ -67,6 +73,8 @@ module selectio_wiz_0
         .in_delay_data_ce(in_delay_data_ce),
         .in_delay_data_inc(in_delay_data_inc),
         .in_delay_reset(in_delay_reset),
+        .in_delay_tap_in(in_delay_tap_in),
+        .in_delay_tap_out(in_delay_tap_out),
         .io_reset(io_reset),
         .ref_clock(ref_clock));
 endmodule
@@ -80,6 +88,8 @@ module selectio_wiz_0_selectio_wiz_0_selectio_wiz
     in_delay_reset,
     in_delay_data_ce,
     in_delay_data_inc,
+    in_delay_tap_in,
+    in_delay_tap_out,
     delay_locked,
     ref_clock,
     bitslip,
@@ -92,6 +102,8 @@ module selectio_wiz_0_selectio_wiz_0_selectio_wiz
   input in_delay_reset;
   input [0:0]in_delay_data_ce;
   input [0:0]in_delay_data_inc;
+  input [4:0]in_delay_tap_in;
+  output [4:0]in_delay_tap_out;
   output delay_locked;
   input ref_clock;
   input [0:0]bitslip;
@@ -111,10 +123,11 @@ module selectio_wiz_0_selectio_wiz_0_selectio_wiz
   wire [0:0]in_delay_data_ce;
   wire [0:0]in_delay_data_inc;
   wire in_delay_reset;
+  wire [4:0]in_delay_tap_in;
+  wire [4:0]in_delay_tap_out;
   wire io_reset;
   wire ref_clock;
   wire ref_clock_bufg;
-  wire [4:0]\NLW_pins[0].idelaye2_bus_CNTVALUEOUT_UNCONNECTED ;
   wire \NLW_pins[0].iserdese2_master_O_UNCONNECTED ;
   wire \NLW_pins[0].iserdese2_master_SHIFTOUT1_UNCONNECTED ;
   wire \NLW_pins[0].iserdese2_master_SHIFTOUT2_UNCONNECTED ;
@@ -142,7 +155,7 @@ module selectio_wiz_0_selectio_wiz_0_selectio_wiz
     .CINVCTRL_SEL("FALSE"),
     .DELAY_SRC("IDATAIN"),
     .HIGH_PERFORMANCE_MODE("FALSE"),
-    .IDELAY_TYPE("VARIABLE"),
+    .IDELAY_TYPE("VAR_LOAD"),
     .IDELAY_VALUE(0),
     .IS_C_INVERTED(1'b0),
     .IS_DATAIN_INVERTED(1'b0),
@@ -154,8 +167,8 @@ module selectio_wiz_0_selectio_wiz_0_selectio_wiz
        (.C(clk_div_in),
         .CE(in_delay_data_ce),
         .CINVCTRL(1'b0),
-        .CNTVALUEIN({1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .CNTVALUEOUT(\NLW_pins[0].idelaye2_bus_CNTVALUEOUT_UNCONNECTED [4:0]),
+        .CNTVALUEIN(in_delay_tap_in),
+        .CNTVALUEOUT(in_delay_tap_out),
         .DATAIN(1'b0),
         .DATAOUT(data_in_from_pins_delay),
         .IDATAIN(data_in_from_pins_int),

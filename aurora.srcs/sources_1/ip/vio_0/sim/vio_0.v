@@ -52,15 +52,21 @@ clk,
 probe_out0,
 probe_out1,
 probe_out2,
-probe_out3
+probe_out3,
+probe_out4,
+probe_out5,
+probe_out6
 );
 
 input clk;
 
 output reg [0 : 0] probe_out0 = 'h0 ;
 output reg [0 : 0] probe_out1 = 'h0 ;
-output reg [0 : 0] probe_out2 = 'h0 ;
+output reg [63 : 0] probe_out2 = 'h0000000000000000 ;
 output reg [0 : 0] probe_out3 = 'h0 ;
+output reg [4 : 0] probe_out4 = 'h00 ;
+output reg [0 : 0] probe_out5 = 'h0 ;
+output reg [0 : 0] probe_out6 = 'h0 ;
 
 
 endmodule

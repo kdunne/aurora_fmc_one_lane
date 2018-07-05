@@ -15,13 +15,13 @@
     input data_in_p,
     input data_in_n,
     
-    // output LCD_DB4_LS,
-    // output LCD_DB5_LS,
-    // output LCD_DB6_LS,
-    // output LCD_DB7_LS,
-    // output LCD_E_LS,
-    // output LCD_RS_LS,
-    // output LCD_RW_LS,
+    //output LCD_DB4_LS,
+    //output LCD_DB5_LS,
+    //output LCD_DB6_LS,
+    //output LCD_DB7_LS,
+    //output LCD_E_LS,
+    //output LCD_RS_LS,
+    //output LCD_RW_LS,
     
    // output USER_SMA_CLOCK_P, // Rx->Tx clock internal
    // output USER_SMA_CLOCK_N
@@ -38,14 +38,15 @@ wire rst;
 
 // Clocks
 wire clk40;
-// wire clk50; // For LCD
+//wire clk50; // For LCD
 wire clk160;
 wire clk640;
-wire clk200;
-wire clk300;
+//wire clk200;
+//wire clk300;
 wire clk400;
-wire mmcm_locked_a, mmcm_locked_b, mmcm_locked;
-assign mmcm_locked = mmcm_locked_a & mmcm_locked_b; 
+wire mmcm_locked; 
+//wire mmcm_locked_a, mmcm_locked_b, mmcm_locked;
+//assign mmcm_locked = mmcm_locked_a & mmcm_locked_b; 
 
 // ISERDES Signals
 reg  [31:0] data32_iserdes;
@@ -82,22 +83,21 @@ wire        rxgearboxslip_out;
 // Bit Error Rate Signals
 wire [63:0] data64_rx_uns;
 wire [63:0] ber_cnt;
-wire ber_sync;
-wire sync_init;
+wire        ber_sync;
+wire        sync_init;
 
 // Bitslip FSM Signals
 wire        iserdes_slip;
 wire        gearbox_slip;
 
 // VIO Signals
-wire vio_rst;
-wire vio_rst_tx;
-wire vio_en;
+wire        vio_rst;
+wire        vio_en;
 wire [63:0] vio_data;
-wire vio_en_counting;
-wire [4:0] vio_tap_value;
-wire vio_tap_en;
-wire vio_tap_set;
+wire        vio_en_counting;
+wire [4:0]  vio_tap_value;
+wire        vio_tap_en;
+wire        vio_tap_set;
 
 
 //Resets
@@ -198,25 +198,26 @@ end
 //    .locked(mmcm_locked)
 // );
 
-// // Frequencies
-// // clk40:  10  MHz
-// // clk160: 40 MHz
-// // clk640: 160 MHz
+// // Frequencies - NEW
+// // clk40:  5  MHz
+// // clk160: 20 MHz
+// // clk400: 300 MHz
+// // clk640: 80 MHz
 // // 
 // // If this PLL is instantiated the clocks
 // // will run at slower frequencies, despite
 // // having names such as clk40, clk160, clk640.
-// clk_wiz_1 pll_slow(
+//clk_wiz_1 pll_slow(
 //    .clk_in1_p(sysclk_in_p),
 //    .clk_in1_n(sysclk_in_n),
 //    .clk_out1(clk640),
 //    .clk_out2(clk160),
 //    .clk_out3(clk40),
-//    .clk_out4(clk200),
-//    .clk_out5(clk50),
+//    .clk_out4(clk50),
+//    .clk_out5(clk200),
 //    .reset(rst_in),
 //    .locked(mmcm_locked)
-// );
+//);
 // 
 // OBUFDS #(
 //     .IOSTANDARD("DEFAULT"), // Specify the output I/O standard
@@ -234,15 +235,16 @@ end
 // clk200: 200 MHz
 // clk50:  50 MHZ
 // Internal clocks generated from incoming clk sent over SMA
-// clk_wiz_2 pll_inc_clk(
-//    .clk_in1_p(USER_SMA_CLOCK_P),
-//    .clk_in1_n(USER_SMA_CLOCK_N),
-//    .clk_out1(clk640),
-//    .clk_out2(clk160),
-//    .clk_out3(clk40),
-//    .reset(rst_in),
-//    .locked(mmcm_locked)
-// );
+ clk_wiz_2 pll_inc_clk(
+    .clk_in1_p(sysclk_in_p),
+    .clk_in1_n(sysclk_in_n),
+    .clk_out1(clk640),
+    .clk_out2(clk160),
+    .clk_out3(clk40),
+    .clk_out4(clk400),
+    .reset(rst_in),
+    .locked(mmcm_locked)
+ );
 
 // Frequencies
 // clk40:  39.0625  MHz
@@ -255,26 +257,27 @@ end
 // will run at slower frequencies, despite
 // having names such as clk40, clk160, clk640.
 
-clk_wiz_3 pll_fast_a(
-   .clk_in1_p(sysclk_in_p),
-   .clk_in1_n(sysclk_in_n),
-   .clk_out1(clk640),
-   .clk_out2(clk160),
-   .clk_out3(clk40),
+//clk_wiz_3 pll_fast_a(
+//   .clk_in1_p(sysclk_in_p),
+//   .clk_in1_n(sysclk_in_n),
+//   .clk_out1(clk640),
+//   .clk_out2(clk160),
+//   .clk_out3(clk40),
    ////.clk_out4(clk200),
    //.clk_out4(clk300),
   // .clk_out4(clk400),
+   //.clk_out4(clk50),
    //.clk_out5(clk50),
-   .reset(rst_in),
-   .locked(mmcm_locked_a)
-);
+//   .reset(rst_in),
+//   .locked(mmcm_locked_a)
+//);
 
-clk_wiz_5 pll_fast_b(
-    .clk_in1(clk160),
-    .clk_out1(clk400),     
-    .reset(rst_in),
-    .locked(mmcm_locked_b)      
-);      
+//clk_wiz_5 pll_fast_b(
+//    .clk_in1(clk160),
+//    .clk_out1(clk400),     
+//    .reset(rst_in),
+//    .locked(mmcm_locked_b)      
+//);      
 
 // Rx->Tx clock internal don't need diff output to Tx
 //OBUFDS #(
@@ -340,15 +343,15 @@ clk_wiz_5 pll_fast_b(
 // Aurora Rx
 //===================
 // // ISERDES without IDELAYCTRL or IDELAYE2
-// cmd_iserdes i0 (
-//     .data_in_from_pins_p(data_in_p),
-//     .data_in_from_pins_n(data_in_n),
-//     .clk_in(clk640),
-//     .clk_div_in(clk160),
-//     .io_reset(rst|vio_rst),
-//     .bitslip(iserdes_slip),
-//     .data_in_to_device(sipo)
-// );
+ cmd_iserdes i0 (
+     .data_in_from_pins_p(data_in_p),
+     .data_in_from_pins_n(data_in_n),
+     .clk_in(clk640),
+     .clk_div_in(clk160),
+     .io_reset(rst|vio_rst),
+     .bitslip(iserdes_slip),
+     .data_in_to_device(sipo)
+ );
 
 // wire delay_locked;
 // // ISERDES with IDELAYCTRL or IDELAYE2
@@ -380,36 +383,41 @@ clk_wiz_5 pll_fast_b(
 //   .data_in_to_device(sipo)
 // );
 
-/** OLD SERDES REPLACED BY XAPP 1017 IMPLEMENTATION
-selectio_wiz_0 i0 (
-  .data_in_from_pins_p(data_in_p),
-  .data_in_from_pins_n(data_in_n),
-  .clk_in(clk640),
-  .clk_div_in(clk160),
-  .io_reset(rst|vio_rst),
 
-  .in_delay_reset(in_delay_reset),      // input wire in_delay_reset
-  .in_delay_tap_in(tap_value),          // input wire [4 : 0] in_delay_tap_in
-  .in_delay_tap_out(tap_out),           // output wire [4 : 0] in_delay_tap_out
-  .in_delay_data_ce(delay_ce),          // input wire [0 : 0] in_delay_data_ce
-  .in_delay_data_inc(delay_inc),        // input wire [0 : 0] in_delay_data_inc
+/** OLD SERDES REPLACED BY XAPP 1017 IMPLEMENTATION**/
+//selectio_wiz_0 i0 (
+//  .data_in_from_pins_p(data_in_p),
+//  .data_in_from_pins_n(data_in_n),
+//  .clk_in(clk640),
+//  .clk_div_in(clk160),
+//  .io_reset(rst|vio_rst),
+
+//  .in_delay_reset(in_delay_reset),      // input wire in_delay_reset
+//  .in_delay_tap_in(vio_tap_value),          // input wire [4 : 0] in_delay_tap_in
+//  .in_delay_tap_out(vio_tap_out),           // output wire [4 : 0] in_delay_tap_out
+//  .in_delay_data_ce(delay_ce),          // input wire [0 : 0] in_delay_data_ce
+//  .in_delay_data_inc(delay_inc),        // input wire [0 : 0] in_delay_data_inc
   
-  //.ref_clock(clk200),
-  //.ref_clock(clk300),
-  .ref_clock(clk400),
-  .delay_locked(delay_locked),
-  .bitslip(iserdes_slip),
-  .data_in_to_device(sipo)
-);
-**/
+//  //.ref_clock(clk200),
+//  //.ref_clock(clk300),
+//  .ref_clock(clk400),
+//  .delay_locked(delay_locked),
+//  .bitslip(iserdes_slip),
+//  .data_in_to_device(sipo)
+//);
+
+/** XAPP 1017 IMPLEMENTATION FOR ISERDES
 wire rx_lckd;
 wire [28:0] debug;
+wire ref_clk_bufg;
+wire idelay_rdy;
+
 
 serdes_1_to_468_idelay_ddr #(
 	.S			(8),				// Set the serdes factor (4, 6 or 8)
  	.HIGH_PERFORMANCE_MODE 	("TRUE"),
       	.D			(1),				// Number of data lines
-      	.REF_FREQ		(400.0),			// Set idelay control reference frequency, 300 MHz shown
+      	.REF_FREQ		(300.0),			// Set idelay control reference frequency, 300 MHz shown
       	.CLKIN_PERIOD		(1.666),			// Set input clock period, 600 MHz shown
 	.DATA_FORMAT 		("PER_CLOCK"))  		// PER_CLOCK or PER_CHANL data formatting
 iserdes_inst (                      
@@ -427,13 +435,12 @@ iserdes_inst (
 	.rx_lckd		(rx_lckd),
 	.bitslip  		(iserdes_slip),
 	.rx_data		(sipo),
-	.bit_rate_value		(16'h1200),			// required bit rate value in BCD (1200 Mbps shown)
+	.bit_rate_value		(16'h320),			// required bit rate value in BCD (1200 Mbps shown)
 	.bit_time_value		(),				// bit time value
 	.eye_info		(),				// data eye monitor per line
 	.m_delay_1hot		(),				// sample point monitor per line
-	.debug			(debug)) ;				// debug bus
-
-wire ref_clk_bufg;
+	.debug			 (debug),
+	.clock_sweep     ()) ;				// debug bus
 
 (* IODELAY_GROUP = "xapp_idelay" *)
   IDELAYCTRL
@@ -442,11 +449,13 @@ wire ref_clk_bufg;
      .REFCLK (ref_clk_bufg),
      .RST    (rst|vio_rst));
 
-  BUFG
+BUFG
     ref_clock_bufg (
-     .I (clk400),
-     .O (ref_clk_bufg));
+    .I (clk400),
+    .O (ref_clk_bufg)); 
+**/
 
+ 
 gearbox32to66 rx_gb (
     .rst(rst|vio_rst),
     .clk(clk40),
@@ -510,7 +519,7 @@ ber ber_inst(
 // Scrambler
 scrambler scr (
     .clk(clk40),
-    .rst(rst|vio_rst_tx),
+    .rst(rst|vio_rst),
     .data_in(data_in),
     .sync_info(sync),
     .enable(data_next&gearbox_rdy),
@@ -519,7 +528,7 @@ scrambler scr (
 
 // Gearbox
 gearbox66to32 tx_gb (
-    .rst(rst|vio_rst_tx),
+    .rst(rst|vio_rst),
     .clk(clk40),
     .data66(data66_tx_scr),
     // data66({sync,data_in}),    // Use this to bypass Scrambler
@@ -530,7 +539,7 @@ gearbox66to32 tx_gb (
 
 // OSERDES Interface
 cmd_oserdes piso0_1280 (
-    .io_reset(rst|vio_rst_tx),
+    .io_reset(rst|vio_rst),
     .data_out_from_device(piso),
     .data_out_to_pins_p(data_out_p),
     .data_out_to_pins_n(data_out_n),
@@ -558,15 +567,15 @@ cmd_oserdes piso0_1280 (
 
 ila_1 ila_slim_tx (
     .clk(clk160),
-    .probe0(rst),
+    .probe0(rst|vio_rst),
     .probe1(mmcm_locked),
     .probe2(data_in),
     .probe3(data_out),
-    .probe4(gearbox_rdy),
-    .probe5(piso),
-    .probe6(debug),
-    .probe7(ber_sync),
-    .probe8(sync_init)
+    .probe4(data66_gb_rx),
+    .probe5(blocksync_out),
+    .probe6(gearbox_rdy_rx),
+    .probe7(data_valid)
+    //.probe8(sync_init)
 );
 
 //ila_0 ila (
@@ -598,12 +607,12 @@ ila_1 ila_slim_tx (
 
 // VIO
 vio_0 vio_tx (
-    .clk(clk40),
-    .probe_out0(vio_rst_tx),
+    .clk(clk160),
+    .probe_out0(vio_rst),
     .probe_out1(vio_en),
     .probe_out2(vio_data),
     .probe_out3(vio_en_counting)
-);
+);  
 
 //vio_0 vio_rx (
 //    .clk(clk160),                 // input wire clk
@@ -613,10 +622,10 @@ vio_0 vio_tx (
 //    .probe_out3(vio_tap_set)      // output wire [0 : 0] probe_out3
 //);
 
-// wire SF_CE0;
+//wire SF_CE0;
 
 // LCD
-// lcd lcd_debug (
+//lcd lcd_debug (
 //     .clk(clk50),
 //     .rst(rst),
 //     .SF_D({LCD_DB7_LS, LCD_DB6_LS, LCD_DB5_LS, LCD_DB4_LS}),
@@ -624,6 +633,6 @@ vio_0 vio_tx (
 //     .LCD_RS(LCD_RS_LS),
 //     .LCD_RW(LCD_RW_LS),
 //     .SF_CE0(SF_CE0),
-//     .inv_data_cnt(inv_data_cnt)
-// );
+//     .inv_data_cnt(ber_cnt)
+//);
 endmodule

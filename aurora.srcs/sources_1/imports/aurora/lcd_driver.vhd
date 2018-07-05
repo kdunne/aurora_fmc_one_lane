@@ -63,12 +63,25 @@ write_data_l,         -- 0x"6C"
 write_data_lower_i,         -- 0x"69"
 write_data_d,         -- 0x"64"
 write_data_space,     -- 0x"10"
-write_data_F,         -- 0x"46"
-write_data_r,         -- 0x"72"
+write_data_upper_D,         -- 0x"44"
 write_data_second_a,         -- 0x"61"
-write_data_m,         -- 0x"6D"
-write_data_e,         -- 0x"65"
-write_data_s,         -- 0x"73"
+write_data_t,         -- 0x"74"
+write_data_third_a,         -- 0x"61"
+--write_data_e,         -- 0x"65"
+--write_data_I,         -- 0x"49"
+--write_data_n,         -- 0x"6E"
+--write_data_v,         -- 0x"76"
+--write_data_a,         -- 0x"61"
+--write_data_l,         -- 0x"6C"
+--write_data_lower_i,         -- 0x"69"
+--write_data_d,         -- 0x"64"
+--write_data_space,     -- 0x"10"
+--write_data_F,         -- 0x"46"
+--write_data_r,         -- 0x"72"
+--write_data_second_a,         -- 0x"61"
+--write_data_m,         -- 0x"6D"
+--write_data_e,         -- 0x"65"
+--write_data_s,         -- 0x"73"
 address_digit, 
 write_digit4,
 write_digit3,
@@ -189,18 +202,26 @@ begin
             byte <= x"64";
         when write_data_space =>    -- x"10"
             byte <= x"10";
-        when write_data_F =>        -- x"46"
-            byte <= x"46";
-        when write_data_r =>        -- x"72"
-            byte <= x"72";
-        when write_data_second_a =>        -- x"61"
+        when write_data_upper_D =>    -- x"44"
+            byte <= x"44";
+        when write_data_second_a =>    -- x"61"
             byte <= x"61";
-        when write_data_m =>        -- x"6D"
-            byte <= x"6D";
-        when write_data_e =>        -- x"65"
-            byte <= x"65";
-        when write_data_s =>        -- x"73"
-            byte <= x"73";
+        when write_data_t =>    -- x"74"
+            byte <= x"74";
+        when write_data_third_a =>    -- x"61"
+            byte <= x"61";
+--        when write_data_F =>        -- x"46"
+--            byte <= x"46";
+--        when write_data_r =>        -- x"72"
+--            byte <= x"72";
+--        when write_data_second_a =>        -- x"61"
+--            byte <= x"61";
+--        when write_data_m =>        -- x"6D"
+--            byte <= x"6D";
+--        when write_data_e =>        -- x"65"
+--            byte <= x"65";
+--        when write_data_s =>        -- x"73"
+--            byte <= x"73";
         when address_digit =>
           byte <= X"CB"; -- last char of the second line
         when write_digit0 =>
@@ -584,12 +605,16 @@ begin
              dstate = write_data_lower_i or 
              dstate = write_data_d or 
              dstate = write_data_space or
-             dstate = write_data_F or
-             dstate = write_data_r or
-             dstate = write_data_second_a or
-             dstate = write_data_m or
-             dstate = write_data_e or
-             dstate = write_data_s or
+             dstate = write_data_upper_d or 
+             dstate = write_data_second_a or 
+             dstate = write_data_t or 
+             dstate = write_data_third_a or
+--             dstate = write_data_F or
+--             dstate = write_data_r or
+--             dstate = write_data_second_a or
+--             dstate = write_data_m or
+--             dstate = write_data_e or
+--             dstate = write_data_s or
              dstate = address_digit or
              dstate = write_digit0 or
              dstate = write_digit1 or
@@ -744,40 +769,52 @@ begin
                 next_regsel <= '1';
             end if;
         when write_data_space =>
-            if (txdone = '1') then 
-                next_dstate <= write_data_F;
+            if (txdone = '1') then
+                  next_dstate <= write_data_upper_D; 
+--                next_dstate <= write_data_F;
                 next_regsel <= '1';
             end if;
-        when write_data_F =>
-            if (txdone = '1') then 
-                next_dstate <= write_data_r;
-                next_regsel <= '1';
-            end if;
-        when write_data_r =>
+        when write_data_upper_D =>
             if (txdone = '1') then 
                 next_dstate <= write_data_second_a;
+--                next_dstate <= write_data_r;
                 next_regsel <= '1';
             end if;
         when write_data_second_a =>
             if (txdone = '1') then 
-                next_dstate <= write_data_m;
+                next_dstate <= write_data_t;
+--                next_dstate <= write_data_second_a;
                 next_regsel <= '1';
             end if;
-        when write_data_m =>
+        when write_data_t =>
             if (txdone = '1') then 
-                next_dstate <= write_data_e;
+                next_dstate <= write_data_third_a;
+--                next_dstate <= write_data_m;
                 next_regsel <= '1';
             end if;
-        when write_data_e =>
-            if (txdone = '1') then 
-                next_dstate <= write_data_s;
-                next_regsel <= '1';
-            end if;
-        when write_data_s =>
-            if (txdone = '1') then 
-                next_dstate <= address_digit;
-                next_regsel <= '0';
-            end if;
+        when write_data_third_a =>
+                if (txdone = '1') then 
+                    next_dstate <= address_digit;
+    --                next_dstate <= write_data_m;
+                    next_regsel <= '1';
+                end if;
+--        when write_data_m =>
+--            if (txdone = '1') then 
+--
+--                next_dstate <= write_data_e;
+--                next_regsel <= '1';
+--            end if;
+--        when write_data_e =>
+--            if (txdone = '1') then 
+--
+--                next_dstate <= write_data_s;
+--                next_regsel <= '1';
+--            end if;
+--        when write_data_s =>
+--            if (txdone = '1') then 
+--                next_dstate <= address_digit;
+--                next_regsel <= '0';
+--            end if;
       when address_digit => -- 0x80
         next_regsel <= '0';
         if (txdone = '1') then 

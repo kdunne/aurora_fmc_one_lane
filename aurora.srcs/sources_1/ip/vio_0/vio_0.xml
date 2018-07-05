@@ -79,11 +79,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jul 02 23:52:26 UTC 2018</spirit:value>
+            <spirit:value>Thu Jul 05 18:10:22 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:a9d80e9b</spirit:value>
+            <spirit:value>7:d4c01bd0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -112,11 +112,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jul 02 23:52:26 UTC 2018</spirit:value>
+            <spirit:value>Thu Jul 05 18:10:23 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:a9d80e9b</spirit:value>
+            <spirit:value>7:d4c01bd0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -130,11 +130,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jul 02 23:52:26 UTC 2018</spirit:value>
+            <spirit:value>Thu Jul 05 18:10:23 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:a9d80e9b</spirit:value>
+            <spirit:value>7:d4c01bd0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -149,11 +149,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jul 02 23:52:26 UTC 2018</spirit:value>
+            <spirit:value>Thu Jul 05 18:10:23 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:a9d80e9b</spirit:value>
+            <spirit:value>7:d4c01bd0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -168,11 +168,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jul 02 23:52:26 UTC 2018</spirit:value>
+            <spirit:value>Thu Jul 05 18:10:24 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:192ba970</spirit:value>
+            <spirit:value>7:3945223f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -186,11 +186,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jul 02 23:52:26 UTC 2018</spirit:value>
+            <spirit:value>Thu Jul 05 18:10:24 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:a9d80e9b</spirit:value>
+            <spirit:value>7:d4c01bd0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -204,11 +204,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jul 02 23:55:39 UTC 2018</spirit:value>
+            <spirit:value>Thu Jul 05 18:14:01 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:a9d80e9b</spirit:value>
+            <spirit:value>7:d4c01bd0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -6933,7 +6933,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_PROBE_OUT2_WIDTH&apos;)) - 1)">0</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_PROBE_OUT2_WIDTH&apos;)) - 1)">63</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -6979,7 +6979,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_PROBE_OUT4_WIDTH&apos;)) - 1)">0</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_PROBE_OUT4_WIDTH&apos;)) - 1)">4</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -6992,7 +6992,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.probe_out4" xilinx:dependency="(id(&apos;PARAM_VALUE.C_NUM_PROBE_OUT&apos;)>4)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.probe_out4" xilinx:dependency="(id(&apos;PARAM_VALUE.C_NUM_PROBE_OUT&apos;)>4)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -7015,7 +7015,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.probe_out5" xilinx:dependency="(id(&apos;PARAM_VALUE.C_NUM_PROBE_OUT&apos;)>5)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.probe_out5" xilinx:dependency="(id(&apos;PARAM_VALUE.C_NUM_PROBE_OUT&apos;)>5)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -7038,7 +7038,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.probe_out6" xilinx:dependency="(id(&apos;PARAM_VALUE.C_NUM_PROBE_OUT&apos;)>6)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.probe_out6" xilinx:dependency="(id(&apos;PARAM_VALUE.C_NUM_PROBE_OUT&apos;)>6)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -12874,7 +12874,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_NUM_PROBE_OUT</spirit:name>
         <spirit:displayName>Output Probe Count</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_NUM_PROBE_OUT" spirit:minimum="0" spirit:maximum="256" spirit:rangeType="long">4</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_NUM_PROBE_OUT" spirit:minimum="0" spirit:maximum="256" spirit:rangeType="long">7</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_EN_SYNCHRONIZATION</spirit:name>
@@ -14174,7 +14174,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_PROBE_OUT2_WIDTH</spirit:name>
         <spirit:displayName>PROBE OUT2 WIDTH</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.C_PROBE_OUT2_WIDTH" spirit:dependency="(spirit:decode(id(&apos;PARAM_VALUE.C_PROBE_OUT2_WIDTH&apos;)))" spirit:minimum="1" spirit:maximum="256" spirit:rangeType="long">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.C_PROBE_OUT2_WIDTH" spirit:dependency="(spirit:decode(id(&apos;PARAM_VALUE.C_PROBE_OUT2_WIDTH&apos;)))" spirit:minimum="1" spirit:maximum="256" spirit:rangeType="long">64</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_PROBE_OUT3_WIDTH</spirit:name>
@@ -14184,7 +14184,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_PROBE_OUT4_WIDTH</spirit:name>
         <spirit:displayName>PROBE OUT4 WIDTH</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.C_PROBE_OUT4_WIDTH" spirit:dependency="(spirit:decode(id(&apos;PARAM_VALUE.C_PROBE_OUT4_WIDTH&apos;)))" spirit:minimum="1" spirit:maximum="256" spirit:rangeType="long">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.C_PROBE_OUT4_WIDTH" spirit:dependency="(spirit:decode(id(&apos;PARAM_VALUE.C_PROBE_OUT4_WIDTH&apos;)))" spirit:minimum="1" spirit:maximum="256" spirit:rangeType="long">5</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_PROBE_OUT5_WIDTH</spirit:name>
@@ -15454,7 +15454,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_PROBE_OUT2_INIT_VAL</spirit:name>
         <spirit:displayName>PROBE OUT2 INIT VALUE</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.C_PROBE_OUT2_INIT_VAL" spirit:dependency="(spirit:decode(id(&apos;PARAM_VALUE.C_PROBE_OUT2_INIT_VAL&apos;)))" spirit:bitStringLength="4">0x0</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.C_PROBE_OUT2_INIT_VAL" spirit:dependency="(spirit:decode(id(&apos;PARAM_VALUE.C_PROBE_OUT2_INIT_VAL&apos;)))" spirit:bitStringLength="64">0x0000000000000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_PROBE_OUT3_INIT_VAL</spirit:name>
@@ -15464,7 +15464,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_PROBE_OUT4_INIT_VAL</spirit:name>
         <spirit:displayName>PROBE OUT4 INIT VALUE</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.C_PROBE_OUT4_INIT_VAL" spirit:dependency="(spirit:decode(id(&apos;PARAM_VALUE.C_PROBE_OUT4_INIT_VAL&apos;)))" spirit:bitStringLength="4">0x0</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.C_PROBE_OUT4_INIT_VAL" spirit:dependency="(spirit:decode(id(&apos;PARAM_VALUE.C_PROBE_OUT4_INIT_VAL&apos;)))" spirit:bitStringLength="5">0x00</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_PROBE_OUT5_INIT_VAL</spirit:name>
@@ -18223,7 +18223,7 @@
     <spirit:parameter>
       <spirit:name>C_PROBE_OUT4_INIT_VAL</spirit:name>
       <spirit:displayName>PROBE OUT4 INIT VALUE</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_PROBE_OUT4_INIT_VAL" spirit:order="53100" spirit:bitStringLength="4">0x0</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_PROBE_OUT4_INIT_VAL" spirit:order="53100" spirit:bitStringLength="5">0x0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_PROBE_OUT3_INIT_VAL</spirit:name>
@@ -18233,7 +18233,7 @@
     <spirit:parameter>
       <spirit:name>C_PROBE_OUT2_INIT_VAL</spirit:name>
       <spirit:displayName>PROBE OUT2 INIT VALUE</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_PROBE_OUT2_INIT_VAL" spirit:order="52900" spirit:bitStringLength="4">0x0</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_PROBE_OUT2_INIT_VAL" spirit:order="52900" spirit:bitStringLength="64">0x0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_PROBE_OUT1_INIT_VAL</spirit:name>
@@ -19503,7 +19503,7 @@
     <spirit:parameter>
       <spirit:name>C_PROBE_OUT4_WIDTH</spirit:name>
       <spirit:displayName>PROBE OUT4 WIDTH</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_PROBE_OUT4_WIDTH" spirit:order="27500" spirit:minimum="1" spirit:maximum="256" spirit:rangeType="long">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_PROBE_OUT4_WIDTH" spirit:order="27500" spirit:minimum="1" spirit:maximum="256" spirit:rangeType="long">5</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_PROBE_OUT3_WIDTH</spirit:name>
@@ -19513,7 +19513,7 @@
     <spirit:parameter>
       <spirit:name>C_PROBE_OUT2_WIDTH</spirit:name>
       <spirit:displayName>PROBE OUT2 WIDTH</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_PROBE_OUT2_WIDTH" spirit:order="27300" spirit:minimum="1" spirit:maximum="256" spirit:rangeType="long">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_PROBE_OUT2_WIDTH" spirit:order="27300" spirit:minimum="1" spirit:maximum="256" spirit:rangeType="long">64</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_PROBE_OUT1_WIDTH</spirit:name>
@@ -20813,7 +20813,7 @@
     <spirit:parameter>
       <spirit:name>C_NUM_PROBE_OUT</spirit:name>
       <spirit:displayName>Output Probe Count</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_NUM_PROBE_OUT" spirit:order="1300" spirit:minimum="0" spirit:maximum="256" spirit:rangeType="long">4</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_NUM_PROBE_OUT" spirit:order="1300" spirit:minimum="0" spirit:maximum="256" spirit:rangeType="long">7</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_EN_PROBE_IN_ACTIVITY</spirit:name>
@@ -20850,6 +20850,8 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_NUM_PROBE_IN" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_NUM_PROBE_OUT" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_PROBE_OUT1_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_PROBE_OUT2_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C_PROBE_OUT4_WIDTH" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

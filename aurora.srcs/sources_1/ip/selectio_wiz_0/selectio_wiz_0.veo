@@ -63,6 +63,8 @@
    .in_delay_reset(in_delay_reset), // input in_delay_reset                    
    .in_delay_data_ce(in_delay_data_ce), // input [0  :0] in_delay_data_ce      
    .in_delay_data_inc(in_delay_data_inc), // input [0  :0] in_delay_data_inc     
+   .in_delay_tap_in(in_delay_tap_in), // input [24:0] in_delay_tap_in          
+   .in_delay_tap_out(in_delay_tap_out), // output [24:0] in_delay_tap_out          
  
    .delay_locked(delay_locked), // output delay_locked                      
    .ref_clock(ref_clock), // input ref_clock                         

@@ -564,11 +564,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jul 02 22:13:57 UTC 2018</spirit:value>
+            <spirit:value>Thu Jul 05 18:19:33 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:aadda3c2</spirit:value>
+            <spirit:value>7:bbecb983</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -583,11 +583,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jul 02 22:13:57 UTC 2018</spirit:value>
+            <spirit:value>Thu Jul 05 18:19:34 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:aadda3c2</spirit:value>
+            <spirit:value>7:bbecb983</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -602,11 +602,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jul 02 22:13:57 UTC 2018</spirit:value>
+            <spirit:value>Thu Jul 05 18:19:34 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:aadda3c2</spirit:value>
+            <spirit:value>7:bbecb983</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -621,11 +621,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jul 02 22:13:57 UTC 2018</spirit:value>
+            <spirit:value>Thu Jul 05 18:19:34 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:91d4b180</spirit:value>
+            <spirit:value>7:bea6d39a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -640,11 +640,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jul 02 22:13:57 UTC 2018</spirit:value>
+            <spirit:value>Thu Jul 05 18:19:34 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:91d4b180</spirit:value>
+            <spirit:value>7:bea6d39a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -658,11 +658,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jul 02 22:13:57 UTC 2018</spirit:value>
+            <spirit:value>Thu Jul 05 18:19:34 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:aadda3c2</spirit:value>
+            <spirit:value>7:bbecb983</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -676,11 +676,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jul 02 22:16:31 UTC 2018</spirit:value>
+            <spirit:value>Thu Jul 05 18:23:06 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:aadda3c2</spirit:value>
+            <spirit:value>7:bbecb983</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1312,7 +1312,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.in_delay_tap_in" xilinx:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_BUS_DIR&apos;))=&quot;INPUTS&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_BUS_DIR&apos;))=&quot;SEPARATE&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_BUS_DIR&apos;))=&quot;BIDIR&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_SELIO_BUS_IN_DELAY&apos;))=&quot;VAR_LOADABLE&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DEVICE&apos;))!=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.in_delay_tap_in" xilinx:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_BUS_DIR&apos;))=&quot;INPUTS&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_BUS_DIR&apos;))=&quot;SEPARATE&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_BUS_DIR&apos;))=&quot;BIDIR&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_SELIO_BUS_IN_DELAY&apos;))=&quot;VAR_LOADABLE&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DEVICE&apos;))!=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -1336,7 +1336,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.in_delay_tap_out" xilinx:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_BUS_DIR&apos;))=&quot;INPUTS&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_BUS_DIR&apos;))=&quot;SEPARATE&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_BUS_DIR&apos;))=&quot;BIDIR&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_SELIO_BUS_IN_DELAY&apos;))=&quot;VAR_LOADABLE&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DEVICE&apos;))!=1))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.in_delay_tap_out" xilinx:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_BUS_DIR&apos;))=&quot;INPUTS&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_BUS_DIR&apos;))=&quot;SEPARATE&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_BUS_DIR&apos;))=&quot;BIDIR&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_SELIO_BUS_IN_DELAY&apos;))=&quot;VAR_LOADABLE&quot;)) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_DEVICE&apos;))!=1))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -2085,7 +2085,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="string">
         <spirit:name>C_SELIO_BUS_IN_DELAY</spirit:name>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_SELIO_BUS_IN_DELAY" spirit:order="57">VARIABLE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_SELIO_BUS_IN_DELAY" spirit:order="57">VAR_LOADABLE</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_BUS_IN_TAP</spirit:name>
@@ -2557,7 +2557,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>SELIO_BUS_IN_DELAY</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.SELIO_BUS_IN_DELAY" spirit:choiceRef="choice_pairs_3e378a1b" spirit:order="18">VARIABLE</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.SELIO_BUS_IN_DELAY" spirit:choiceRef="choice_pairs_3e378a1b" spirit:order="18">VAR_LOADABLE</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>BUS_IN_TAP</spirit:name>

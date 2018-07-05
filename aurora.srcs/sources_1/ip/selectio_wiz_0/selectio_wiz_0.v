@@ -53,7 +53,7 @@
 
 `timescale 1ps/1ps
 
-(* CORE_GENERATION_INFO = "selectio_wiz_0,selectio_wiz_v5_1_10,{component_name=selectio_wiz_0,bus_dir=INPUTS,bus_sig_type=DIFF,bus_io_std=LVDS,use_serialization=true,use_phase_detector=false,serialization_factor=8,enable_bitslip=false,enable_train=false,system_data_width=1,bus_in_delay=NONE,bus_out_delay=NONE,clk_sig_type=SINGLE,clk_io_std=LVCMOS18,clk_buf=BUFIO2,active_edge=RISING,clk_delay=NONE,selio_bus_in_delay=VARIABLE,selio_bus_out_delay=NONE,selio_clk_buf=MMCM,selio_active_edge=SDR,selio_ddr_alignment=SAME_EDGE_PIPELINED,selio_oddr_alignment=SAME_EDGE,ddr_alignment=C0,selio_interface_type=NETWORKING,interface_type=NETWORKING,selio_bus_in_tap=0,selio_bus_out_tap=0,selio_clk_io_std=LVDS,selio_clk_sig_type=DIFF}" *)
+(* CORE_GENERATION_INFO = "selectio_wiz_0,selectio_wiz_v5_1_10,{component_name=selectio_wiz_0,bus_dir=INPUTS,bus_sig_type=DIFF,bus_io_std=LVDS,use_serialization=true,use_phase_detector=false,serialization_factor=8,enable_bitslip=false,enable_train=false,system_data_width=1,bus_in_delay=NONE,bus_out_delay=NONE,clk_sig_type=SINGLE,clk_io_std=LVCMOS18,clk_buf=BUFIO2,active_edge=RISING,clk_delay=NONE,selio_bus_in_delay=VAR_LOADABLE,selio_bus_out_delay=NONE,selio_clk_buf=MMCM,selio_active_edge=SDR,selio_ddr_alignment=SAME_EDGE_PIPELINED,selio_oddr_alignment=SAME_EDGE,ddr_alignment=C0,selio_interface_type=NETWORKING,interface_type=NETWORKING,selio_bus_in_tap=0,selio_bus_out_tap=0,selio_clk_io_std=LVDS,selio_clk_sig_type=DIFF}" *)
 
 module selectio_wiz_0
    // width of the data for the system
@@ -68,6 +68,8 @@ module selectio_wiz_0
   input              in_delay_reset,                       // Active high synchronous reset for input delay
   input  [SYS_W -1 :0]           in_delay_data_ce,                     // Enable signal for delay
   input  [SYS_W -1 :0]           in_delay_data_inc,                    // Delay increment (high), decrement (low) signal
+  input  [5*SYS_W -1:0]       in_delay_tap_in,  // Dynamically loadable delay tap value for input delay
+  output [5*SYS_W -1:0]       in_delay_tap_out, // Delay tap value for monitoring input delay
   output             delay_locked,   // Locked signal from IDELAYCTRL
   input              ref_clock,      // Reference clock for IDELAYCTRL. Has to come from BUFG.
   input   [SYS_W -1:0]           bitslip,       // Bitslip module is enabled in NETWORKING mode
@@ -90,6 +92,8 @@ module selectio_wiz_0
    .in_delay_reset(in_delay_reset),                    
    .in_delay_data_ce(in_delay_data_ce),      
    .in_delay_data_inc(in_delay_data_inc),     
+   .in_delay_tap_in(in_delay_tap_in),          
+   .in_delay_tap_out(in_delay_tap_out),         
    .delay_locked(delay_locked),                      
    .ref_clock(ref_clock),                         
    .bitslip(bitslip),                           

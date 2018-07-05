@@ -66,6 +66,8 @@ module selectio_wiz_0_selectio_wiz
   input              in_delay_reset,                       // Active high synchronous reset for input delay
   input  [SYS_W -1 :0]           in_delay_data_ce,                     // Enable signal for delay
   input  [SYS_W -1 :0]           in_delay_data_inc,                    // Delay increment (high), decrement (low) signal
+  input  [5*SYS_W -1:0]       in_delay_tap_in,  // Dynamically loadable delay tap value for input delay
+  output [5*SYS_W -1:0]       in_delay_tap_out, // Delay tap value for monitoring input delay
  
   output             delay_locked,   // Locked signal from IDELAYCTRL
   input              ref_clock,      // Reference clock for IDELAYCTRL. Has to come from BUFG.
@@ -82,15 +84,18 @@ module selectio_wiz_0_selectio_wiz
   wire   [SYS_W-1:0] data_in_from_pins_int;
   // Between the delay and serdes
   wire [SYS_W-1:0]  data_in_from_pins_delay;
-  wire   [SYS_W-1:0] delay_data_busy;
   wire [SYS_W-1:0] in_delay_ce;
   wire [SYS_W-1:0] in_delay_inc_dec;
+  wire [4:0]  in_delay_tap_in_int[0:SYS_W - 1];   // fills in starting with 0
+  wire [4:0]  in_delay_tap_out_int[0:SYS_W - 1];   // fills in starting with 0
   wire ref_clock_bufg;
   // Array to use intermediately from the serdes to the internal
   //  devices. bus "0" is the leftmost bus
   wire [SYS_W-1:0]  iserdes_q[0:13];   // fills in starting with 0
    assign in_delay_ce = {                      in_delay_data_ce[0]};
    assign in_delay_inc_dec = {                      in_delay_data_inc[0]};
+   assign in_delay_tap_in_int[0] = in_delay_tap_in[5*(0 + 1) -1:5*(0)] ;
+   assign in_delay_tap_out[5*(0 + 1) -1:5*(0)] = in_delay_tap_out_int[0];
   // Create the clock logic
 
 
@@ -118,7 +123,7 @@ module selectio_wiz_0_selectio_wiz
          .CINVCTRL_SEL           ("FALSE"),                            // TRUE, FALSE
          .DELAY_SRC              ("IDATAIN"),                          // IDATAIN, DATAIN
          .HIGH_PERFORMANCE_MODE  ("FALSE"),                            // TRUE, FALSE
-         .IDELAY_TYPE            ("VARIABLE"),              // FIXED, VARIABLE, or VAR_LOADABLE
+         .IDELAY_TYPE            ("VAR_LOAD"),              // FIXED, VARIABLE, or VAR_LOADABLE
          .IDELAY_VALUE           (0),                  // 0 to 31
          .REFCLK_FREQUENCY       (200.0),
          .PIPE_SEL               ("FALSE"),
@@ -134,8 +139,8 @@ module selectio_wiz_0_selectio_wiz
          .LD                     (in_delay_reset),
          .REGRST                 (io_reset),
          .LDPIPEEN               (1'b0),
-         .CNTVALUEIN             (5'b00000),
-         .CNTVALUEOUT            (),
+         .CNTVALUEIN             (in_delay_tap_in_int[pin_count]), //in_delay_tap_in),
+         .CNTVALUEOUT            (in_delay_tap_out_int[pin_count]), //in_delay_tap_out),
          .CINVCTRL               (1'b0)
          );
 

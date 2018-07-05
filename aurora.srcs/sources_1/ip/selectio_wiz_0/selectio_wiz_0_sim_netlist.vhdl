@@ -1,8 +1,8 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Mon Jul  2 15:16:31 2018
--- Host        : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
+-- Date        : Thu Jul  5 11:23:06 2018
+-- Host        : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.10 (Carbon)
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/selectio_wiz_0/selectio_wiz_0_sim_netlist.vhdl
 -- Design      : selectio_wiz_0
@@ -22,6 +22,8 @@ entity selectio_wiz_0_selectio_wiz_0_selectio_wiz is
     in_delay_reset : in STD_LOGIC;
     in_delay_data_ce : in STD_LOGIC_VECTOR ( 0 to 0 );
     in_delay_data_inc : in STD_LOGIC_VECTOR ( 0 to 0 );
+    in_delay_tap_in : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    in_delay_tap_out : out STD_LOGIC_VECTOR ( 4 downto 0 );
     delay_locked : out STD_LOGIC;
     ref_clock : in STD_LOGIC;
     bitslip : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -43,7 +45,6 @@ architecture STRUCTURE of selectio_wiz_0_selectio_wiz_0_selectio_wiz is
   signal data_in_from_pins_delay : STD_LOGIC;
   signal data_in_from_pins_int : STD_LOGIC;
   signal ref_clock_bufg : STD_LOGIC;
-  signal \NLW_pins[0].idelaye2_bus_CNTVALUEOUT_UNCONNECTED\ : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal \NLW_pins[0].iserdese2_master_O_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_pins[0].iserdese2_master_SHIFTOUT1_UNCONNECTED\ : STD_LOGIC;
   signal \NLW_pins[0].iserdese2_master_SHIFTOUT2_UNCONNECTED\ : STD_LOGIC;
@@ -85,7 +86,7 @@ delayctrl: unisim.vcomponents.IDELAYCTRL
       CINVCTRL_SEL => "FALSE",
       DELAY_SRC => "IDATAIN",
       HIGH_PERFORMANCE_MODE => "FALSE",
-      IDELAY_TYPE => "VARIABLE",
+      IDELAY_TYPE => "VAR_LOAD",
       IDELAY_VALUE => 0,
       IS_C_INVERTED => '0',
       IS_DATAIN_INVERTED => '0',
@@ -98,8 +99,8 @@ delayctrl: unisim.vcomponents.IDELAYCTRL
       C => clk_div_in,
       CE => in_delay_data_ce(0),
       CINVCTRL => '0',
-      CNTVALUEIN(4 downto 0) => B"00000",
-      CNTVALUEOUT(4 downto 0) => \NLW_pins[0].idelaye2_bus_CNTVALUEOUT_UNCONNECTED\(4 downto 0),
+      CNTVALUEIN(4 downto 0) => in_delay_tap_in(4 downto 0),
+      CNTVALUEOUT(4 downto 0) => in_delay_tap_out(4 downto 0),
       DATAIN => '0',
       DATAOUT => data_in_from_pins_delay,
       IDATAIN => data_in_from_pins_int,
@@ -183,6 +184,8 @@ entity selectio_wiz_0 is
     in_delay_reset : in STD_LOGIC;
     in_delay_data_ce : in STD_LOGIC_VECTOR ( 0 to 0 );
     in_delay_data_inc : in STD_LOGIC_VECTOR ( 0 to 0 );
+    in_delay_tap_in : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    in_delay_tap_out : out STD_LOGIC_VECTOR ( 4 downto 0 );
     delay_locked : out STD_LOGIC;
     ref_clock : in STD_LOGIC;
     bitslip : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -216,6 +219,8 @@ inst: entity work.selectio_wiz_0_selectio_wiz_0_selectio_wiz
       in_delay_data_ce(0) => in_delay_data_ce(0),
       in_delay_data_inc(0) => in_delay_data_inc(0),
       in_delay_reset => in_delay_reset,
+      in_delay_tap_in(4 downto 0) => in_delay_tap_in(4 downto 0),
+      in_delay_tap_out(4 downto 0) => in_delay_tap_out(4 downto 0),
       io_reset => io_reset,
       ref_clock => ref_clock
     );
