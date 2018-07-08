@@ -43,48 +43,168 @@ set_property IOSTANDARD LVDS [get_ports sysclk_in_p]
 # VC707
 # ISERDES Input
 
-#FMC_IN_6_P on Hardware (mistake on FMC layout)
-# FMC1_HPC_LA33_N
-#set_property PACKAGE_PIN T31 [get_ports data_in_n]
-#set_property IOSTANDARD LVDS [get_ports data_in_n]
-#set_property DIFF_TERM TRUE [get_ports data_in_n]
-#FMC_IN_6_N
-# FMC1_HPC_LA33_P
-#set_property PACKAGE_PIN U31 [get_ports data_in_p]
-#set_property IOSTANDARD LVDS [get_ports data_in_p]
-#set_property DIFF_TERM TRUE [get_ports data_in_p]
+#FMC_IN_0_P on Hardware (mistake on FMC layout)
+# FMC1_HPC_LA25_N
+set_property PACKAGE_PIN K30 [get_ports data_in_n[0]]
+set_property IOSTANDARD LVDS [get_ports data_in_n[0]]
+set_property DIFF_TERM TRUE [get_ports data_in_n[0]]
+#FMC_IN_0_N
+# FMC1_HPC_LA25_P
+set_property PACKAGE_PIN K29 [get_ports data_in_p[0]]
+set_property IOSTANDARD LVDS [get_ports data_in_p[0]]
+set_property DIFF_TERM TRUE [get_ports data_in_p[0]]
+
+#FMC_IN_2_P on Hardware (mistake on FMC layout)
+# FMC1_HPC_LA24_N
+set_property PACKAGE_PIN P31 [get_ports data_in_n[1]]
+set_property IOSTANDARD LVDS [get_ports data_in_n[1]
+set_property DIFF_TERM TRUE [get_ports data_in_n[1]]
+#FMC_IN_2_N
+# FMC1_HPC_LA24_P
+set_property PACKAGE_PIN R30 [get_ports data_in_p[1]]
+set_property IOSTANDARD LVDS [get_ports data_in_p[1]]
+set_property DIFF_TERM TRUE [get_ports data_in_p[1]]
+
+#FMC_IN_2_P on Hardware (mistake on FMC layout)
+# FMC1_HPC_LA29_N
+set_property PACKAGE_PIN T30 [get_ports data_in_n[2]]
+set_property IOSTANDARD LVDS [get_ports data_in_n[2]]
+set_property DIFF_TERM TRUE [get_ports data_in_n[2]]
+#FMC_IN_2_N
+# FMC1_HPC_LA29_P
+set_property PACKAGE_PIN T29 [get_ports data_in_p[2]]
+set_property IOSTANDARD LVDS [get_ports data_in_p[2]]
+set_property DIFF_TERM TRUE [get_ports data_in_p[2]]
+
+#FMC_IN_3_P on Hardware (mistake on FMC layout)
+# FMC1_HPC_LA28_N
+set_property PACKAGE_PIN L30 [get_ports data_in_n[3]]
+set_property IOSTANDARD LVDS [get_ports data_in_n[3]]
+set_property DIFF_TERM TRUE [get_ports data_in_n[3]]
+#FMC_IN_3_N
+# FMC1_HPC_LA28_P
+set_property PACKAGE_PIN L29 [get_ports data_in_p[3]]
+set_property IOSTANDARD LVDS [get_ports data_in_p[3]]
+set_property DIFF_TERM TRUE [get_ports data_in_p[3]]
+
+#FMC_IN_4_P on Hardware (mistake on FMC layout)
+# FMC1_HPC_LA31_N
+set_property PACKAGE_PIN M29 [get_ports data_in_n[4]]
+set_property IOSTANDARD LVDS [get_ports data_in_n[4]]
+set_property DIFF_TERM TRUE [get_ports data_in_n[4]]
+#FMC_IN_4_N
+# FMC1_HPC_LA31_P
+set_property PACKAGE_PIN M28 [get_ports data_in_p[4]]
+set_property IOSTANDARD LVDS [get_ports data_in_p[4]]
+set_property DIFF_TERM TRUE [get_ports data_in_p[4]]
 
 #FMC_IN_5_P on Hardware (mistake on FMC layout)
 # FMC1_HPC_LA30_N
-set_property IOSTANDARD LVDS [get_ports data_in_n]
-set_property DIFF_TERM TRUE [get_ports data_in_n]
+set_property PACKAGE_PIN V31 [get_ports data_in_n[5]]
+set_property IOSTANDARD LVDS [get_ports data_in_n[5]]
+set_property DIFF_TERM TRUE [get_ports data_in_n[5]]
 #FMC_IN_5_N
 # FMC1_HPC_LA30_P
-set_property PACKAGE_PIN V31 [get_ports data_in_n]
-set_property PACKAGE_PIN V30 [get_ports data_in_p]
-set_property IOSTANDARD LVDS [get_ports data_in_p]
-set_property DIFF_TERM TRUE [get_ports data_in_p]
+set_property PACKAGE_PIN V30 [get_ports data_in_p[5]]
+set_property IOSTANDARD LVDS [get_ports data_in_p[5]]
+set_property DIFF_TERM TRUE [get_ports data_in_p[5]]
+
+#FMC_IN_6_P on Hardware (mistake on FMC layout)
+# FMC1_HPC_LA33_N
+set_property PACKAGE_PIN T31 [get_ports data_in_n[6]]
+set_property IOSTANDARD LVDS [get_ports data_in_n[6]]
+set_property DIFF_TERM TRUE [get_ports data_in_n[6]]
+#FMC_IN_6_N
+# FMC1_HPC_LA33_P
+set_property PACKAGE_PIN U31 [get_ports data_in_p[6]]
+set_property IOSTANDARD LVDS [get_ports data_in_p[6]]
+set_property DIFF_TERM TRUE [get_ports data_in_p[6]]
+
+#FMC_IN_7_P on Hardware (mistake on FMC layout)
+# FMC1_HPC_LA32_N
+set_property PACKAGE_PIN U29 [get_ports data_in_n[7]]
+set_property IOSTANDARD LVDS [get_ports data_in_n[7]]
+set_property DIFF_TERM TRUE [get_ports data_in_n[7]]
+#FMC_IN_7_N
+# FMC1_HPC_LA32_P
+set_property PACKAGE_PIN V29 [get_ports data_in_p[7]]
+set_property IOSTANDARD LVDS [get_ports data_in_p[7]]
+set_property DIFF_TERM TRUE [get_ports data_in_p[7]]
 
 # VC707
 # OSERDES Input
 
-# FMC_OUT_6_N on Hardware (mistake on FMC layout)
-# FMC1_HPC_LA11_P
-#set_property PACKAGE_PIN F40 [get_ports data_out_p]
-#set_property IOSTANDARD LVDS [get_ports data_out_p]
-# FMC_OUT_6_P on Hardware
-# FMC1_HPC_LA11_N
-#set_property PACKAGE_PIN F41 [get_ports data_out_n]
-#set_property IOSTANDARD LVDS [get_ports data_out_n]
+# FMC_OUT_0_N on Hardware (mistake on FMC layout)
+# FMC1_HPC_LA02_P
+set_property PACKAGE_PIN P41 [get_ports data_out_p[0]]
+set_property IOSTANDARD LVDS [get_ports data_out_p[0]]
+# FMC_OUT_0_P on Hardware
+# FMC1_HPC_LA02_N
+set_property PACKAGE_PIN N41 [get_ports data_out_n[0]]
+set_property IOSTANDARD LVDS [get_ports data_out_n[0]]
+
+# FMC_OUT_1_N on Hardware (mistake on FMC layout)
+# FMC1_HPC_LA03_P
+set_property PACKAGE_PIN M42 [get_ports data_out_p[1]]
+set_property IOSTANDARD LVDS [get_ports data_out_p[1]]
+# FMC_OUT_1_P on Hardware
+# FMC1_HPC_LA03_N
+set_property PACKAGE_PIN L42 [get_ports data_out_n[1]]
+set_property IOSTANDARD LVDS [get_ports data_out_n[1]]
+
+# FMC_OUT_2_N on Hardware (mistake on FMC layout)
+# FMC1_HPC_LA04_P
+set_property PACKAGE_PIN H40 [get_ports data_out_p[2]]
+set_property IOSTANDARD LVDS [get_ports data_out_p[2]]
+# FMC_OUT_2_P on Hardware
+# FMC1_HPC_LA04_N
+set_property PACKAGE_PIN H41 [get_ports data_out_n[2]]
+set_property IOSTANDARD LVDS [get_ports data_out_n[2]]
+
+# FMC_OUT_3_N on Hardware (mistake on FMC layout)
+# FMC1_HPC_LA08_P
+set_property PACKAGE_PIN M37 [get_ports data_out_p[3]]
+set_property IOSTANDARD LVDS [get_ports data_out_p[3]]
+# FMC_OUT_3_P on Hardware
+# FMC1_HPC_LA08_N
+set_property PACKAGE_PIN M38 [get_ports data_out_n[3]]
+set_property IOSTANDARD LVDS [get_ports data_out_n[3]]
+
+# FMC_OUT_4_N on Hardware (mistake on FMC layout)
+# FMC1_HPC_LA07_P
+set_property PACKAGE_PIN G41 [get_ports data_out_p[4]]
+set_property IOSTANDARD LVDS [get_ports data_out_p[4]]
+# FMC_OUT_4_P on Hardware
+# FMC1_HPC_LA07_N
+set_property PACKAGE_PIN G42 [get_ports data_out_n[4]]
+set_property IOSTANDARD LVDS [get_ports data_out_n[4]]
 
 # FMC_OUT_5_P on Hardware (mistake on FMC layout)
 # FMC1_HPC_LA12_N
-set_property IOSTANDARD LVDS [get_ports data_out_n]
+set_property PACKAGE_PIN P40 [get_ports data_out_n[5]]
+set_property IOSTANDARD LVDS [get_ports data_out_n[5]]
 # FMC_OUT_5_N on Hardware
 # FMC1_HPC_LA12_P
-set_property PACKAGE_PIN P40 [get_ports data_out_n]
-set_property PACKAGE_PIN R40 [get_ports data_out_p]
-set_property IOSTANDARD LVDS [get_ports data_out_p]
+set_property PACKAGE_PIN R40 [get_ports data_out_p[5]]
+set_property IOSTANDARD LVDS [get_ports data_out_p[5]]
+
+# FMC_OUT_6_N on Hardware (mistake on FMC layout)
+# FMC1_HPC_LA11_P
+set_property PACKAGE_PIN F40 [get_ports data_out_p[6]]
+set_property IOSTANDARD LVDS [get_ports data_out_p[6]]
+# FMC_OUT_6_P on Hardware
+# FMC1_HPC_LA11_N
+set_property PACKAGE_PIN F41 [get_ports data_out_n[6]]
+set_property IOSTANDARD LVDS [get_ports data_out_n[6]]
+
+# FMC_OUT_7_N on Hardware (mistake on FMC layout)
+# FMC1_HPC_LA15_P
+set_property PACKAGE_PIN M36 [get_ports data_out_p[7]]
+set_property IOSTANDARD LVDS [get_ports data_out_p[7]]
+# FMC_OUT_7_P on Hardware
+# FMC1_HPC_LA15_N
+set_property PACKAGE_PIN L37 [get_ports data_out_n[7]]
+set_property IOSTANDARD LVDS [get_ports data_out_n[7]]
 
 # Rx->TX clock internal
 #USER SMA CLOCK

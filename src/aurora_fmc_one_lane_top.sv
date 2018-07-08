@@ -5,7 +5,7 @@
 // Changelog: 
 // (Lev Kurilenko) 8/7/2017 - Created top module
 
- module aurora_top(
+ module fmc_one_lane(
 
     // Rx Signals
     input sysclk_in_p,
@@ -41,9 +41,9 @@ wire clk40;
 //wire clk50; // For LCD
 wire clk160;
 wire clk640;
-//wire clk200;
+wire clk200;
 //wire clk300;
-wire clk400;
+//wire clk400;
 wire mmcm_locked; 
 //wire mmcm_locked_a, mmcm_locked_b, mmcm_locked;
 //assign mmcm_locked = mmcm_locked_a & mmcm_locked_b; 
@@ -103,35 +103,7 @@ wire        vio_tap_set;
 //Resets
 assign rst = !mmcm_locked;
 
-// Data Driver
-always @(posedge clk40) begin
-    if (rst) begin
-        data_in <= 64'h0000_0000_0000_0000;
-        sync <= 2'b00;
-    end
-    else if (gearbox_rdy&data_next) begin
-        //data_in <= data_in + 1;
-    
-        // Used for BER Testing
-        //data_in <= ber_char;
-        //sync <= 2'b01;
- 
-        if (vio_en) begin
-            if (vio_en_counting) begin
-                data_in <= data_in + 1;
-                sync <= 2'b01;
-            end
-            else begin 
-                data_in <= vio_data;
-                sync <= 2'b01;
-            end
-        end
-        else begin
-            data_in <= ber_char;
-            sync <= 2'b10;
-        end
-    end
-end
+
 
 // Serializer 32 to 8 bits
 always @(posedge clk160) begin
@@ -198,7 +170,7 @@ end
 //    .locked(mmcm_locked)
 // );
 
-// // Frequencies - NEW
+// // Frequencies - EDITED
 // // clk40:  5  MHz
 // // clk160: 20 MHz
 // // clk400: 300 MHz
@@ -241,7 +213,7 @@ end
     .clk_out1(clk640),
     .clk_out2(clk160),
     .clk_out3(clk40),
-    .clk_out4(clk400),
+    .clk_out4(clk200),
     .reset(rst_in),
     .locked(mmcm_locked)
  );
@@ -343,17 +315,17 @@ end
 // Aurora Rx
 //===================
 // // ISERDES without IDELAYCTRL or IDELAYE2
- cmd_iserdes i0 (
-     .data_in_from_pins_p(data_in_p),
-     .data_in_from_pins_n(data_in_n),
-     .clk_in(clk640),
-     .clk_div_in(clk160),
-     .io_reset(rst|vio_rst),
-     .bitslip(iserdes_slip),
-     .data_in_to_device(sipo)
- );
+// cmd_iserdes i0 (
+//     .data_in_from_pins_p(data_in_p),
+//     .data_in_from_pins_n(data_in_n),
+//     .clk_in(clk640),
+//     .clk_div_in(clk160),
+//     .io_reset(rst|vio_rst),
+//     .bitslip(iserdes_slip),
+//     .data_in_to_device(sipo)
+// );
 
-// wire delay_locked;
+ wire delay_locked;
 // // ISERDES with IDELAYCTRL or IDELAYE2
 // selectio_wiz_0 i0 (
 //   .data_in_from_pins_p(data_in_p),
@@ -363,11 +335,11 @@ end
 //   .io_reset(rst|vio_rst),
 //   .in_delay_reset(rst|vio_rst),
 //   .in_delay_data_ce(1'b0),
-//   .in_delay_data_inc(1'b0),
+ //  .in_delay_data_inc(1'b0),
 //   .ref_clock(clk200),
 //   .delay_locked(delay_locked),
 //   .bitslip(iserdes_slip),
-//   .data_in_to_device(sipo)
+ //  .data_in_to_device(sipo)
 // );
 
 // ISERDES with Fixed Tap Value
@@ -406,7 +378,7 @@ end
 //  .data_in_to_device(sipo)
 //);
 
-/** XAPP 1017 IMPLEMENTATION FOR ISERDES
+/** XAPP 1017 IMPLEMENTATION FOR ISERDES **/
 wire rx_lckd;
 wire [28:0] debug;
 wire ref_clk_bufg;
@@ -417,8 +389,8 @@ serdes_1_to_468_idelay_ddr #(
 	.S			(8),				// Set the serdes factor (4, 6 or 8)
  	.HIGH_PERFORMANCE_MODE 	("TRUE"),
       	.D			(1),				// Number of data lines
-      	.REF_FREQ		(300.0),			// Set idelay control reference frequency, 300 MHz shown
-      	.CLKIN_PERIOD		(1.666),			// Set input clock period, 600 MHz shown
+      	.REF_FREQ		(200.0),			// Set idelay control reference frequency, 300 MHz shown EDITED from 300
+      	.CLKIN_PERIOD		(6.664),			// Set input clock period, 600 MHz shown EDITED FROM 1.666, now 160 MHz
 	.DATA_FORMAT 		("PER_CLOCK"))  		// PER_CLOCK or PER_CHANL data formatting
 iserdes_inst (                      
 	.clk160             (clk160),
@@ -451,11 +423,10 @@ iserdes_inst (
 
 BUFG
     ref_clock_bufg (
-    .I (clk400),
+    .I (clk200),
     .O (ref_clk_bufg)); 
-**/
 
- 
+
 gearbox32to66 rx_gb (
     .rst(rst|vio_rst),
     .clk(clk40),
@@ -479,6 +450,7 @@ block_sync # (
     .SH_CNT_MAX(16'd400),           // default: 64
     .SH_INVALID_CNT_MAX(10'd16)     // default: 16
 )
+
 b_sync (
     .clk(clk40),
     .system_reset(rst|vio_rst),
@@ -504,7 +476,7 @@ ber ber_inst(
     .data_valid(data_valid),
     .gearbox_rdy_rx(gearbox_rdy_rx),
     .data66_gb_rx(data66_gb_rx),
-    .data64_rx_uns(data64_rx_uns),
+    .data64_rx_uns(data_out), // data64_rx_uns not driven. should this be data_out?
     .ber_cnt(ber_cnt),
     .ber_sync(ber_sync),
     .sync_init(sync_init)
@@ -574,8 +546,10 @@ ila_1 ila_slim_tx (
     .probe4(data66_gb_rx),
     .probe5(blocksync_out),
     .probe6(gearbox_rdy_rx),
-    .probe7(data_valid)
-    //.probe8(sync_init)
+    .probe7(data_valid),
+    .probe8(sync_out),
+    .probe9(ber_cnt),
+    .probe10(rx_lckd)
 );
 
 //ila_0 ila (
@@ -611,7 +585,10 @@ vio_0 vio_tx (
     .probe_out0(vio_rst),
     .probe_out1(vio_en),
     .probe_out2(vio_data),
-    .probe_out3(vio_en_counting)
+    .probe_out3(vio_en_counting),
+    .probe_out4(vio_tap_value),   // output wire [4 : 0] probe_out1
+    .probe_out5(vio_tap_en),      // output wire [0 : 0] probe_out2
+    .probe_out6(vio_tap_set)      // output wire [0 : 0] probe_out3
 );  
 
 //vio_0 vio_rx (

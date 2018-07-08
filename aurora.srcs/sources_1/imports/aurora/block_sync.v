@@ -4,7 +4,7 @@
 `define DLY #0
 module block_sync #
 (
-    parameter      SH_CNT_MAX         = 16'd64,
+    parameter      SH_CNT_MAX         = 16'd64, 
     parameter      SH_INVALID_CNT_MAX = 10'd16
 )
 (
@@ -38,7 +38,7 @@ reg         sh_valid_r;
 reg  [15:0] slip_count_i;   //EDITED
 reg         slip_r;
 reg         sync_done_r;
-reg  [15:0] sync_header_count_i;
+reg  [15:0] sync_header_count_i; // EDITED
 reg   [9:0] sync_header_invalid_count_i;
 reg         test_sh_r;
 
