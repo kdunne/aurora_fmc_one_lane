@@ -1,0 +1,1 @@
+-wto "f2c5c7ccd81747e48a98fd8dfe784899" --incr --debug "typical" --relax --mt "8" --maxdelay -L "xil_defaultlib" -L "simprims_ver" -L "secureip" --snapshot "aurora_top_time_synth" -transport_int_delays -pulse_r "0" -pulse_int_r "0" -pulse_e "0" -pulse_int_e "0" "xil_defaultlib.aurora_top" "xil_defaultlib.glbl" -log "elaborate.log" 

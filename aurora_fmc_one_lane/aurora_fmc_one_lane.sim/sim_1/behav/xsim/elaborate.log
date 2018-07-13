@@ -1,0 +1,94 @@
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto f2c5c7ccd81747e48a98fd8dfe784899 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot aurora_top_behav xil_defaultlib.aurora_top xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.v" Line 70. Module clk_wiz_3 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3_clk_wiz.v" Line 70. Module clk_wiz_3_clk_wiz has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/IBUFDS.v" Line 32. Module IBUFDS has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/MMCME2_ADV.v" Line 123. Module MMCME2_ADV(BANDWIDTH="HIGH",CLKFBOUT_MULT_F=32.0,CLKIN1_PERIOD=5.0,CLKOUT0_DIVIDE_F=2.0,CLKOUT1_DIVIDE=8,CLKOUT2_DIVIDE=32,DIVCLK_DIVIDE=5) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.v" Line 68. Module clk_wiz_5 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5_clk_wiz.v" Line 68. Module clk_wiz_5_clk_wiz has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/IBUF.v" Line 29. Module IBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/PLLE2_ADV.v" Line 48. Module PLLE2_ADV(CLKFBOUT_MULT=15,CLKIN1_PERIOD=6.25,CLKOUT0_DIVIDE=3,DIVCLK_DIVIDE=2) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/serdes_1_to_468_idelay_ddr.v" Line 60. Module serdes_1_to_468_idelay_ddr(REF_FREQ=400.0,HIGH_PERFORMANCE_MODE="TRUE",CLKIN_PERIOD=1.666) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/delay_controller_wrap.v" Line 58. Module delay_controller_wrap(S=8) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/IBUFDS_DIFF_OUT.v" Line 32. Module IBUFDS_DIFF_OUT has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/IDELAYE2.v" Line 25. Module IDELAYE2(HIGH_PERFORMANCE_MODE="TRUE",IDELAY_TYPE="VAR_LOAD",REFCLK_FREQUENCY=400.0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/ISERDESE2.v" Line 26. Module ISERDESE2(DATA_WIDTH=8,INTERFACE_TYPE="NETWORKING",IOBDELAY="IFD",NUM_CE=1) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 3. Module B_ISERDESE2(DATA_WIDTH=8,INTERFACE_TYPE="NETWORKING",IOBDELAY="IFD",NUM_CE=1) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 151. Module vioi_inlogic_ship(DATA_WIDTH=8,INTERFACE_TYPE="NETWORKING",IOBDELAY="IFD",NUM_CE=1) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1154. Module vioi_inlogic_shell has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1943. Module xil_iserdese2_vl_mod8 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 3998. Module xil_iserdese2_vl_mod22 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 3114. Module xil_iserdese2_vl_mod15 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 3978. Module xil_iserdese2_vl_mod21 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 2924. Module xil_iserdese2_vl_mod14 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1837. Module xil_iserdese2_vl_mod5 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1837. Module xil_iserdese2_vl_mod5 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1837. Module xil_iserdese2_vl_mod5 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1837. Module xil_iserdese2_vl_mod5 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1441. Module xil_iserdese2_vl_mod1 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 5231. Module xil_iserdese2_vl_mod27 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 5231. Module xil_iserdese2_vl_mod27 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 5231. Module xil_iserdese2_vl_mod27 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 2724. Module xil_iserdese2_vl_mod13 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1850. Module xil_iserdese2_vl_mod6 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1441. Module xil_iserdese2_vl_mod1 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 5231. Module xil_iserdese2_vl_mod27 has a timescale but at least one module in design doesn't have timescale.
+INFO: [Common 17-14] Message 'XSIM 43-4100' appears 50 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1fs
+Compiling module unisims_ver.IBUFDS
+Compiling module unisims_ver.MMCME2_ADV(BANDWIDTH="HIGH",CLKF...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_3_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_3
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=15,CLKIN...
+Compiling module xil_defaultlib.clk_wiz_5_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_5
+Compiling module xil_defaultlib.delay_controller_wrap(S=8)
+Compiling module unisims_ver.IBUFDS_DIFF_OUT
+Compiling module unisims_ver.IDELAYE2(HIGH_PERFORMANCE_MODE="...
+Compiling secureip modules ...
+Compiling module unisims_ver.ISERDESE2(DATA_WIDTH=8,INTERFACE...
+Compiling module xil_defaultlib.serdes_1_to_468_idelay_ddr(REF_F...
+Compiling module unisims_ver.IDELAYCTRL_default
+Compiling module xil_defaultlib.gearbox32to66
+Compiling module xil_defaultlib.descrambler
+Compiling module xil_defaultlib.block_sync(SH_CNT_MAX=16'b011001...
+Compiling module xil_defaultlib.bitslip_fsm
+Compiling module xil_defaultlib.ber_scrambler
+Compiling module xil_defaultlib.ber
+Compiling module xil_defaultlib.scrambler
+Compiling module xil_defaultlib.gearbox66to32
+Compiling module unisims_ver.OBUFDS(IOSTANDARD="LVDS")
+Compiling secureip modules ...
+Compiling module unisims_ver.OSERDESE2(DATA_RATE_OQ="SDR",DAT...
+Compiling module xil_defaultlib.cmd_oserdes_selectio_wiz_default
+Compiling module xil_defaultlib.cmd_oserdes
+Compiling module xil_defaultlib.ila_1
+Compiling module xil_defaultlib.vio_0
+Compiling module xil_defaultlib.aurora_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot aurora_top_behav

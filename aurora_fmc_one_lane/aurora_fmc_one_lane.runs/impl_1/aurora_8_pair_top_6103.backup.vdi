@@ -1,0 +1,497 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Jul 11 14:21:22 2018
+# Process ID: 6103
+# Current directory: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1
+# Command line: vivado -log aurora_8_pair_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source aurora_8_pair_top.tcl -notrace
+# Log file: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/aurora_8_pair_top.vdi
+# Journal file: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source aurora_8_pair_top.tcl -notrace
+Command: link_design -top aurora_8_pair_top -part xc7vx485tffg1761-2
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.dcp' for cell 'ila_slim'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_2/clk_wiz_2.dcp' for cell 'pll_mid'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/vio_0/vio_0.dcp' for cell 'vio'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.dcp' for cell 'aurora_core[0].aurora_fmc_one_lane/piso0_1280'
+INFO: [Netlist 29-17] Analyzing 760 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7vx485tffg1761-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: ila_slim UUID: 0ba64a6c-1181-5940-a906-7ec5558b893f 
+INFO: [Chipscope 16-324] Core: vio UUID: 1be27d51-1a4c-50dc-974f-3e22d2c609b9 
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_2/clk_wiz_2_board.xdc] for cell 'pll_mid/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_2/clk_wiz_2_board.xdc] for cell 'pll_mid/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_2/clk_wiz_2.xdc] for cell 'pll_mid/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_2/clk_wiz_2.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_2/clk_wiz_2.xdc:57]
+get_clocks: Time (s): cpu = 00:00:13 ; elapsed = 00:00:40 . Memory (MB): peak = 2529.457 ; gain = 662.773 ; free physical = 3065 ; free virtual = 13932
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_2/clk_wiz_2.xdc] for cell 'pll_mid/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'aurora_core[0].aurora_fmc_one_lane/piso0_1280/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'aurora_core[0].aurora_fmc_one_lane/piso0_1280/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'aurora_core[1].aurora_fmc_one_lane/piso0_1280/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'aurora_core[1].aurora_fmc_one_lane/piso0_1280/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'aurora_core[2].aurora_fmc_one_lane/piso0_1280/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'aurora_core[2].aurora_fmc_one_lane/piso0_1280/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'aurora_core[3].aurora_fmc_one_lane/piso0_1280/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'aurora_core[3].aurora_fmc_one_lane/piso0_1280/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'aurora_core[4].aurora_fmc_one_lane/piso0_1280/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'aurora_core[4].aurora_fmc_one_lane/piso0_1280/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'aurora_core[5].aurora_fmc_one_lane/piso0_1280/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'aurora_core[5].aurora_fmc_one_lane/piso0_1280/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'aurora_core[6].aurora_fmc_one_lane/piso0_1280/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'aurora_core[6].aurora_fmc_one_lane/piso0_1280/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'aurora_core[7].aurora_fmc_one_lane/piso0_1280/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'aurora_core[7].aurora_fmc_one_lane/piso0_1280/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/vio_0/vio_0.xdc] for cell 'vio'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/vio_0/vio_0.xdc] for cell 'vio'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'ila_slim/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'ila_slim/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila.xdc] for cell 'ila_slim/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila.xdc] for cell 'ila_slim/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc]
+WARNING: [Constraints 18-619] A clock with name 'sysclk_in_p' already exists, overwriting the previous clock with the same name. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc:2]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 220 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 212 instances
+  IBUFDS_DIFF_OUT => IBUFDS_DIFF_OUT (IBUFDS, IBUFDS): 8 instances
+
+15 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:42 ; elapsed = 00:02:37 . Memory (MB): peak = 2539.461 ; gain = 1211.438 ; free physical = 3094 ; free virtual = 13940
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Command: opt_design -retarget -propconst -bram_power_opt
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx485t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2629.500 ; gain = 80.039 ; free physical = 3084 ; free virtual = 13930
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-318] Generating core instance : dbg_hub
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:xsdbm:3.0", from Vivado IP cache entry "447797ca110bd01d".
+INFO: [Netlist 29-17] Analyzing 552 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2629.500 ; gain = 0.000 ; free physical = 3035 ; free virtual = 13883
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 10fe4a92a
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:02:45 . Memory (MB): peak = 2629.500 ; gain = 0.000 ; free physical = 3035 ; free virtual = 13883
+
+Phase 2 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 2 Retarget | Checksum: 1eab3a6c5
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:02:46 . Memory (MB): peak = 2629.500 ; gain = 0.000 ; free physical = 3050 ; free virtual = 13898
+INFO: [Opt 31-389] Phase Retarget created 23 cells and removed 39 cells
+
+Phase 3 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 3 Constant propagation | Checksum: 1e2ebb0e8
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:02:46 . Memory (MB): peak = 2629.500 ; gain = 0.000 ; free physical = 3064 ; free virtual = 13912
+INFO: [Opt 31-389] Phase Constant propagation created 5 cells and removed 111 cells
+Ending Logic Optimization Task | Checksum: 1e2ebb0e8
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:02:46 . Memory (MB): peak = 2629.500 ; gain = 0.000 ; free physical = 3063 ; free virtual = 13911
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=21.794 | TNS=0.000 |
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 8 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 8 newly gated: 0 Total Ports: 16
+Ending PowerOpt Patch Enables Task | Checksum: f2c5ef1c
+
+Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 3033 ; free virtual = 13881
+Ending Power Optimization Task | Checksum: f2c5ef1c
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 3018.754 ; gain = 389.254 ; free physical = 3045 ; free virtual = 13894
+INFO: [Common 17-83] Releasing license: Implementation
+42 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:10 ; elapsed = 00:02:58 . Memory (MB): peak = 3018.754 ; gain = 479.293 ; free physical = 3045 ; free virtual = 13894
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 3042 ; free virtual = 13894
+INFO: [Common 17-1381] The checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/aurora_8_pair_top_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file aurora_8_pair_top_drc_opted.rpt -pb aurora_8_pair_top_drc_opted.pb -rpx aurora_8_pair_top_drc_opted.rpx
+Command: report_drc -file aurora_8_pair_top_drc_opted.rpt -pb aurora_8_pair_top_drc_opted.pb -rpx aurora_8_pair_top_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/aurora_8_pair_top_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx485t'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 3042 ; free virtual = 13894
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: c8da4e16
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 3042 ; free virtual = 13894
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 3041 ; free virtual = 13893
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+CRITICAL WARNING: [Place 30-461] A non-muxed BUFG 'ref_clock_bufg' is driven by another global buffer 'pll_mid/inst/clkout4_buf'. Remove non-muxed BUFG if it is not desired.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e8db937b
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 3014 ; free virtual = 13865
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1d5630922
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2951 ; free virtual = 13803
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1d5630922
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2951 ; free virtual = 13802
+Phase 1 Placer Initialization | Checksum: 1d5630922
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2951 ; free virtual = 13802
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 1925ac907
+
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:28 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2876 ; free virtual = 13728
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1925ac907
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:28 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2878 ; free virtual = 13729
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 10bdd8b2a
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:30 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2895 ; free virtual = 13747
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 2059875d2
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:30 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2893 ; free virtual = 13745
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 10c8ea779
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:30 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2893 ; free virtual = 13745
+
+Phase 3.5 Small Shape Detail Placement
+
+Phase 3.5.1 Place Remaining
+Phase 3.5.1 Place Remaining | Checksum: 13c2a7bae
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:35 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2841 ; free virtual = 13692
+Phase 3.5 Small Shape Detail Placement | Checksum: 13c2a7bae
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:35 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2856 ; free virtual = 13708
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 11c03aa5d
+
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:36 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2874 ; free virtual = 13725
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: d8a59390
+
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:36 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2873 ; free virtual = 13725
+Phase 3 Detail Placement | Checksum: d8a59390
+
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:36 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2872 ; free virtual = 13723
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 190e98a70
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Place 46-33] Processed net aurora_core[7].aurora_fmc_one_lane/iserdes_inst/loop3[0].dc_inst/s_delay_val_int_reg[4]_0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-31] BUFG insertion identified 1 candidate nets, 0 success, 1 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 190e98a70
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:39 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2890 ; free virtual = 13742
+INFO: [Place 30-746] Post Placement Timing Summary WNS=17.672. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1bd5b7aae
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:39 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2891 ; free virtual = 13742
+Phase 4.1 Post Commit Optimization | Checksum: 1bd5b7aae
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:39 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2893 ; free virtual = 13744
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1bd5b7aae
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:39 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2903 ; free virtual = 13754
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 1bd5b7aae
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:39 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2902 ; free virtual = 13754
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 1a203f523
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:39 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2902 ; free virtual = 13754
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1a203f523
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:39 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2902 ; free virtual = 13753
+Ending Placer Task | Checksum: b0d7530c
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:39 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2988 ; free virtual = 13839
+INFO: [Common 17-83] Releasing license: Implementation
+66 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:20 ; elapsed = 00:00:41 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2988 ; free virtual = 13839
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.69 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2959 ; free virtual = 13832
+INFO: [Common 17-1381] The checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/aurora_8_pair_top_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file aurora_8_pair_top_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.27 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2943 ; free virtual = 13801
+INFO: [runtcl-4] Executing : report_utilization -file aurora_8_pair_top_utilization_placed.rpt -pb aurora_8_pair_top_utilization_placed.pb
+report_utilization: Time (s): cpu = 00:00:00.50 ; elapsed = 00:00:00.54 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2981 ; free virtual = 13839
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file aurora_8_pair_top_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.10 . Memory (MB): peak = 3018.754 ; gain = 0.000 ; free physical = 2979 ; free virtual = 13837
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx485t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: 407db93b ConstDB: 0 ShapeSum: 705999d1 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: e8fae7ae
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:34 . Memory (MB): peak = 3116.785 ; gain = 98.031 ; free physical = 2616 ; free virtual = 13473
+Post Restoration Checksum: NetGraph: dd3723aa NumContArr: bc3c404 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: e8fae7ae
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:34 . Memory (MB): peak = 3116.785 ; gain = 98.031 ; free physical = 2607 ; free virtual = 13465
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: e8fae7ae
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:35 . Memory (MB): peak = 3116.785 ; gain = 98.031 ; free physical = 2546 ; free virtual = 13404
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: e8fae7ae
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:35 . Memory (MB): peak = 3116.785 ; gain = 98.031 ; free physical = 2543 ; free virtual = 13400
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1b09ecede
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:41 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2522 ; free virtual = 13379
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=17.928 | TNS=0.000  | WHS=-0.434 | THS=-1057.601|
+
+Phase 2 Router Initialization | Checksum: 1a514e6f5
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:42 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2552 ; free virtual = 13409
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 10cdb7926
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:43 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2531 ; free virtual = 13389
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 1703
+ Number of Nodes with overlaps = 68
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=9.757  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1ead7e14c
+
+Time (s): cpu = 00:01:34 ; elapsed = 00:00:47 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2505 ; free virtual = 13363
+Phase 4 Rip-up And Reroute | Checksum: 1ead7e14c
+
+Time (s): cpu = 00:01:34 ; elapsed = 00:00:47 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2505 ; free virtual = 13363
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 19a5f5da2
+
+Time (s): cpu = 00:01:35 ; elapsed = 00:00:47 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2505 ; free virtual = 13363
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=9.757  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 19a5f5da2
+
+Time (s): cpu = 00:01:36 ; elapsed = 00:00:47 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2505 ; free virtual = 13363
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 19a5f5da2
+
+Time (s): cpu = 00:01:36 ; elapsed = 00:00:47 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2505 ; free virtual = 13363
+Phase 5 Delay and Skew Optimization | Checksum: 19a5f5da2
+
+Time (s): cpu = 00:01:36 ; elapsed = 00:00:47 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2505 ; free virtual = 13362
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1f93d985e
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:00:48 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2518 ; free virtual = 13376
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=9.757  | TNS=0.000  | WHS=0.038  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1365d3489
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:00:48 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2539 ; free virtual = 13397
+Phase 6 Post Hold Fix | Checksum: 1365d3489
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:00:48 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2539 ; free virtual = 13397
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.585713 %
+  Global Horizontal Routing Utilization  = 0.703598 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 20f1d434c
+
+Time (s): cpu = 00:01:38 ; elapsed = 00:00:48 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2536 ; free virtual = 13393
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 20f1d434c
+
+Time (s): cpu = 00:01:38 ; elapsed = 00:00:48 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2533 ; free virtual = 13391
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 2520738d0
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:00:49 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2529 ; free virtual = 13386
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=9.757  | TNS=0.000  | WHS=0.038  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 2520738d0
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:00:49 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2531 ; free virtual = 13389
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:00:49 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2608 ; free virtual = 13466
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+83 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:44 ; elapsed = 00:00:51 . Memory (MB): peak = 3197.668 ; gain = 178.914 ; free physical = 2608 ; free virtual = 13466
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.89 . Memory (MB): peak = 3197.672 ; gain = 0.004 ; free physical = 2578 ; free virtual = 13462
+INFO: [Common 17-1381] The checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/aurora_8_pair_top_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file aurora_8_pair_top_drc_routed.rpt -pb aurora_8_pair_top_drc_routed.pb -rpx aurora_8_pair_top_drc_routed.rpx
+Command: report_drc -file aurora_8_pair_top_drc_routed.rpt -pb aurora_8_pair_top_drc_routed.pb -rpx aurora_8_pair_top_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/aurora_8_pair_top_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file aurora_8_pair_top_methodology_drc_routed.rpt -pb aurora_8_pair_top_methodology_drc_routed.pb -rpx aurora_8_pair_top_methodology_drc_routed.rpx
+Command: report_methodology -file aurora_8_pair_top_methodology_drc_routed.rpt -pb aurora_8_pair_top_methodology_drc_routed.pb -rpx aurora_8_pair_top_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/aurora_8_pair_top_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file aurora_8_pair_top_power_routed.rpt -pb aurora_8_pair_top_power_summary_routed.pb -rpx aurora_8_pair_top_power_routed.rpx
+Command: report_power -file aurora_8_pair_top_power_routed.rpt -pb aurora_8_pair_top_power_summary_routed.pb -rpx aurora_8_pair_top_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+95 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 3317.723 ; gain = 0.000 ; free physical = 2487 ; free virtual = 13360
+INFO: [runtcl-4] Executing : report_route_status -file aurora_8_pair_top_route_status.rpt -pb aurora_8_pair_top_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file aurora_8_pair_top_timing_summary_routed.rpt -rpx aurora_8_pair_top_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file aurora_8_pair_top_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
+INFO: [runtcl-4] Executing : report_clock_utilization -file aurora_8_pair_top_clock_utilization_routed.rpt
+report_clock_utilization: Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3317.723 ; gain = 0.000 ; free physical = 2489 ; free virtual = 13363
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 11 14:29:36 2018...

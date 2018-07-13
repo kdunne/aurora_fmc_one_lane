@@ -13,12 +13,32 @@ module block_sync #
     input          system_reset,
     
     // User Interface
+    output reg   [9:0] sync_header_invalid_count_i,
+    output reg     sync_done_r,
     output reg     blocksync_out,
     output reg     rxgearboxslip_out,
     input    [1:0] rxheader_in,
-    input          rxheadervalid_in
+    input          rxheadervalid_in,
+    
+    output reg         next_begin_c,
+    output reg         next_sh_invalid_c,
+    output reg         next_sh_valid_c,
+    output reg         next_slip_c,
+    output reg         next_sync_done_c,
+    output reg         next_test_sh_c,
+    output wire        sh_count_equals_max_i,
+    output wire        sh_invalid_cnt_equals_max_i,
+    output wire        sh_invalid_cnt_equals_zero_i,
+    output wire        slip_done_i,
+    output wire        sync_found_i,
+    output reg         sh_invalid_r,
+    output reg         sh_valid_r,
+    output reg  [99:0] slip_count_i,
+    (* keep = "true" *)output reg  [15:0] sync_header_count_i
+
 );
 
+/**
 reg         next_begin_c;
 reg         next_sh_invalid_c;
 reg         next_sh_valid_c;
@@ -30,16 +50,18 @@ wire        sh_invalid_cnt_equals_max_i;
 wire        sh_invalid_cnt_equals_zero_i;
 wire        slip_done_i;
 wire        sync_found_i;
+**/
+
 
 reg         begin_r;
-reg         sh_invalid_r;
-reg         sh_valid_r;
+//reg         sh_invalid_r;
+//reg         sh_valid_r;
 //reg  [99:0] slip_count_i;   //EDITED
-reg  [15:0] slip_count_i;   //EDITED
+//reg  [15:0] slip_count_i;   //EDITED
 reg         slip_r;
-reg         sync_done_r;
-reg  [15:0] sync_header_count_i; // EDITED
-reg   [9:0] sync_header_invalid_count_i;
+//reg         sync_done_r;
+//(* keep = "true" *)reg  [15:0] sync_header_count_i; // EDITED
+//reg   [9:0] sync_header_invalid_count_i;
 reg         test_sh_r;
 
 reg         system_reset_r;
@@ -173,17 +195,17 @@ always @(posedge clk)
 
 //_____________ Ouput assignment to indicate block sync complete  _________
 
-// always @(posedge clk)
-//     if(!slip_r) slip_count_i   <=  `DLY    100'h0000;
-//     else        slip_count_i   <=  `DLY    {slip_count_i[98:0],rxgearboxslip_out};
-// 
-// assign slip_done_i = slip_count_i[99];
+ always @(posedge clk)
+     if(!slip_r) slip_count_i   <=  `DLY    100'h0000;
+     else        slip_count_i   <=  `DLY    {slip_count_i[98:0],rxgearboxslip_out};
+ 
+ assign slip_done_i = slip_count_i[99];
 
-always @(posedge clk)
-    if(!slip_r) slip_count_i   <=  `DLY    16'h0000;
-    else        slip_count_i   <=  `DLY    {slip_count_i[14:0],rxgearboxslip_out};
+//always @(posedge clk)
+//    if(!slip_r) slip_count_i   <=  `DLY    16'h0000;
+//    else        slip_count_i   <=  `DLY    {slip_count_i[14:0],rxgearboxslip_out};
 
-assign slip_done_i = slip_count_i[15];
+//assign slip_done_i = slip_count_i[15];
 
 //_____________ Pulse GEARBOXSLIP port to slip the data by 1 bit  _________
 

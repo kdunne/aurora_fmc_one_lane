@@ -1,0 +1,1 @@
+-wto "f2c5c7ccd81747e48a98fd8dfe784899" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "unisims_ver" -L "secureip" --snapshot "aurora_top_func_impl" "xil_defaultlib.aurora_top" "xil_defaultlib.glbl" -log "elaborate.log" 

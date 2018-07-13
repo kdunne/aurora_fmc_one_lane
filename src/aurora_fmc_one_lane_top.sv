@@ -8,40 +8,79 @@
  module fmc_one_lane(
 
     // Rx Signals
-    input sysclk_in_p,
-    input sysclk_in_n,
-    input rst_in,
-    
+    input rst,
+    //input sysclk_in_p,
+    //input sysclk_in_n,
+    input clk40,
+    input clk160,
+    input clk640,
+    input clk400,
+    input clk50,
+    input idelay_ref_clock,
+
     input data_in_p,
     input data_in_n,
     
-    //output LCD_DB4_LS,
-    //output LCD_DB5_LS,
-    //output LCD_DB6_LS,
-    //output LCD_DB7_LS,
-    //output LCD_E_LS,
-    //output LCD_RS_LS,
-    //output LCD_RW_LS,
+    output blocksync_out,
+    output data_valid,
+    output reg [1:0] sync_out,
+    output [63:0] data_out,
+    output gearbox_rdy_rx,
+    output reg [9:0] sync_header_invalid_count_i,
+    output reg sync_done_r,
+    output reg rxgearboxslip_out,
+    output reg  [31:0] data32_iserdes,
+    output wire [7:0]  sipo,
+    //input rst_in,
+    
+    output LCD_DB4_LS,
+    output LCD_DB5_LS,
+    output LCD_DB6_LS,
+    output LCD_DB7_LS,
+    output LCD_E_LS,
+    output LCD_RS_LS,
+    output LCD_RW_LS,
     
    // output USER_SMA_CLOCK_P, // Rx->Tx clock internal
    // output USER_SMA_CLOCK_N
 
     // Tx Signals
+    input [63:0] data_in,
+    input [1:0] sync,
+    output data_next,
     output data_out_p,
-    output data_out_n
+    output data_out_n,
+    output gearbox_rdy,
+    
+    //Blocksync Signals
+    output reg         next_begin_c,
+    output reg         next_sh_invalid_c,
+    output reg         next_sh_valid_c,
+    output reg         next_slip_c,
+    output reg         next_sync_done_c,
+    output reg         next_test_sh_c,
+    output wire        sh_count_equals_max_i,
+    output wire        sh_invalid_cnt_equals_max_i,
+    output wire        sh_invalid_cnt_equals_zero_i,
+    output wire        slip_done_i,
+    output wire        sync_found_i,
+    output reg         sh_invalid_r,
+    output reg         sh_valid_r,
+    output reg  [99:0] slip_count_i,
+    output reg  [15:0] sync_header_count_i
 );
 
 localparam ber_char = 64'hB0B5_C0CA_C01A_CAFE;
 
 // Resets
-wire rst;
+//wire rst;
 
 // Clocks
-wire clk40;
+//wire clk40;
 //wire clk50; // For LCD
-wire clk160;
-wire clk640;
-wire clk200;
+//wire clk160;
+//wire clk640;
+//wire clk200;
 //wire clk300;
 //wire clk400;
 wire mmcm_locked; 
@@ -49,8 +88,10 @@ wire mmcm_locked;
 //assign mmcm_locked = mmcm_locked_a & mmcm_locked_b; 
 
 // ISERDES Signals
-reg  [31:0] data32_iserdes;
-wire [7:0]  sipo;
+//reg  [31:0] data32_iserdes;
+//wire [7:0]  sipo;
+wire ref_clk_bufg;
+wire idelay_rdy;
 
 // OSERDES Signals
 wire [7:0] piso;
@@ -58,27 +99,27 @@ reg [63:0] tx_buffer;
 reg [2:0] tx_buf_cnt;
 
 // Rx Gearbox Signals
-wire        gearbox_rdy_rx;
+//wire        gearbox_rdy_rx;
 wire [65:0] data66_gb_rx;
-wire        data_valid;
+//wire        data_valid;
 
 // Tx Gearbox Signals
 wire [31:0] data32_gb_tx;
-wire        data_next;
-wire        gearbox_rdy;
+//wire        data_next;
+//wire        gearbox_rdy;
 
 // Scrambler Signals
-reg [63:0] data_in;
-reg [1:0] sync;
+//reg [63:0] data_in;
+//reg [1:0] sync;
 wire [65:0] data66_tx_scr;
 
 // Descrambler Signals
-wire [1:0]  sync_out;
-wire [63:0] data_out;
+//wire [1:0]  sync_out;
+//wire [63:0] data_out;
 
 // Block Sync Signals
-wire        blocksync_out;
-wire        rxgearboxslip_out;
+//wire        blocksync_out;
+//wire        rxgearboxslip_out;
 
 // Bit Error Rate Signals
 wire [63:0] data64_rx_uns;
@@ -91,19 +132,16 @@ wire        iserdes_slip;
 wire        gearbox_slip;
 
 // VIO Signals
-wire        vio_rst;
-wire        vio_en;
-wire [63:0] vio_data;
-wire        vio_en_counting;
-wire [4:0]  vio_tap_value;
-wire        vio_tap_en;
-wire        vio_tap_set;
-
+//wire        vio_rst;
+//wire        vio_en;
+//wire [63:0] vio_data;
+//wire        vio_en_counting;
+//wire [4:0]  vio_tap_value;
+//wire        vio_tap_en;
+//wire        vio_tap_set;
 
 //Resets
-assign rst = !mmcm_locked;
-
-
+//assign rst = !mmcm_locked;
 
 // Serializer 32 to 8 bits
 always @(posedge clk160) begin
@@ -127,7 +165,7 @@ assign piso = tx_buffer[7:0];
 
 // Data Reception (8 bits to 32 bits)
 always @(posedge clk160) begin
-    if (rst|vio_rst) begin
+    if (rst) begin
         data32_iserdes <= 32'h0000_0000;
     end
     else begin
@@ -142,7 +180,7 @@ reg [31:0] data32_iserdes_r;
 reg [31:0] data32_iserdes_r_r;
 
 always @(posedge clk40) begin
-    if (rst|vio_rst) begin
+    if (rst) begin
         data32_iserdes_r <= 32'h0000_0000;
         data32_iserdes_r_r <= 32'h0000_0000;
     end
@@ -151,6 +189,19 @@ always @(posedge clk40) begin
         data32_iserdes_r_r <= data32_iserdes_r;
     end
 end
+
+wire [1:0] sync_out_i;
+// Delay sync_out by one 40 Mhz clock cycle to align with data_out
+// Needed for proper channel bonding.
+always @(posedge clk40) begin
+    if (rst) begin
+        sync_out <= 2'b00;
+    end
+    else begin
+        sync_out <= sync_out_i;
+    end
+end
+
 
 //==========================
 //  Clock Generation MMCM
@@ -200,6 +251,9 @@ end
 //     .I(clk200)              // Buffer input
 // );
 
+
+/** COMMENTED OUT MOVED TO TOP
+
 // Frequencies
 // clk40:  10  MHz
 // clk160: 40 MHz
@@ -217,6 +271,8 @@ end
     .reset(rst_in),
     .locked(mmcm_locked)
  );
+ **/
+ 
 
 // Frequencies
 // clk40:  39.0625  MHz
@@ -311,6 +367,42 @@ end
 //     .I(clk200)              // Buffer input
 // );
 
+//==================================
+//            Aurora Tx
+//==================================
+
+// Scrambler
+scrambler scr (
+    .clk(clk40),
+    .rst(rst),
+    .data_in(data_in),
+    .sync_info(sync),
+    .enable(data_next&gearbox_rdy),
+    .data_out(data66_tx_scr)
+);
+
+// Gearbox
+gearbox66to32 tx_gb (
+    .rst(rst),
+    .clk(clk40),
+    //.data66(data66_tx_scr),
+    .data66({sync,data_in}),    // Use this to bypass Scrambler
+    .gearbox_rdy(gearbox_rdy),
+    .data32(data32_gb_tx),
+    .data_next(data_next)
+);
+
+// OSERDES Interface
+cmd_oserdes piso0_1280 (
+    .io_reset(rst),
+    .data_out_from_device(piso),
+    .data_out_to_pins_p(data_out_p),
+    .data_out_to_pins_n(data_out_n),
+    .clk_in(clk640),
+    .clk_div_in(clk160)
+);
+
+
 //===================
 // Aurora Rx
 //===================
@@ -325,7 +417,7 @@ end
 //     .data_in_to_device(sipo)
 // );
 
- wire delay_locked;
+// wire delay_locked;
 // // ISERDES with IDELAYCTRL or IDELAYE2
 // selectio_wiz_0 i0 (
 //   .data_in_from_pins_p(data_in_p),
@@ -381,15 +473,13 @@ end
 /** XAPP 1017 IMPLEMENTATION FOR ISERDES **/
 wire rx_lckd;
 wire [28:0] debug;
-wire ref_clk_bufg;
-wire idelay_rdy;
 
 
 serdes_1_to_468_idelay_ddr #(
 	.S			(8),				// Set the serdes factor (4, 6 or 8)
  	.HIGH_PERFORMANCE_MODE 	("TRUE"),
       	.D			(1),				// Number of data lines
-      	.REF_FREQ		(200.0),			// Set idelay control reference frequency, 300 MHz shown EDITED from 300
+      	.REF_FREQ		(400.0),			// Set idelay control reference frequency, 300 MHz shown EDITED from 300
       	.CLKIN_PERIOD		(6.664),			// Set input clock period, 600 MHz shown EDITED FROM 1.666, now 160 MHz
 	.DATA_FORMAT 		("PER_CLOCK"))  		// PER_CLOCK or PER_CHANL data formatting
 iserdes_inst (                      
@@ -398,37 +488,37 @@ iserdes_inst (
 	.datain_p     		(data_in_p),
 	.datain_n     		(data_in_n),
 	.enable_phase_detector	(1'b1),				// enable phase detector (active alignment) operation
-	.enable_monitor		(1'b0),				// enables data eye monitoring
+	.enable_monitor		(1'b1),				// enables data eye monitoring
 	.dcd_correct		(1'b0),				// enables clock duty cycle correction
 	.rxclk    		(),
 	.idelay_rdy		(idelay_rdy),
-	.system_clk		(),
-	.reset     		(rst|vio_rst),
+	.system_clk		(clk160),
+	.reset     		(rst),
 	.rx_lckd		(rx_lckd),
 	.bitslip  		(iserdes_slip),
 	.rx_data		(sipo),
-	.bit_rate_value		(16'h320),			// required bit rate value in BCD (1200 Mbps shown)
+	.bit_rate_value		(16'h0320),			// required bit rate value in BCD (1200 Mbps shown)
 	.bit_time_value		(),				// bit time value
 	.eye_info		(),				// data eye monitor per line
 	.m_delay_1hot		(),				// sample point monitor per line
-	.debug			 (debug),
-	.clock_sweep     ()) ;				// debug bus
+	.debug			 (debug),           // debug bus 
+	.clock_sweep     ()) ;				
 
 (* IODELAY_GROUP = "xapp_idelay" *)
   IDELAYCTRL
     delayctrl (
      .RDY    (idelay_rdy),
-     .REFCLK (ref_clk_bufg),
-     .RST    (rst|vio_rst));
-
+     .REFCLK (idelay_ref_clock),
+     .RST    (rst));
+/**
 BUFG
     ref_clock_bufg (
-    .I (clk200),
+    .I (clk400),
     .O (ref_clk_bufg)); 
-
+**/
 
 gearbox32to66 rx_gb (
-    .rst(rst|vio_rst),
+    .rst(rst),
     .clk(clk40),
     .data32(data32_iserdes_r_r),
     .gearbox_rdy(gearbox_rdy_rx),
@@ -439,30 +529,47 @@ gearbox32to66 rx_gb (
 
 descrambler uns (
     .clk(clk40),
-    .rst(!blocksync_out|rst|vio_rst),
+    .rst(!blocksync_out|rst),
     .data_in(data66_gb_rx), 
-    .sync_info(sync_out),
+    .sync_info(sync_out_i),
     .enable(blocksync_out&data_valid&gearbox_rdy_rx),
     .data_out(data_out)
 );
 
 block_sync # (
-    .SH_CNT_MAX(16'd400),           // default: 64
+    .SH_CNT_MAX(16'd1000),           // default: 64
     .SH_INVALID_CNT_MAX(10'd16)     // default: 16
 )
 
 b_sync (
     .clk(clk40),
-    .system_reset(rst|vio_rst),
+    .system_reset(rst),
     .blocksync_out(blocksync_out),
     .rxgearboxslip_out(rxgearboxslip_out),
-    .rxheader_in(sync_out),
-    .rxheadervalid_in(data_valid&gearbox_rdy_rx)
+    .rxheader_in(sync_out_i),
+    .rxheadervalid_in(data_valid&gearbox_rdy_rx),
+    .sync_header_invalid_count_i(sync_header_invalid_count_i),
+    .sync_done_r(sync_done_r),
+    .next_begin_c(next_begin_c),
+    .next_sh_invalid_c(next_sh_invalid_c),
+    .next_sh_valid_c(next_sh_valid_c),
+    .next_slip_c(next_slip_c),
+    .next_sync_done_c(next_sync_done_c),
+    .next_test_sh_c(next_test_sh_c),
+    .sh_count_equals_max_i(sh_count_equals_max_i),
+    .sh_invalid_cnt_equals_max_i(sh_invalid_cnt_equals_max_i),
+    .sh_invalid_cnt_equals_zero_i(sh_invalid_cnt_equals_zero_i),
+    .slip_done_i(slip_done_i),
+    .sync_found_i(sync_found_i),
+    .sh_invalid_r(sh_invalid_r),
+    .sh_valid_r(sh_valid_r),
+    .slip_count_i(slip_count_i),
+    .sync_header_count_i(sync_header_count_i)
 );
 
 bitslip_fsm bs_fsm (
     .clk(clk160),
-    .rst(rst|vio_rst),
+    .rst(rst),
     .blocksync(blocksync_out),
     .rxgearboxslip(rxgearboxslip_out),
     .iserdes_slip(iserdes_slip),
@@ -470,7 +577,7 @@ bitslip_fsm bs_fsm (
 );
 
 ber ber_inst(
-    .rst(rst|vio_rst),
+    .rst(rst),
     .clk40(clk40),
     .blocksync_out(blocksync_out),
     .data_valid(data_valid),
@@ -484,40 +591,7 @@ ber ber_inst(
 
 
 
-//==================================
-//            Aurora Tx
-//==================================
 
-// Scrambler
-scrambler scr (
-    .clk(clk40),
-    .rst(rst|vio_rst),
-    .data_in(data_in),
-    .sync_info(sync),
-    .enable(data_next&gearbox_rdy),
-    .data_out(data66_tx_scr)
-);
-
-// Gearbox
-gearbox66to32 tx_gb (
-    .rst(rst|vio_rst),
-    .clk(clk40),
-    .data66(data66_tx_scr),
-    // data66({sync,data_in}),    // Use this to bypass Scrambler
-    .gearbox_rdy(gearbox_rdy),
-    .data32(data32_gb_tx),
-    .data_next(data_next)
-);
-
-// OSERDES Interface
-cmd_oserdes piso0_1280 (
-    .io_reset(rst|vio_rst),
-    .data_out_from_device(piso),
-    .data_out_to_pins_p(data_out_p),
-    .data_out_to_pins_n(data_out_n),
-    .clk_in(clk640),
-    .clk_div_in(clk160)
-);
 
 //============================================================================
 //                          Debugging & Monitoring
@@ -537,9 +611,10 @@ cmd_oserdes piso0_1280 (
 //    .probe8(sync_init)
 //);
 
+/** COMMENTED OUT MOVED TO 8_pair_top.sv
 ila_1 ila_slim_tx (
     .clk(clk160),
-    .probe0(rst|vio_rst),
+    .probe0(rst),
     .probe1(mmcm_locked),
     .probe2(data_in),
     .probe3(data_out),
@@ -551,6 +626,7 @@ ila_1 ila_slim_tx (
     .probe9(ber_cnt),
     .probe10(rx_lckd)
 );
+
 
 //ila_0 ila (
 //	.clk(clk160),                  // input wire clk
@@ -579,6 +655,7 @@ ila_1 ila_slim_tx (
 //    .probe21(latched_true)        // input wire [0:0]  probe21
 //);
 
+/** COMMENTED OUT MOVED TO 8_pair_top.sv
 // VIO
 vio_0 vio_tx (
     .clk(clk160),
@@ -590,6 +667,7 @@ vio_0 vio_tx (
     .probe_out5(vio_tap_en),      // output wire [0 : 0] probe_out2
     .probe_out6(vio_tap_set)      // output wire [0 : 0] probe_out3
 );  
+**/
 
 //vio_0 vio_rx (
 //    .clk(clk160),                 // input wire clk
@@ -599,17 +677,17 @@ vio_0 vio_tx (
 //    .probe_out3(vio_tap_set)      // output wire [0 : 0] probe_out3
 //);
 
-//wire SF_CE0;
+wire SF_CE0;
 
 // LCD
-//lcd lcd_debug (
-//     .clk(clk50),
-//     .rst(rst),
-//     .SF_D({LCD_DB7_LS, LCD_DB6_LS, LCD_DB5_LS, LCD_DB4_LS}),
-//     .LCD_E(LCD_E_LS),
-//     .LCD_RS(LCD_RS_LS),
-//     .LCD_RW(LCD_RW_LS),
-//     .SF_CE0(SF_CE0),
-//     .inv_data_cnt(ber_cnt)
-//);
+lcd lcd_debug (
+     .clk(clk50),
+     .rst(rst),
+     .SF_D({LCD_DB7_LS, LCD_DB6_LS, LCD_DB5_LS, LCD_DB4_LS}),
+     .LCD_E(LCD_E_LS),
+     .LCD_RS(LCD_RS_LS),
+     .LCD_RW(LCD_RW_LS),
+     .SF_CE0(SF_CE0),
+     .inv_data_cnt(ber_cnt)
+);
 endmodule

@@ -1,0 +1,1101 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Tue Jul  3 14:39:40 2018
+| Host         : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.10 (Carbon)
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1761-2
+------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'clk_wiz_2'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of clk_wiz_2 (xilinx.com:ip:clk_wiz:5.4 (Rev. 3)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jul  2 15:08:37 2018
+| Host         : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1761-2
+-----------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'selectio_wiz_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of selectio_wiz_0 (xilinx.com:ip:selectio_wiz:5.1) from (Rev. 4) to (Rev. 10)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Warnings
+-----------
+
+WARNING: The upgraded user parameter set contained parameters that could not be mapped on to the upgraded IP. When checking the upgrade script, note that parameter names are case sensitive.
+
+
+3. Customization warnings
+-------------------------
+
+The normal upgrade process failed due to validation failures in the given configuration. Attempting partial upgrade to set as many user parameters as possible. Please check the parameters whose values were not applied.
+
+Customization errors found on 'selectio_wiz_0'. Restoring to previous valid configuration.
+
+
+4. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:selectio_wiz:5.1 -user_name selectio_wiz_0
+set_property -dict "\
+  CONFIG.ACTIVE_EDGE {RISING} \
+  CONFIG.BUS_DIR {INPUTS} \
+  CONFIG.BUS_IN_DELAY {NONE} \
+  CONFIG.BUS_IN_TAP {0} \
+  CONFIG.BUS_IO_STD {LVDS_25} \
+  CONFIG.BUS_OUT_DELAY {NONE} \
+  CONFIG.BUS_OUT_TAP {0} \
+  CONFIG.BUS_SIG_TYPE {DIFF} \
+  CONFIG.BUS_TAP_RESET {NOT_APP} \
+  CONFIG.BUS_TAP_WRAP {NOT_APP} \
+  CONFIG.CLK_BUF {BUFIO2} \
+  CONFIG.CLK_DELAY {NONE} \
+  CONFIG.CLK_EN {false} \
+  CONFIG.CLK_FWD {false} \
+  CONFIG.CLK_FWD_IO_STD {LVDS_25} \
+  CONFIG.CLK_FWD_SER {false} \
+  CONFIG.CLK_FWD_SIG_TYPE {DIFF} \
+  CONFIG.CLK_IO_STD {LVCMOS18} \
+  CONFIG.CLK_SIG_TYPE {SINGLE} \
+  CONFIG.CLK_TAP {0} \
+  CONFIG.CONFIG_CLK_FWD {false} \
+  CONFIG.Clk_in.ASSOCIATED_BUSIF {} \
+  CONFIG.Clk_in.ASSOCIATED_RESET {} \
+  CONFIG.Clk_in.CLK_DOMAIN {} \
+  CONFIG.Clk_in.FREQ_HZ {100000000} \
+  CONFIG.Clk_in.PHASE {0.000} \
+  CONFIG.Component_Name {selectio_wiz_0} \
+  CONFIG.DDR_ALIGNMENT {C0} \
+  CONFIG.DDR_CLK_BUF {BUFR} \
+  CONFIG.ENABLE_BITSLIP {false} \
+  CONFIG.ENABLE_TRAIN {false} \
+  CONFIG.IDDR_RST_TYPE {ASYNC} \
+  CONFIG.IDELAY_HIGH_PERF_MODE {false} \
+  CONFIG.INCLUDE_IDELAYCTRL {true} \
+  CONFIG.INCLUDE_IDELAYCTRL_BUFG {true} \
+  CONFIG.INTERFACE_TYPE {NETWORKING} \
+  CONFIG.NOTES {None} \
+  CONFIG.SELIO_ACTIVE_EDGE {DDR} \
+  CONFIG.SELIO_BUS_IN_DELAY {VAR_LOADABLE} \
+  CONFIG.SELIO_BUS_IN_TAP {2} \
+  CONFIG.SELIO_BUS_OUT_DELAY {NONE} \
+  CONFIG.SELIO_BUS_OUT_TAP {0} \
+  CONFIG.SELIO_CLK_BUF {MMCM} \
+  CONFIG.SELIO_CLK_IO_STD {LVDS_25} \
+  CONFIG.SELIO_CLK_SIG_TYPE {DIFF} \
+  CONFIG.SELIO_DDR_ALIGNMENT {SAME_EDGE_PIPELINED} \
+  CONFIG.SELIO_IDDR_RST_TYPE {ASYNC} \
+  CONFIG.SELIO_INTERFACE_TYPE {NETWORKING} \
+  CONFIG.SELIO_ODDR_ALIGNMENT {SAME_EDGE} \
+  CONFIG.SERIALIZATION_FACTOR {8} \
+  CONFIG.SYSTEM_DATA_WIDTH {1} \
+  CONFIG.TRAIN_CONSTANT {0} \
+  CONFIG.USE_PHASE_DETECTOR {false} \
+  CONFIG.USE_SERIALIZATION {true} \
+  CONFIG.USE_TEMPLATE {Custom} \
+  CONFIG.clk_out.ASSOCIATED_BUSIF {} \
+  CONFIG.clk_out.ASSOCIATED_RESET {} \
+  CONFIG.clk_out.CLK_DOMAIN {} \
+  CONFIG.clk_out.FREQ_HZ {100000000} \
+  CONFIG.clk_out.PHASE {0.000} \
+  CONFIG.data_in_to_device.LAYERED_METADATA {undef} \
+  CONFIG.io_reset.POLARITY {ACTIVE_HIGH} " [get_ips selectio_wiz_0]
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jul  2 11:25:01 2018
+| Host         : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1761-2
+-----------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'cmd_iserdes'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of cmd_iserdes (xilinx.com:ip:selectio_wiz:5.1 (Rev. 10)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Warnings
+-----------
+
+WARNING: The upgraded user parameter set contained parameters that could not be mapped on to the upgraded IP. When checking the upgrade script, note that parameter names are case sensitive.
+
+
+3. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'cmd_iserdes'.
+
+
+-Upgrade has added interface 'clk_out' (xilinx.com:signal:clock:1.0)
+
+
+4. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'cmd_iserdes'. These changes may impact your design.
+
+
+-Upgraded port 'data_in_to_device' width 1 differs from original width 8
+
+-Upgrade has removed port 'bitslip'
+
+-Upgrade has removed port 'clk_div_in'
+
+-Upgrade has removed port 'data_in_from_pins_n'
+
+-Upgrade has removed port 'data_in_from_pins_p'
+
+-Upgrade has added port 'clk_out'
+
+-Upgrade has added port 'data_in_from_pins'
+
+
+5. Customization warnings
+-------------------------
+
+The normal upgrade process failed due to validation failures in the given configuration. Attempting partial upgrade to set as many user parameters as possible. Please check the parameters whose values were not applied.
+
+Customization errors found on 'cmd_iserdes'. Restoring to previous valid configuration.
+
+
+6. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:selectio_wiz:5.1 -user_name cmd_iserdes
+set_property -dict "\
+  CONFIG.ACTIVE_EDGE {RISING} \
+  CONFIG.BUS_DIR {INPUTS} \
+  CONFIG.BUS_IN_DELAY {NONE} \
+  CONFIG.BUS_IN_TAP {0} \
+  CONFIG.BUS_IO_STD {LVDS_25} \
+  CONFIG.BUS_OUT_DELAY {NONE} \
+  CONFIG.BUS_OUT_TAP {0} \
+  CONFIG.BUS_SIG_TYPE {DIFF} \
+  CONFIG.BUS_TAP_RESET {NOT_APP} \
+  CONFIG.BUS_TAP_WRAP {NOT_APP} \
+  CONFIG.CLK_BUF {BUFIO2} \
+  CONFIG.CLK_DELAY {NONE} \
+  CONFIG.CLK_EN {false} \
+  CONFIG.CLK_FWD {false} \
+  CONFIG.CLK_FWD_IO_STD {LVDS_25} \
+  CONFIG.CLK_FWD_SER {false} \
+  CONFIG.CLK_FWD_SIG_TYPE {DIFF} \
+  CONFIG.CLK_IO_STD {LVCMOS18} \
+  CONFIG.CLK_SIG_TYPE {SINGLE} \
+  CONFIG.CLK_TAP {0} \
+  CONFIG.CONFIG_CLK_FWD {false} \
+  CONFIG.Clk_in.ASSOCIATED_BUSIF {} \
+  CONFIG.Clk_in.ASSOCIATED_RESET {} \
+  CONFIG.Clk_in.CLK_DOMAIN {} \
+  CONFIG.Clk_in.FREQ_HZ {100000000} \
+  CONFIG.Clk_in.PHASE {0.000} \
+  CONFIG.Component_Name {cmd_iserdes} \
+  CONFIG.DDR_ALIGNMENT {C0} \
+  CONFIG.DDR_CLK_BUF {BUFR} \
+  CONFIG.ENABLE_BITSLIP {false} \
+  CONFIG.ENABLE_TRAIN {false} \
+  CONFIG.IDDR_RST_TYPE {ASYNC} \
+  CONFIG.IDELAY_HIGH_PERF_MODE {false} \
+  CONFIG.INCLUDE_IDELAYCTRL {true} \
+  CONFIG.INCLUDE_IDELAYCTRL_BUFG {true} \
+  CONFIG.INTERFACE_TYPE {NETWORKING} \
+  CONFIG.NOTES {None} \
+  CONFIG.SELIO_ACTIVE_EDGE {DDR} \
+  CONFIG.SELIO_BUS_IN_DELAY {NONE} \
+  CONFIG.SELIO_BUS_IN_TAP {0} \
+  CONFIG.SELIO_BUS_OUT_DELAY {NONE} \
+  CONFIG.SELIO_BUS_OUT_TAP {0} \
+  CONFIG.SELIO_CLK_BUF {MMCM} \
+  CONFIG.SELIO_CLK_IO_STD {LVDS_25} \
+  CONFIG.SELIO_CLK_SIG_TYPE {DIFF} \
+  CONFIG.SELIO_DDR_ALIGNMENT {SAME_EDGE_PIPELINED} \
+  CONFIG.SELIO_IDDR_RST_TYPE {ASYNC} \
+  CONFIG.SELIO_INTERFACE_TYPE {NETWORKING} \
+  CONFIG.SELIO_ODDR_ALIGNMENT {SAME_EDGE} \
+  CONFIG.SERIALIZATION_FACTOR {8} \
+  CONFIG.SYSTEM_DATA_WIDTH {1} \
+  CONFIG.TRAIN_CONSTANT {0} \
+  CONFIG.USE_PHASE_DETECTOR {false} \
+  CONFIG.USE_SERIALIZATION {true} \
+  CONFIG.USE_TEMPLATE {Custom} \
+  CONFIG.data_in_to_device.LAYERED_METADATA {undef} \
+  CONFIG.io_reset.POLARITY {ACTIVE_HIGH} " [get_ips cmd_iserdes]
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Thu Jun 28 15:10:27 2018
+| Host         : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1761-2
+-----------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'clk_wiz_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of clk_wiz_1 (xilinx.com:ip:clk_wiz:5.4 (Rev. 3)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jun 25 17:40:12 2018
+| Host         : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1761-2
+-----------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'selectio_wiz_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of selectio_wiz_0 (xilinx.com:ip:selectio_wiz:5.1 (Rev. 10)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Warnings
+-----------
+
+WARNING: The upgraded user parameter set contained parameters that could not be mapped on to the upgraded IP. When checking the upgrade script, note that parameter names are case sensitive.
+
+
+3. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'selectio_wiz_0'.
+
+
+-Upgrade has added interface 'clk_out' (xilinx.com:signal:clock:1.0)
+
+
+4. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'selectio_wiz_0'. These changes may impact your design.
+
+
+-Upgraded port 'data_in_to_device' width 1 differs from original width 8
+
+-Upgrade has removed port 'bitslip'
+
+-Upgrade has removed port 'clk_div_in'
+
+-Upgrade has removed port 'data_in_from_pins_n'
+
+-Upgrade has removed port 'data_in_from_pins_p'
+
+-Upgrade has removed port 'delay_locked'
+
+-Upgrade has removed port 'in_delay_data_ce'
+
+-Upgrade has removed port 'in_delay_data_inc'
+
+-Upgrade has removed port 'in_delay_reset'
+
+-Upgrade has removed port 'in_delay_tap_in'
+
+-Upgrade has removed port 'in_delay_tap_out'
+
+-Upgrade has removed port 'ref_clock'
+
+-Upgrade has added port 'clk_out'
+
+-Upgrade has added port 'data_in_from_pins'
+
+
+5. Customization warnings
+-------------------------
+
+The normal upgrade process failed due to validation failures in the given configuration. Attempting partial upgrade to set as many user parameters as possible. Please check the parameters whose values were not applied.
+
+Customization errors found on 'selectio_wiz_0'. Restoring to previous valid configuration.
+
+
+6. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:selectio_wiz:5.1 -user_name selectio_wiz_0
+set_property -dict "\
+  CONFIG.ACTIVE_EDGE {RISING} \
+  CONFIG.BUS_DIR {INPUTS} \
+  CONFIG.BUS_IN_DELAY {NONE} \
+  CONFIG.BUS_IN_TAP {0} \
+  CONFIG.BUS_IO_STD {LVDS_25} \
+  CONFIG.BUS_OUT_DELAY {NONE} \
+  CONFIG.BUS_OUT_TAP {0} \
+  CONFIG.BUS_SIG_TYPE {DIFF} \
+  CONFIG.BUS_TAP_RESET {NOT_APP} \
+  CONFIG.BUS_TAP_WRAP {NOT_APP} \
+  CONFIG.CLK_BUF {BUFIO2} \
+  CONFIG.CLK_DELAY {NONE} \
+  CONFIG.CLK_EN {false} \
+  CONFIG.CLK_FWD {false} \
+  CONFIG.CLK_FWD_IO_STD {LVDS_25} \
+  CONFIG.CLK_FWD_SER {false} \
+  CONFIG.CLK_FWD_SIG_TYPE {DIFF} \
+  CONFIG.CLK_IO_STD {LVCMOS18} \
+  CONFIG.CLK_SIG_TYPE {SINGLE} \
+  CONFIG.CLK_TAP {0} \
+  CONFIG.CONFIG_CLK_FWD {false} \
+  CONFIG.Clk_in.ASSOCIATED_BUSIF {} \
+  CONFIG.Clk_in.ASSOCIATED_RESET {} \
+  CONFIG.Clk_in.CLK_DOMAIN {} \
+  CONFIG.Clk_in.FREQ_HZ {100000000} \
+  CONFIG.Clk_in.PHASE {0.000} \
+  CONFIG.Component_Name {selectio_wiz_0} \
+  CONFIG.DDR_ALIGNMENT {C0} \
+  CONFIG.DDR_CLK_BUF {BUFR} \
+  CONFIG.ENABLE_BITSLIP {false} \
+  CONFIG.ENABLE_TRAIN {false} \
+  CONFIG.IDDR_RST_TYPE {ASYNC} \
+  CONFIG.IDELAY_HIGH_PERF_MODE {false} \
+  CONFIG.INCLUDE_IDELAYCTRL {true} \
+  CONFIG.INCLUDE_IDELAYCTRL_BUFG {true} \
+  CONFIG.INTERFACE_TYPE {NETWORKING} \
+  CONFIG.NOTES {None} \
+  CONFIG.SELIO_ACTIVE_EDGE {DDR} \
+  CONFIG.SELIO_BUS_IN_DELAY {VAR_LOADABLE} \
+  CONFIG.SELIO_BUS_IN_TAP {0} \
+  CONFIG.SELIO_BUS_OUT_DELAY {NONE} \
+  CONFIG.SELIO_BUS_OUT_TAP {0} \
+  CONFIG.SELIO_CLK_BUF {MMCM} \
+  CONFIG.SELIO_CLK_IO_STD {LVDS_25} \
+  CONFIG.SELIO_CLK_SIG_TYPE {DIFF} \
+  CONFIG.SELIO_DDR_ALIGNMENT {SAME_EDGE_PIPELINED} \
+  CONFIG.SELIO_IDDR_RST_TYPE {ASYNC} \
+  CONFIG.SELIO_INTERFACE_TYPE {NETWORKING} \
+  CONFIG.SELIO_ODDR_ALIGNMENT {SAME_EDGE} \
+  CONFIG.SERIALIZATION_FACTOR {8} \
+  CONFIG.SYSTEM_DATA_WIDTH {1} \
+  CONFIG.TRAIN_CONSTANT {0} \
+  CONFIG.USE_PHASE_DETECTOR {false} \
+  CONFIG.USE_SERIALIZATION {true} \
+  CONFIG.USE_TEMPLATE {Custom} \
+  CONFIG.data_in_to_device.LAYERED_METADATA {undef} \
+  CONFIG.io_reset.POLARITY {ACTIVE_HIGH} " [get_ips selectio_wiz_0]
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jun 25 17:39:12 2018
+| Host         : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1761-2
+-----------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ila_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of ila_0 (xilinx.com:ip:ila:6.2 (Rev. 5)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jun 25 17:35:29 2018
+| Host         : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1761-2
+-----------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'cmd_iserdes'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of cmd_iserdes (xilinx.com:ip:selectio_wiz:5.1 (Rev. 10)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Warnings
+-----------
+
+WARNING: The upgraded user parameter set contained parameters that could not be mapped on to the upgraded IP. When checking the upgrade script, note that parameter names are case sensitive.
+
+
+3. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'cmd_iserdes'.
+
+
+-Upgrade has added interface 'clk_out' (xilinx.com:signal:clock:1.0)
+
+
+4. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'cmd_iserdes'. These changes may impact your design.
+
+
+-Upgraded port 'data_in_to_device' width 1 differs from original width 8
+
+-Upgrade has removed port 'bitslip'
+
+-Upgrade has removed port 'clk_div_in'
+
+-Upgrade has removed port 'data_in_from_pins_n'
+
+-Upgrade has removed port 'data_in_from_pins_p'
+
+-Upgrade has added port 'clk_out'
+
+-Upgrade has added port 'data_in_from_pins'
+
+
+5. Customization warnings
+-------------------------
+
+The normal upgrade process failed due to validation failures in the given configuration. Attempting partial upgrade to set as many user parameters as possible. Please check the parameters whose values were not applied.
+
+Customization errors found on 'cmd_iserdes'. Restoring to previous valid configuration.
+
+
+6. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:selectio_wiz:5.1 -user_name cmd_iserdes
+set_property -dict "\
+  CONFIG.ACTIVE_EDGE {RISING} \
+  CONFIG.BUS_DIR {INPUTS} \
+  CONFIG.BUS_IN_DELAY {NONE} \
+  CONFIG.BUS_IN_TAP {0} \
+  CONFIG.BUS_IO_STD {LVDS_25} \
+  CONFIG.BUS_OUT_DELAY {NONE} \
+  CONFIG.BUS_OUT_TAP {0} \
+  CONFIG.BUS_SIG_TYPE {DIFF} \
+  CONFIG.BUS_TAP_RESET {NOT_APP} \
+  CONFIG.BUS_TAP_WRAP {NOT_APP} \
+  CONFIG.CLK_BUF {BUFIO2} \
+  CONFIG.CLK_DELAY {NONE} \
+  CONFIG.CLK_EN {false} \
+  CONFIG.CLK_FWD {false} \
+  CONFIG.CLK_FWD_IO_STD {LVDS_25} \
+  CONFIG.CLK_FWD_SER {false} \
+  CONFIG.CLK_FWD_SIG_TYPE {DIFF} \
+  CONFIG.CLK_IO_STD {LVCMOS18} \
+  CONFIG.CLK_SIG_TYPE {SINGLE} \
+  CONFIG.CLK_TAP {0} \
+  CONFIG.CONFIG_CLK_FWD {false} \
+  CONFIG.Clk_in.ASSOCIATED_BUSIF {} \
+  CONFIG.Clk_in.ASSOCIATED_RESET {} \
+  CONFIG.Clk_in.CLK_DOMAIN {} \
+  CONFIG.Clk_in.FREQ_HZ {100000000} \
+  CONFIG.Clk_in.PHASE {0.000} \
+  CONFIG.Component_Name {cmd_iserdes} \
+  CONFIG.DDR_ALIGNMENT {C0} \
+  CONFIG.DDR_CLK_BUF {BUFR} \
+  CONFIG.ENABLE_BITSLIP {false} \
+  CONFIG.ENABLE_TRAIN {false} \
+  CONFIG.IDDR_RST_TYPE {ASYNC} \
+  CONFIG.IDELAY_HIGH_PERF_MODE {false} \
+  CONFIG.INCLUDE_IDELAYCTRL {true} \
+  CONFIG.INCLUDE_IDELAYCTRL_BUFG {true} \
+  CONFIG.INTERFACE_TYPE {NETWORKING} \
+  CONFIG.NOTES {None} \
+  CONFIG.SELIO_ACTIVE_EDGE {DDR} \
+  CONFIG.SELIO_BUS_IN_DELAY {NONE} \
+  CONFIG.SELIO_BUS_IN_TAP {0} \
+  CONFIG.SELIO_BUS_OUT_DELAY {NONE} \
+  CONFIG.SELIO_BUS_OUT_TAP {0} \
+  CONFIG.SELIO_CLK_BUF {MMCM} \
+  CONFIG.SELIO_CLK_IO_STD {LVDS_25} \
+  CONFIG.SELIO_CLK_SIG_TYPE {DIFF} \
+  CONFIG.SELIO_DDR_ALIGNMENT {SAME_EDGE_PIPELINED} \
+  CONFIG.SELIO_IDDR_RST_TYPE {ASYNC} \
+  CONFIG.SELIO_INTERFACE_TYPE {NETWORKING} \
+  CONFIG.SELIO_ODDR_ALIGNMENT {SAME_EDGE} \
+  CONFIG.SERIALIZATION_FACTOR {8} \
+  CONFIG.SYSTEM_DATA_WIDTH {1} \
+  CONFIG.TRAIN_CONSTANT {0} \
+  CONFIG.USE_PHASE_DETECTOR {false} \
+  CONFIG.USE_SERIALIZATION {true} \
+  CONFIG.USE_TEMPLATE {Custom} \
+  CONFIG.data_in_to_device.LAYERED_METADATA {undef} \
+  CONFIG.io_reset.POLARITY {ACTIVE_HIGH} " [get_ips cmd_iserdes]
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jun 25 17:35:06 2018
+| Host         : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1761-2
+-----------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'vio_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of vio_0 (xilinx.com:ip:vio:3.0 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jun 25 17:34:24 2018
+| Host         : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1761-2
+-----------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ila_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of ila_1 (xilinx.com:ip:ila:6.2 (Rev. 5)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jun 25 17:25:51 2018
+| Host         : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1761-2
+-----------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'cmd_oserdes'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of cmd_oserdes (xilinx.com:ip:selectio_wiz:5.1 (Rev. 10)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Warnings
+-----------
+
+WARNING: The upgraded user parameter set contained parameters that could not be mapped on to the upgraded IP. When checking the upgrade script, note that parameter names are case sensitive.
+
+
+3. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'cmd_oserdes'.
+
+
+-Upgrade has removed interface 'data_out_from_device'
+
+-Upgrade has added interface 'clk_out' (xilinx.com:signal:clock:1.0)
+
+-Upgrade has added interface 'data_in_to_device' (xilinx.com:signal:data:1.0)
+
+
+4. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'cmd_oserdes'. These changes may impact your design.
+
+
+-Upgrade has removed port 'clk_div_in'
+
+-Upgrade has removed port 'data_out_from_device'
+
+-Upgrade has removed port 'data_out_to_pins_n'
+
+-Upgrade has removed port 'data_out_to_pins_p'
+
+-Upgrade has added port 'clk_out'
+
+-Upgrade has added port 'data_in_from_pins'
+
+-Upgrade has added port 'data_in_to_device'
+
+
+5. Customization warnings
+-------------------------
+
+The normal upgrade process failed due to validation failures in the given configuration. Attempting partial upgrade to set as many user parameters as possible. Please check the parameters whose values were not applied.
+
+Customization errors found on 'cmd_oserdes'. Restoring to previous valid configuration.
+
+
+6. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:selectio_wiz:5.1 -user_name cmd_oserdes
+set_property -dict "\
+  CONFIG.ACTIVE_EDGE {RISING} \
+  CONFIG.BUS_DIR {OUTPUTS} \
+  CONFIG.BUS_IN_DELAY {NONE} \
+  CONFIG.BUS_IN_TAP {0} \
+  CONFIG.BUS_IO_STD {LVDS_25} \
+  CONFIG.BUS_OUT_DELAY {NONE} \
+  CONFIG.BUS_OUT_TAP {0} \
+  CONFIG.BUS_SIG_TYPE {DIFF} \
+  CONFIG.BUS_TAP_RESET {NOT_APP} \
+  CONFIG.BUS_TAP_WRAP {NOT_APP} \
+  CONFIG.CLK_BUF {BUFIO2} \
+  CONFIG.CLK_DELAY {NONE} \
+  CONFIG.CLK_EN {false} \
+  CONFIG.CLK_FWD {false} \
+  CONFIG.CLK_FWD_IO_STD {LVDS_25} \
+  CONFIG.CLK_FWD_SER {false} \
+  CONFIG.CLK_FWD_SIG_TYPE {DIFF} \
+  CONFIG.CLK_IO_STD {LVCMOS18} \
+  CONFIG.CLK_SIG_TYPE {SINGLE} \
+  CONFIG.CLK_TAP {0} \
+  CONFIG.CONFIG_CLK_FWD {false} \
+  CONFIG.Clk_in.ASSOCIATED_BUSIF {} \
+  CONFIG.Clk_in.ASSOCIATED_RESET {} \
+  CONFIG.Clk_in.CLK_DOMAIN {} \
+  CONFIG.Clk_in.FREQ_HZ {100000000} \
+  CONFIG.Clk_in.PHASE {0.000} \
+  CONFIG.Component_Name {cmd_oserdes} \
+  CONFIG.DDR_ALIGNMENT {C0} \
+  CONFIG.DDR_CLK_BUF {BUFR} \
+  CONFIG.ENABLE_BITSLIP {false} \
+  CONFIG.ENABLE_TRAIN {false} \
+  CONFIG.IDDR_RST_TYPE {ASYNC} \
+  CONFIG.IDELAY_HIGH_PERF_MODE {false} \
+  CONFIG.INCLUDE_IDELAYCTRL {true} \
+  CONFIG.INCLUDE_IDELAYCTRL_BUFG {true} \
+  CONFIG.INTERFACE_TYPE {NETWORKING} \
+  CONFIG.NOTES {None} \
+  CONFIG.SELIO_ACTIVE_EDGE {DDR} \
+  CONFIG.SELIO_BUS_IN_DELAY {NONE} \
+  CONFIG.SELIO_BUS_IN_TAP {0} \
+  CONFIG.SELIO_BUS_OUT_DELAY {NONE} \
+  CONFIG.SELIO_BUS_OUT_TAP {0} \
+  CONFIG.SELIO_CLK_BUF {MMCM} \
+  CONFIG.SELIO_CLK_IO_STD {LVDS_25} \
+  CONFIG.SELIO_CLK_SIG_TYPE {DIFF} \
+  CONFIG.SELIO_DDR_ALIGNMENT {SAME_EDGE_PIPELINED} \
+  CONFIG.SELIO_IDDR_RST_TYPE {ASYNC} \
+  CONFIG.SELIO_INTERFACE_TYPE {NETWORKING} \
+  CONFIG.SELIO_ODDR_ALIGNMENT {SAME_EDGE} \
+  CONFIG.SERIALIZATION_FACTOR {8} \
+  CONFIG.SYSTEM_DATA_WIDTH {1} \
+  CONFIG.TRAIN_CONSTANT {0} \
+  CONFIG.USE_PHASE_DETECTOR {false} \
+  CONFIG.USE_SERIALIZATION {true} \
+  CONFIG.USE_TEMPLATE {Custom} \
+  CONFIG.data_out_from_device.LAYERED_METADATA {undef} \
+  CONFIG.io_reset.POLARITY {ACTIVE_HIGH} " [get_ips cmd_oserdes]
+
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jun 25 17:25:29 2018
+| Host         : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1761-2
+-----------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'clk_wiz_5'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of clk_wiz_5 (xilinx.com:ip:clk_wiz:5.4 (Rev. 3)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jun 25 17:11:16 2018
+| Host         : dhcp-130-148.ucsc.edu running 64-bit Scientific Linux CERN SLC release 6.9 (Carbon)
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1761-2
+-----------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'clk_wiz_3'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of clk_wiz_3 (xilinx.com:ip:clk_wiz:5.4 (Rev. 3)) to Vivado generation flows.
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+An attempt to modify the value of disabled parameter 'CLKOUT4_REQUESTED_OUT_FREQ' from '100.000' to '400' has been ignored for IP 'clk_wiz_3'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:clk_wiz:5.4 -user_name clk_wiz_3
+set_property -dict "\
+  CONFIG.AUTO_PRIMITIVE {MMCM} \
+  CONFIG.AXI_DRP {false} \
+  CONFIG.CALC_DONE {empty} \
+  CONFIG.CDDCDONE_PORT {cddcdone} \
+  CONFIG.CDDCREQ_PORT {cddcreq} \
+  CONFIG.CLKFB_IN_N_PORT {clkfb_in_n} \
+  CONFIG.CLKFB_IN_PORT {clkfb_in} \
+  CONFIG.CLKFB_IN_P_PORT {clkfb_in_p} \
+  CONFIG.CLKFB_IN_SIGNALING {SINGLE} \
+  CONFIG.CLKFB_OUT_N_PORT {clkfb_out_n} \
+  CONFIG.CLKFB_OUT_PORT {clkfb_out} \
+  CONFIG.CLKFB_OUT_P_PORT {clkfb_out_p} \
+  CONFIG.CLKFB_STOPPED_PORT {clkfb_stopped} \
+  CONFIG.CLKIN1_JITTER_PS {50.0} \
+  CONFIG.CLKIN1_UI_JITTER {0.010} \
+  CONFIG.CLKIN2_JITTER_PS {100.0} \
+  CONFIG.CLKIN2_UI_JITTER {0.010} \
+  CONFIG.CLKOUT1_DRIVES {BUFG} \
+  CONFIG.CLKOUT1_JITTER {102.510} \
+  CONFIG.CLKOUT1_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT1_PHASE_ERROR {154.081} \
+  CONFIG.CLKOUT1_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {640} \
+  CONFIG.CLKOUT1_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT1_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT1_USED {true} \
+  CONFIG.CLKOUT2_DRIVES {BUFG} \
+  CONFIG.CLKOUT2_JITTER {128.042} \
+  CONFIG.CLKOUT2_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT2_PHASE_ERROR {154.081} \
+  CONFIG.CLKOUT2_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {160} \
+  CONFIG.CLKOUT2_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT2_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT2_USED {true} \
+  CONFIG.CLKOUT3_DRIVES {BUFG} \
+  CONFIG.CLKOUT3_JITTER {161.245} \
+  CONFIG.CLKOUT3_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT3_PHASE_ERROR {154.081} \
+  CONFIG.CLKOUT3_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {40} \
+  CONFIG.CLKOUT3_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT3_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT3_USED {true} \
+  CONFIG.CLKOUT4_DRIVES {BUFG} \
+  CONFIG.CLKOUT4_JITTER {109.360} \
+  CONFIG.CLKOUT4_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT4_PHASE_ERROR {154.081} \
+  CONFIG.CLKOUT4_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT4_REQUESTED_OUT_FREQ {400} \
+  CONFIG.CLKOUT4_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT4_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT4_USED {false} \
+  CONFIG.CLKOUT5_DRIVES {BUFG} \
+  CONFIG.CLKOUT5_JITTER {121.478} \
+  CONFIG.CLKOUT5_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT5_PHASE_ERROR {82.655} \
+  CONFIG.CLKOUT5_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT5_REQUESTED_OUT_FREQ {100.000} \
+  CONFIG.CLKOUT5_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT5_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT5_USED {false} \
+  CONFIG.CLKOUT6_DRIVES {BUFG} \
+  CONFIG.CLKOUT6_JITTER {0.0} \
+  CONFIG.CLKOUT6_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT6_PHASE_ERROR {0.0} \
+  CONFIG.CLKOUT6_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT6_REQUESTED_OUT_FREQ {100.000} \
+  CONFIG.CLKOUT6_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT6_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT6_USED {false} \
+  CONFIG.CLKOUT7_DRIVES {BUFG} \
+  CONFIG.CLKOUT7_JITTER {0.0} \
+  CONFIG.CLKOUT7_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT7_PHASE_ERROR {0.0} \
+  CONFIG.CLKOUT7_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT7_REQUESTED_OUT_FREQ {100.000} \
+  CONFIG.CLKOUT7_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT7_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT7_USED {false} \
+  CONFIG.CLKOUTPHY_REQUESTED_FREQ {600.000} \
+  CONFIG.CLK_IN1_BOARD_INTERFACE {Custom} \
+  CONFIG.CLK_IN1_D.BOARD.ASSOCIATED_PARAM {CLK_IN1_BOARD_INTERFACE} \
+  CONFIG.CLK_IN1_D.CAN_DEBUG {false} \
+  CONFIG.CLK_IN1_D.FREQ_HZ {100000000} \
+  CONFIG.CLK_IN2_BOARD_INTERFACE {Custom} \
+  CONFIG.CLK_IN_SEL_PORT {clk_in_sel} \
+  CONFIG.CLK_OUT1_PORT {clk_out1} \
+  CONFIG.CLK_OUT1_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT2_PORT {clk_out2} \
+  CONFIG.CLK_OUT2_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT3_PORT {clk_out3} \
+  CONFIG.CLK_OUT3_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT4_PORT {clk_out4} \
+  CONFIG.CLK_OUT4_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT5_PORT {clk_out5} \
+  CONFIG.CLK_OUT5_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT6_PORT {clk_out6} \
+  CONFIG.CLK_OUT6_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT7_PORT {clk_out7} \
+  CONFIG.CLK_OUT7_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_VALID_PORT {CLK_VALID} \
+  CONFIG.CLOCK_MGR_TYPE {auto} \
+  CONFIG.Component_Name {clk_wiz_3} \
+  CONFIG.DADDR_PORT {daddr} \
+  CONFIG.DCLK_PORT {dclk} \
+  CONFIG.DEN_PORT {den} \
+  CONFIG.DIFF_CLK_IN1_BOARD_INTERFACE {Custom} \
+  CONFIG.DIFF_CLK_IN2_BOARD_INTERFACE {Custom} \
+  CONFIG.DIN_PORT {din} \
+  CONFIG.DOUT_PORT {dout} \
+  CONFIG.DRDY_PORT {drdy} \
+  CONFIG.DWE_PORT {dwe} \
+  CONFIG.ENABLE_CDDC {false} \
+  CONFIG.ENABLE_CLKOUTPHY {false} \
+  CONFIG.ENABLE_CLOCK_MONITOR {false} \
+  CONFIG.ENABLE_USER_CLOCK0 {false} \
+  CONFIG.ENABLE_USER_CLOCK1 {false} \
+  CONFIG.ENABLE_USER_CLOCK2 {false} \
+  CONFIG.ENABLE_USER_CLOCK3 {false} \
+  CONFIG.Enable_PLL0 {false} \
+  CONFIG.Enable_PLL1 {false} \
+  CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
+  CONFIG.INPUT_CLK_STOPPED_PORT {input_clk_stopped} \
+  CONFIG.INPUT_MODE {frequency} \
+  CONFIG.INTERFACE_SELECTION {Enable_AXI} \
+  CONFIG.IN_FREQ_UNITS {Units_MHz} \
+  CONFIG.IN_JITTER_UNITS {Units_UI} \
+  CONFIG.JITTER_OPTIONS {UI} \
+  CONFIG.JITTER_SEL {Min_O_Jitter} \
+  CONFIG.LOCKED_PORT {locked} \
+  CONFIG.MMCM_BANDWIDTH {HIGH} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {32.000} \
+  CONFIG.MMCM_CLKFBOUT_PHASE {0.000} \
+  CONFIG.MMCM_CLKFBOUT_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKIN1_PERIOD {5.000} \
+  CONFIG.MMCM_CLKIN2_PERIOD {10.000} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {2.000} \
+  CONFIG.MMCM_CLKOUT0_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT0_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT0_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {8} \
+  CONFIG.MMCM_CLKOUT1_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT1_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT1_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT2_DIVIDE {32} \
+  CONFIG.MMCM_CLKOUT2_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT2_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT2_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT3_DIVIDE {3} \
+  CONFIG.MMCM_CLKOUT3_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT3_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT3_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT4_CASCADE {false} \
+  CONFIG.MMCM_CLKOUT4_DIVIDE {1} \
+  CONFIG.MMCM_CLKOUT4_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT4_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT4_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT5_DIVIDE {1} \
+  CONFIG.MMCM_CLKOUT5_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT5_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT5_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT6_DIVIDE {1} \
+  CONFIG.MMCM_CLKOUT6_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT6_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT6_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLOCK_HOLD {false} \
+  CONFIG.MMCM_COMPENSATION {ZHOLD} \
+  CONFIG.MMCM_DIVCLK_DIVIDE {5} \
+  CONFIG.MMCM_NOTES {None} \
+  CONFIG.MMCM_REF_JITTER1 {0.010} \
+  CONFIG.MMCM_REF_JITTER2 {0.010} \
+  CONFIG.MMCM_STARTUP_WAIT {false} \
+  CONFIG.NUM_OUT_CLKS {3} \
+  CONFIG.OVERRIDE_MMCM {true} \
+  CONFIG.OVERRIDE_PLL {false} \
+  CONFIG.PHASESHIFT_MODE {WAVEFORM} \
+  CONFIG.PHASE_DUTY_CONFIG {false} \
+  CONFIG.PLATFORM {UNKNOWN} \
+  CONFIG.PLL_BANDWIDTH {OPTIMIZED} \
+  CONFIG.PLL_CLKFBOUT_MULT {4} \
+  CONFIG.PLL_CLKFBOUT_PHASE {0.000} \
+  CONFIG.PLL_CLKIN_PERIOD {10.000} \
+  CONFIG.PLL_CLKOUT0_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT0_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT0_PHASE {0.000} \
+  CONFIG.PLL_CLKOUT1_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT1_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT1_PHASE {0.000} \
+  CONFIG.PLL_CLKOUT2_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT2_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT2_PHASE {0.000} \
+  CONFIG.PLL_CLKOUT3_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT3_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT3_PHASE {0.000} \
+  CONFIG.PLL_CLKOUT4_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT4_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT4_PHASE {0.000} \
+  CONFIG.PLL_CLKOUT5_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT5_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT5_PHASE {0.000} \
+  CONFIG.PLL_CLK_FEEDBACK {CLKFBOUT} \
+  CONFIG.PLL_COMPENSATION {SYSTEM_SYNCHRONOUS} \
+  CONFIG.PLL_DIVCLK_DIVIDE {1} \
+  CONFIG.PLL_NOTES {None} \
+  CONFIG.PLL_REF_JITTER {0.010} \
+  CONFIG.POWER_DOWN_PORT {power_down} \
+  CONFIG.PRECISION {1} \
+  CONFIG.PRIMARY_PORT {clk_in1} \
+  CONFIG.PRIMITIVE {MMCM} \
+  CONFIG.PRIMTYPE_SEL {mmcm_adv} \
+  CONFIG.PRIM_IN_FREQ {200.000} \
+  CONFIG.PRIM_IN_JITTER {0.010} \
+  CONFIG.PRIM_IN_TIMEPERIOD {10.000} \
+  CONFIG.PRIM_SOURCE {Differential_clock_capable_pin} \
+  CONFIG.PSCLK_PORT {psclk} \
+  CONFIG.PSDONE_PORT {psdone} \
+  CONFIG.PSEN_PORT {psen} \
+  CONFIG.PSINCDEC_PORT {psincdec} \
+  CONFIG.REF_CLK_FREQ {100.0} \
+  CONFIG.RELATIVE_INCLK {REL_PRIMARY} \
+  CONFIG.RESET_BOARD_INTERFACE {Custom} \
+  CONFIG.RESET_PORT {reset} \
+  CONFIG.RESET_TYPE {ACTIVE_HIGH} \
+  CONFIG.SECONDARY_IN_FREQ {100.000} \
+  CONFIG.SECONDARY_IN_JITTER {0.010} \
+  CONFIG.SECONDARY_IN_TIMEPERIOD {10.000} \
+  CONFIG.SECONDARY_PORT {clk_in2} \
+  CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} \
+  CONFIG.SS_MODE {CENTER_HIGH} \
+  CONFIG.SS_MOD_FREQ {250} \
+  CONFIG.SS_MOD_TIME {0.004} \
+  CONFIG.STATUS_PORT {STATUS} \
+  CONFIG.SUMMARY_STRINGS {empty} \
+  CONFIG.USER_CLK_FREQ0 {100.0} \
+  CONFIG.USER_CLK_FREQ1 {100.0} \
+  CONFIG.USER_CLK_FREQ2 {100.0} \
+  CONFIG.USER_CLK_FREQ3 {100.0} \
+  CONFIG.USE_BOARD_FLOW {false} \
+  CONFIG.USE_CLKFB_STOPPED {false} \
+  CONFIG.USE_CLK_VALID {false} \
+  CONFIG.USE_CLOCK_SEQUENCING {false} \
+  CONFIG.USE_DYN_PHASE_SHIFT {false} \
+  CONFIG.USE_DYN_RECONFIG {false} \
+  CONFIG.USE_FREEZE {false} \
+  CONFIG.USE_FREQ_SYNTH {true} \
+  CONFIG.USE_INCLK_STOPPED {false} \
+  CONFIG.USE_INCLK_SWITCHOVER {false} \
+  CONFIG.USE_LOCKED {true} \
+  CONFIG.USE_MAX_I_JITTER {false} \
+  CONFIG.USE_MIN_O_JITTER {false} \
+  CONFIG.USE_MIN_POWER {false} \
+  CONFIG.USE_PHASE_ALIGNMENT {true} \
+  CONFIG.USE_POWER_DOWN {false} \
+  CONFIG.USE_RESET {true} \
+  CONFIG.USE_SAFE_CLOCK_STARTUP {false} \
+  CONFIG.USE_SPREAD_SPECTRUM {false} \
+  CONFIG.USE_STATUS {false} \
+  CONFIG.reset.BOARD.ASSOCIATED_PARAM {RESET_BOARD_INTERFACE} \
+  CONFIG.reset.POLARITY {ACTIVE_HIGH} " [get_ips clk_wiz_3]
+
+

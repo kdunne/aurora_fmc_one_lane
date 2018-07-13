@@ -1,0 +1,2389 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Jul 11 16:08:57 2018
+# Process ID: 20902
+# Current directory: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1
+# Command line: vivado -log aurora_8_pair_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source aurora_8_pair_top.tcl
+# Log file: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/aurora_8_pair_top.vds
+# Journal file: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source aurora_8_pair_top.tcl -notrace
+Command: synth_design -top aurora_8_pair_top -part xc7vx485tffg1761-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 20911 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1436.562 ; gain = 83.988 ; free physical = 3815 ; free virtual = 14718
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'aurora_8_pair_top' [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:6]
+	Parameter num_lanes bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'fmc_one_lane' [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_fmc_one_lane_top.sv:8]
+	Parameter ber_char bound to: 64'b1011000010110101110000001100101011000000000110101100101011111110 
+INFO: [Synth 8-638] synthesizing module 'scrambler' [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/scrambler.v:5]
+	Parameter TX_DATA_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'scrambler' (1#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/scrambler.v:5]
+INFO: [Synth 8-638] synthesizing module 'gearbox66to32' [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/gearbox_66_to_32.sv:1]
+WARNING: [Synth 8-6014] Unused sequential element cnt_dly_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/gearbox_66_to_32.sv:22]
+WARNING: [Synth 8-6014] Unused sequential element delay_cnt_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/gearbox_66_to_32.sv:24]
+INFO: [Synth 8-256] done synthesizing module 'gearbox66to32' (2#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/gearbox_66_to_32.sv:1]
+INFO: [Synth 8-638] synthesizing module 'cmd_oserdes' [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/realtime/cmd_oserdes_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'cmd_oserdes' (3#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/realtime/cmd_oserdes_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'serdes_1_to_468_idelay_ddr' [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/serdes_1_to_468_idelay_ddr.v:60]
+	Parameter S bound to: 8 - type: integer 
+	Parameter D bound to: 1 - type: integer 
+	Parameter REF_FREQ bound to: 400.000000 - type: float 
+	Parameter HIGH_PERFORMANCE_MODE bound to: TRUE - type: string 
+	Parameter CLKIN_PERIOD bound to: 6.664000 - type: float 
+	Parameter DATA_FORMAT bound to: PER_CLOCK - type: string 
+	Parameter RX_SWAP_MASK bound to: 1'b0 
+INFO: [Synth 8-638] synthesizing module 'delay_controller_wrap' [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/delay_controller_wrap.v:58]
+	Parameter S bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'delay_controller_wrap' (4#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/delay_controller_wrap.v:58]
+INFO: [Synth 8-638] synthesizing module 'IBUFDS_DIFF_OUT' [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:19536]
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUFDS_DIFF_OUT' (5#1) [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:19536]
+INFO: [Synth 8-638] synthesizing module 'IDELAYE2' [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:21517]
+	Parameter CINVCTRL_SEL bound to: FALSE - type: string 
+	Parameter DELAY_SRC bound to: IDATAIN - type: string 
+	Parameter HIGH_PERFORMANCE_MODE bound to: TRUE - type: string 
+	Parameter IDELAY_TYPE bound to: VAR_LOAD - type: string 
+	Parameter IDELAY_VALUE bound to: 0 - type: integer 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_DATAIN_INVERTED bound to: 1'b0 
+	Parameter IS_IDATAIN_INVERTED bound to: 1'b0 
+	Parameter PIPE_SEL bound to: FALSE - type: string 
+	Parameter REFCLK_FREQUENCY bound to: 400.000000 - type: float 
+	Parameter SIGNAL_PATTERN bound to: DATA - type: string 
+	Parameter SIM_DELAY_D bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'IDELAYE2' (6#1) [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:21517]
+INFO: [Synth 8-638] synthesizing module 'ISERDESE2' [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:25007]
+	Parameter DATA_RATE bound to: DDR - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: IFD - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 1 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'ISERDESE2' (7#1) [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:25007]
+WARNING: [Synth 8-6014] Unused sequential element rx_lckd_intd4_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/serdes_1_to_468_idelay_ddr.v:288]
+WARNING: [Synth 8-6014] Unused sequential element not_rx_lckd_intd4_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/serdes_1_to_468_idelay_ddr.v:289]
+WARNING: [Synth 8-3848] Net rxclk in module/entity serdes_1_to_468_idelay_ddr does not have driver. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/serdes_1_to_468_idelay_ddr.v:79]
+WARNING: [Synth 8-3848] Net system_clk in module/entity serdes_1_to_468_idelay_ddr does not have driver. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/serdes_1_to_468_idelay_ddr.v:80]
+WARNING: [Synth 8-3848] Net cdataout in module/entity serdes_1_to_468_idelay_ddr does not have driver. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/serdes_1_to_468_idelay_ddr.v:96]
+INFO: [Synth 8-256] done synthesizing module 'serdes_1_to_468_idelay_ddr' (8#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/serdes_1_to_468_idelay_ddr.v:60]
+INFO: [Synth 8-638] synthesizing module 'IDELAYCTRL' [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:21504]
+	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IDELAYCTRL' (9#1) [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:21504]
+INFO: [Synth 8-638] synthesizing module 'gearbox32to66' [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/gearbox_32_to_66.v:3]
+WARNING: [Synth 8-3936] Found unconnected internal register 'rotate_reg' and it is trimmed from '128' to '66' bits. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/gearbox_32_to_66.v:88]
+INFO: [Synth 8-256] done synthesizing module 'gearbox32to66' (10#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/gearbox_32_to_66.v:3]
+INFO: [Synth 8-638] synthesizing module 'descrambler' [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/descrambler.v:5]
+	Parameter RX_DATA_WIDTH bound to: 64 - type: integer 
+WARNING: [Synth 8-3936] Found unconnected internal register 'poly_reg' and it is trimmed from '122' to '58' bits. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/descrambler.v:49]
+INFO: [Synth 8-256] done synthesizing module 'descrambler' (11#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/descrambler.v:5]
+INFO: [Synth 8-638] synthesizing module 'block_sync' [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/block_sync.v:5]
+	Parameter SH_CNT_MAX bound to: 16'b0000001111101000 
+	Parameter SH_INVALID_CNT_MAX bound to: 10'b0000010000 
+	Parameter BEGIN_R_ST bound to: 6'b100000 
+	Parameter TEST_SH_ST bound to: 6'b010000 
+	Parameter SH_VALID_ST bound to: 6'b001000 
+	Parameter SH_INVALID_ST bound to: 6'b000100 
+	Parameter SLIP_R_ST bound to: 6'b000010 
+	Parameter SYNC_DONE_R_ST bound to: 6'b000001 
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/block_sync.v:37]
+INFO: [Synth 8-256] done synthesizing module 'block_sync' (12#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/block_sync.v:5]
+INFO: [Synth 8-638] synthesizing module 'bitslip_fsm' [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/bitslip_fsm.sv:14]
+INFO: [Synth 8-256] done synthesizing module 'bitslip_fsm' (13#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/bitslip_fsm.sv:14]
+INFO: [Synth 8-638] synthesizing module 'ber' [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/ber.sv:17]
+	Parameter ber_char bound to: 64'b1011000010110101110000001100101011000000000110101100101011111110 
+	Parameter cb_char bound to: 64'b1100000011111111111011100000000011000000110010101100000000011010 
+	Parameter sync_char bound to: 2'b01 
+INFO: [Synth 8-638] synthesizing module 'ber_scrambler' [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/ber_scrambler.v:13]
+	Parameter TX_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter cb_char bound to: 64'b1100000011111111111011100000000011000000110010101100000000011010 
+WARNING: [Synth 8-3936] Found unconnected internal register 'poly_reg' and it is trimmed from '122' to '64' bits. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/ber_scrambler.v:45]
+INFO: [Synth 8-256] done synthesizing module 'ber_scrambler' (14#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/ber_scrambler.v:13]
+INFO: [Synth 8-256] done synthesizing module 'ber' (15#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/ber.sv:17]
+INFO: [Synth 8-638] synthesizing module 'lcd' [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:44]
+INFO: [Synth 8-226] default block is never used [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:313]
+INFO: [Synth 8-256] done synthesizing module 'lcd' (16#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:44]
+WARNING: [Synth 8-689] width (64) of port connection 'inv_data_cnt' does not match port width (16) of module 'lcd' [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_fmc_one_lane_top.sv:691]
+INFO: [Synth 8-256] done synthesizing module 'fmc_one_lane' (17#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_fmc_one_lane_top.sv:8]
+WARNING: [Synth 8-350] instance 'aurora_fmc_one_lane' of module 'fmc_one_lane' requires 47 connections, but only 40 given [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:317]
+WARNING: [Synth 8-350] instance 'aurora_fmc_one_lane' of module 'fmc_one_lane' requires 47 connections, but only 40 given [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:317]
+WARNING: [Synth 8-350] instance 'aurora_fmc_one_lane' of module 'fmc_one_lane' requires 47 connections, but only 40 given [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:317]
+WARNING: [Synth 8-350] instance 'aurora_fmc_one_lane' of module 'fmc_one_lane' requires 47 connections, but only 40 given [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:317]
+WARNING: [Synth 8-350] instance 'aurora_fmc_one_lane' of module 'fmc_one_lane' requires 47 connections, but only 40 given [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:317]
+WARNING: [Synth 8-350] instance 'aurora_fmc_one_lane' of module 'fmc_one_lane' requires 47 connections, but only 40 given [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:317]
+WARNING: [Synth 8-350] instance 'aurora_fmc_one_lane' of module 'fmc_one_lane' requires 47 connections, but only 40 given [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:317]
+WARNING: [Synth 8-350] instance 'aurora_fmc_one_lane' of module 'fmc_one_lane' requires 47 connections, but only 40 given [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:317]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_2' [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/realtime/clk_wiz_2_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_2' (18#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/realtime/clk_wiz_2_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (19#1) [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:370]
+INFO: [Synth 8-638] synthesizing module 'ila_1' [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/realtime/ila_1_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ila_1' (20#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/realtime/ila_1_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'vio_0' [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'vio_0' (21#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio'. This will prevent further optimization [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:406]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'pll_mid'. This will prevent further optimization [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:166]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_slim'. This will prevent further optimization [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:370]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'aurora_core[5].aurora_fmc_one_lane'. This will prevent further optimization [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:317]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'aurora_core[2].aurora_fmc_one_lane'. This will prevent further optimization [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:317]
+INFO: [Synth 8-256] done synthesizing module 'aurora_8_pair_top' (22#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:6]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[63]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[62]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[61]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[60]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[59]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[58]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[57]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[56]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[55]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[54]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[53]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[52]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[51]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[50]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[49]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[48]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[47]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[46]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[45]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[44]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[43]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[42]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[41]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[40]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[39]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[38]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[37]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[36]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[35]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[34]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[33]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[32]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[31]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[30]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[29]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[28]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[27]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[26]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[25]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[24]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[23]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[22]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[21]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[20]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[19]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[18]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[17]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[16]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[15]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[14]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[13]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[12]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[11]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[10]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[9]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[8]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[7]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[6]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[5]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[4]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[3]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[2]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[1]
+WARNING: [Synth 8-3331] design ber_scrambler has unconnected port data_in_rx_uns[0]
+WARNING: [Synth 8-3331] design ber has unconnected port data66_gb_rx[65]
+WARNING: [Synth 8-3331] design ber has unconnected port data66_gb_rx[64]
+WARNING: [Synth 8-3331] design serdes_1_to_468_idelay_ddr has unconnected port rxclk
+WARNING: [Synth 8-3331] design serdes_1_to_468_idelay_ddr has unconnected port system_clk
+WARNING: [Synth 8-3331] design fmc_one_lane has unconnected port clk400
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1503.102 ; gain = 150.527 ; free physical = 3799 ; free virtual = 14703
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1503.102 ; gain = 150.527 ; free physical = 3807 ; free virtual = 14711
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 40 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7vx485tffg1761-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc] for cell 'aurora_core[0].aurora_fmc_one_lane/piso0_1280'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc] for cell 'aurora_core[0].aurora_fmc_one_lane/piso0_1280'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc] for cell 'aurora_core[1].aurora_fmc_one_lane/piso0_1280'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc] for cell 'aurora_core[1].aurora_fmc_one_lane/piso0_1280'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc] for cell 'aurora_core[2].aurora_fmc_one_lane/piso0_1280'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc] for cell 'aurora_core[2].aurora_fmc_one_lane/piso0_1280'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc] for cell 'aurora_core[3].aurora_fmc_one_lane/piso0_1280'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc] for cell 'aurora_core[3].aurora_fmc_one_lane/piso0_1280'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc] for cell 'aurora_core[4].aurora_fmc_one_lane/piso0_1280'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc] for cell 'aurora_core[4].aurora_fmc_one_lane/piso0_1280'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc] for cell 'aurora_core[5].aurora_fmc_one_lane/piso0_1280'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc] for cell 'aurora_core[5].aurora_fmc_one_lane/piso0_1280'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc] for cell 'aurora_core[6].aurora_fmc_one_lane/piso0_1280'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc] for cell 'aurora_core[6].aurora_fmc_one_lane/piso0_1280'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc] for cell 'aurora_core[7].aurora_fmc_one_lane/piso0_1280'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc] for cell 'aurora_core[7].aurora_fmc_one_lane/piso0_1280'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp5/vio_0_in_context.xdc] for cell 'vio'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp5/vio_0_in_context.xdc] for cell 'vio'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp6/ila_1_in_context.xdc] for cell 'ila_slim'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp6/ila_1_in_context.xdc] for cell 'ila_slim'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp7/clk_wiz_2_in_context.xdc] for cell 'pll_mid'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp7/clk_wiz_2_in_context.xdc] for cell 'pll_mid'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc]
+WARNING: [Constraints 18-619] A clock with name 'sysclk_in_p' already exists, overwriting the previous clock with the same name. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc:2]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/aurora_8_pair_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/aurora_8_pair_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  IBUFDS_DIFF_OUT => IBUFDS_DIFF_OUT (IBUFDS, IBUFDS): 8 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2126.941 ; gain = 0.004 ; free physical = 3374 ; free virtual = 14278
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'aurora_core[0].aurora_fmc_one_lane/piso0_1280' at clock pin 'clk_in' is different from the actual clock period '6.250', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'aurora_core[1].aurora_fmc_one_lane/piso0_1280' at clock pin 'clk_in' is different from the actual clock period '6.250', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'aurora_core[2].aurora_fmc_one_lane/piso0_1280' at clock pin 'clk_in' is different from the actual clock period '6.250', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'aurora_core[3].aurora_fmc_one_lane/piso0_1280' at clock pin 'clk_in' is different from the actual clock period '6.250', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'aurora_core[4].aurora_fmc_one_lane/piso0_1280' at clock pin 'clk_in' is different from the actual clock period '6.250', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'aurora_core[5].aurora_fmc_one_lane/piso0_1280' at clock pin 'clk_in' is different from the actual clock period '6.250', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'aurora_core[6].aurora_fmc_one_lane/piso0_1280' at clock pin 'clk_in' is different from the actual clock period '6.250', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'aurora_core[7].aurora_fmc_one_lane/piso0_1280' at clock pin 'clk_in' is different from the actual clock period '6.250', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:45 ; elapsed = 00:02:13 . Memory (MB): peak = 2127.941 ; gain = 775.367 ; free physical = 3581 ; free virtual = 14485
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1761-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:45 ; elapsed = 00:02:13 . Memory (MB): peak = 2127.941 ; gain = 775.367 ; free physical = 3581 ; free virtual = 14485
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for data_out_n[0]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for data_out_n[0]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for data_out_p[0]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for data_out_p[0]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for data_out_n[1]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for data_out_n[1]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for data_out_p[1]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for data_out_p[1]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for data_out_n[2]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for data_out_n[2]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for data_out_p[2]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for data_out_p[2]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for data_out_n[3]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for data_out_n[3]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for data_out_p[3]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for data_out_p[3]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for data_out_n[4]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for data_out_n[4]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for data_out_p[4]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for data_out_p[4]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for data_out_n[5]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for data_out_n[5]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for data_out_p[5]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for data_out_p[5]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for data_out_n[6]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for data_out_n[6]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for data_out_p[6]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for data_out_p[6]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for data_out_n[7]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for data_out_n[7]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for data_out_p[7]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for data_out_p[7]. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp4/cmd_oserdes_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for sysclk_in_n. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp7/clk_wiz_2_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sysclk_in_n. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp7/clk_wiz_2_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for sysclk_in_p. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp7/clk_wiz_2_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sysclk_in_p. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/.Xil/Vivado-20902-dhcp-130-148.ucsc.edu/dcp7/clk_wiz_2_in_context.xdc, line 10).
+Applied set_property DONT_TOUCH = true for \aurora_core[0].aurora_fmc_one_lane /piso0_1280. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \aurora_core[1].aurora_fmc_one_lane /piso0_1280. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \aurora_core[2].aurora_fmc_one_lane /piso0_1280. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \aurora_core[3].aurora_fmc_one_lane /piso0_1280. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \aurora_core[4].aurora_fmc_one_lane /piso0_1280. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \aurora_core[5].aurora_fmc_one_lane /piso0_1280. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \aurora_core[6].aurora_fmc_one_lane /piso0_1280. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \aurora_core[7].aurora_fmc_one_lane /piso0_1280. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for ila_slim. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for pll_mid. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vio. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:02:14 . Memory (MB): peak = 2127.941 ; gain = 775.367 ; free physical = 3506 ; free virtual = 14409
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "gearbox_rdy" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/delay_controller_wrap.v:281]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/delay_controller_wrap.v:339]
+INFO: [Synth 8-5544] ROM "m_delay_val_int" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_delay_val_int" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "s_delay_val_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "data_mux" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "m_delay_mux" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_delay_mux" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "inc_run" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "eye_run" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_delay_val_eye" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "meq_min" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element pdcount_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/delay_controller_wrap.v:226]
+INFO: [Synth 8-5544] ROM "m_delay_val_int" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_delay_val_int" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "s_delay_val_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "data_mux" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "m_delay_mux" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_delay_mux" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "inc_run" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "eye_run" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "s_delay_val_eye" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "meq_min" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "m_delay_1hot" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "msxor_cti" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "msxor_ctd" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "msxor_ctix" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "msxor_ctdx" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "action" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "match" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "match" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/serdes_1_to_468_idelay_ddr.v:314]
+INFO: [Synth 8-5546] ROM "initial_delay" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rst_iserdes" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clk_iserdes_data_d" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element c_sweep_delay_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/serdes_1_to_468_idelay_ddr.v:125]
+WARNING: [Synth 8-6014] Unused sequential element state2_count_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/serdes_1_to_468_idelay_ddr.v:351]
+INFO: [Synth 8-5546] ROM "initial_delay" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rst_iserdes" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clk_iserdes_data_d" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gearbox_rdy" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gearbox_rdy" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element sync_header_invalid_count_i_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/block_sync.v:177]
+INFO: [Synth 8-802] inferred FSM for state register 'bitslip_state_reg' in module 'bitslip_fsm'
+INFO: [Synth 8-5544] ROM "gearbox_slip" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "bitslip_state_next" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "bitslip_state_next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "bitslip_state_next" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'istate_reg' in module 'lcd'
+INFO: [Synth 8-802] inferred FSM for state register 'dstate_reg' in module 'lcd'
+INFO: [Synth 8-5545] ROM "digit0_r" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "timer_40us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_100us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_4100us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_15ms" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_1640us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_selnibble" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_txdone" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_txdone" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "byte" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element digit4_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:884]
+WARNING: [Synth 8-6014] Unused sequential element digit_cnt_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:879]
+INFO: [Synth 8-5545] ROM "digit0_r" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "timer_40us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_100us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_4100us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_15ms" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_1640us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_selnibble" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_txdone" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_txdone" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "byte" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'sync_reg[1][1:0]' into 'sync_reg[0][1:0]' [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:101]
+INFO: [Synth 8-4471] merging register 'sync_reg[2][1:0]' into 'sync_reg[0][1:0]' [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:101]
+INFO: [Synth 8-4471] merging register 'sync_reg[3][1:0]' into 'sync_reg[0][1:0]' [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:101]
+INFO: [Synth 8-4471] merging register 'sync_reg[4][1:0]' into 'sync_reg[0][1:0]' [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:101]
+INFO: [Synth 8-4471] merging register 'sync_reg[6][1:0]' into 'sync_reg[0][1:0]' [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:101]
+INFO: [Synth 8-4471] merging register 'sync_reg[7][1:0]' into 'sync_reg[0][1:0]' [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:101]
+WARNING: [Synth 8-6014] Unused sequential element sync_reg[1] was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:101]
+WARNING: [Synth 8-6014] Unused sequential element sync_reg[2] was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:101]
+WARNING: [Synth 8-6014] Unused sequential element sync_reg[3] was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:101]
+WARNING: [Synth 8-6014] Unused sequential element sync_reg[4] was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:101]
+WARNING: [Synth 8-6014] Unused sequential element sync_reg[6] was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:101]
+WARNING: [Synth 8-6014] Unused sequential element sync_reg[7] was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_8_pair_top.sv:101]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 | 00000000000000000000000000000000
+           SYNC_FINISHED |                               01 | 00000000000000000000000000000011
+               BOTH_SLIP |                               10 | 00000000000000000000000000000010
+            ISERDES_SLIP |                               11 | 00000000000000000000000000000001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'bitslip_state_reg' using encoding 'sequential' in module 'bitslip_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   didle |                            00000 |                            00000
+       set_start_address |                            00001 |                            00001
+            write_data_i |                            00010 |                            00010
+            write_data_n |                            00011 |                            00011
+            write_data_v |                            00100 |                            00100
+            write_data_a |                            00101 |                            00101
+            write_data_l |                            00110 |                            00110
+      write_data_lower_i |                            00111 |                            00111
+            write_data_d |                            01000 |                            01000
+        write_data_space |                            01001 |                            01001
+      write_data_upper_d |                            01010 |                            01010
+     write_data_second_a |                            01011 |                            01011
+            write_data_t |                            01100 |                            01100
+      write_data_third_a |                            01101 |                            01101
+           address_digit |                            01110 |                            01110
+            write_digit4 |                            01111 |                            01111
+            write_digit3 |                            10000 |                            10000
+            write_digit2 |                            10001 |                            10001
+            write_digit1 |                            10010 |                            10010
+            write_digit0 |                            10011 |                            10011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'dstate_reg' using encoding 'sequential' in module 'lcd'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               istep_one |                             0000 |                             0000
+               istep_two |                             0001 |                             0001
+             istep_three |                             0010 |                             0010
+              istep_four |                             0011 |                             0011
+              istep_five |                             0100 |                             0100
+               istep_six |                             0101 |                             0101
+             istep_seven |                             0110 |                             0110
+             istep_eight |                             0111 |                             0111
+              istep_nine |                             1000 |                             1000
+            function_set |                             1001 |                             1001
+              entry_mode |                             1010 |                             1010
+         control_display |                             1011 |                             1011
+           clear_display |                             1100 |                             1100
+               init_done |                             1101 |                             1101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'istate_reg' using encoding 'sequential' in module 'lcd'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:48 ; elapsed = 00:02:16 . Memory (MB): peak = 2127.941 ; gain = 775.367 ; free physical = 3562 ; free virtual = 14466
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |serdes_1_to_468_idelay_ddr__GC0 |           1|      3706|
+|2     |fmc_one_lane__xdcDup__1__GC0    |           1|     13446|
+|3     |fmc_one_lane__xdcDup__2__GC0    |           1|     13446|
+|4     |fmc_one_lane__xdcDup__3__GC0    |           1|     13446|
+|5     |fmc_one_lane__xdcDup__4__GC0    |           1|     13446|
+|6     |fmc_one_lane__xdcDup__5__GC0    |           1|     13446|
+|7     |fmc_one_lane__xdcDup__6__GC0    |           1|     13446|
+|8     |fmc_one_lane__xdcDup__7__GC0    |           1|     13446|
+|9     |fmc_one_lane__GC0               |           1|     13446|
+|10    |aurora_8_pair_top__GC0          |           1|      3310|
++------+--------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	  65 Input     64 Bit       Adders := 8     
+	   2 Input     64 Bit       Adders := 8     
+	   2 Input     32 Bit       Adders := 8     
+	   2 Input     26 Bit       Adders := 8     
+	   2 Input     20 Bit       Adders := 8     
+	   2 Input     16 Bit       Adders := 8     
+	   2 Input     12 Bit       Adders := 8     
+	   2 Input     10 Bit       Adders := 8     
+	   2 Input      8 Bit       Adders := 24    
+	   2 Input      6 Bit       Adders := 16    
+	   2 Input      5 Bit       Adders := 48    
+	   3 Input      5 Bit       Adders := 16    
+	   2 Input      4 Bit       Adders := 56    
+	   2 Input      3 Bit       Adders := 24    
+	   2 Input      2 Bit       Adders := 24    
++---XORs : 
+	   3 Input      1 Bit         XORs := 1536  
++---Registers : 
+	              132 Bit    Registers := 8     
+	              128 Bit    Registers := 8     
+	              122 Bit    Registers := 8     
+	              100 Bit    Registers := 8     
+	               66 Bit    Registers := 8     
+	               64 Bit    Registers := 32    
+	               58 Bit    Registers := 16    
+	               32 Bit    Registers := 64    
+	               26 Bit    Registers := 8     
+	               20 Bit    Registers := 8     
+	               16 Bit    Registers := 24    
+	               12 Bit    Registers := 8     
+	               10 Bit    Registers := 8     
+	                8 Bit    Registers := 80    
+	                6 Bit    Registers := 16    
+	                5 Bit    Registers := 56    
+	                4 Bit    Registers := 96    
+	                3 Bit    Registers := 8     
+	                2 Bit    Registers := 82    
+	                1 Bit    Registers := 304   
++---Muxes : 
+	   4 Input    132 Bit        Muxes := 8     
+	   2 Input    132 Bit        Muxes := 16    
+	   5 Input    128 Bit        Muxes := 8     
+	   2 Input    128 Bit        Muxes := 8     
+	   2 Input     64 Bit        Muxes := 42    
+	   2 Input     58 Bit        Muxes := 8     
+	   2 Input     32 Bit        Muxes := 32    
+	  68 Input     32 Bit        Muxes := 8     
+	   2 Input     26 Bit        Muxes := 8     
+	   2 Input     20 Bit        Muxes := 40    
+	   6 Input     20 Bit        Muxes := 8     
+	   2 Input     12 Bit        Muxes := 16    
+	   4 Input     12 Bit        Muxes := 8     
+	   3 Input      8 Bit        Muxes := 16    
+	   2 Input      8 Bit        Muxes := 56    
+	   4 Input      8 Bit        Muxes := 8     
+	  20 Input      8 Bit        Muxes := 8     
+	   2 Input      6 Bit        Muxes := 8     
+	   7 Input      6 Bit        Muxes := 8     
+	   2 Input      5 Bit        Muxes := 88    
+	   3 Input      5 Bit        Muxes := 8     
+	  22 Input      5 Bit        Muxes := 8     
+	  20 Input      5 Bit        Muxes := 8     
+	   2 Input      4 Bit        Muxes := 96    
+	   3 Input      4 Bit        Muxes := 8     
+	   5 Input      4 Bit        Muxes := 8     
+	   6 Input      4 Bit        Muxes := 8     
+	  14 Input      4 Bit        Muxes := 8     
+	  12 Input      2 Bit        Muxes := 32    
+	   3 Input      2 Bit        Muxes := 17    
+	   2 Input      2 Bit        Muxes := 10    
+	   9 Input      2 Bit        Muxes := 8     
+	   2 Input      1 Bit        Muxes := 592   
+	   3 Input      1 Bit        Muxes := 96    
+	   6 Input      1 Bit        Muxes := 112   
+	   5 Input      1 Bit        Muxes := 16    
+	   4 Input      1 Bit        Muxes := 120   
+	   7 Input      1 Bit        Muxes := 24    
+	  20 Input      1 Bit        Muxes := 24    
+	  14 Input      1 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module aurora_8_pair_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 8     
++---Registers : 
+	               64 Bit    Registers := 8     
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 18    
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+Module delay_controller_wrap 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 4     
+	   3 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 7     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 4     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 10    
+	   3 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	  12 Input      2 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 16    
+	   3 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 8     
+	   5 Input      1 Bit        Muxes := 1     
+Module serdes_1_to_468_idelay_ddr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
+	   3 Input      5 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	  22 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 13    
+	   3 Input      1 Bit        Muxes := 2     
+Module scrambler__8 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	              122 Bit    Registers := 1     
+Module gearbox66to32__8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	              132 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input    132 Bit        Muxes := 1     
+	   2 Input    132 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	  68 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module gearbox32to66__8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               66 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   5 Input    128 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module descrambler__8 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	               64 Bit    Registers := 1     
+	               58 Bit    Registers := 1     
+Module block_sync__8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	              100 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 3     
+Module bitslip_fsm__8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 3     
+	   9 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 6     
+Module ber_scrambler__8 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	               58 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ber__8 
+Detailed RTL Component Info : 
++---Adders : 
+	  65 Input     64 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module lcd__8 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 5     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 10    
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 5     
+	   6 Input     20 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 2     
+	   4 Input     12 Bit        Muxes := 1     
+	  20 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   7 Input      6 Bit        Muxes := 1     
+	  20 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
+	   5 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 29    
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 6     
+	  20 Input      1 Bit        Muxes := 3     
+	  14 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 6     
+Module fmc_one_lane__xdcDup__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module scrambler__9 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	              122 Bit    Registers := 1     
+Module gearbox66to32__9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	              132 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input    132 Bit        Muxes := 1     
+	   2 Input    132 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	  68 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module gearbox32to66__9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               66 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   5 Input    128 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module descrambler__9 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	               64 Bit    Registers := 1     
+	               58 Bit    Registers := 1     
+Module block_sync__9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	              100 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 3     
+Module bitslip_fsm__9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 3     
+	   9 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 6     
+Module ber_scrambler__9 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	               58 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ber__9 
+Detailed RTL Component Info : 
++---Adders : 
+	  65 Input     64 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module lcd__9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 5     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 10    
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 5     
+	   6 Input     20 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 2     
+	   4 Input     12 Bit        Muxes := 1     
+	  20 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   7 Input      6 Bit        Muxes := 1     
+	  20 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
+	   5 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 29    
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 6     
+	  20 Input      1 Bit        Muxes := 3     
+	  14 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 6     
+Module fmc_one_lane__xdcDup__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module scrambler__10 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	              122 Bit    Registers := 1     
+Module gearbox66to32__10 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	              132 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input    132 Bit        Muxes := 1     
+	   2 Input    132 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	  68 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module gearbox32to66__10 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               66 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   5 Input    128 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module descrambler__10 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	               64 Bit    Registers := 1     
+	               58 Bit    Registers := 1     
+Module block_sync__10 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	              100 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 3     
+Module bitslip_fsm__10 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 3     
+	   9 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 6     
+Module ber_scrambler__10 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	               58 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ber__10 
+Detailed RTL Component Info : 
++---Adders : 
+	  65 Input     64 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module lcd__10 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 5     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 10    
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 5     
+	   6 Input     20 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 2     
+	   4 Input     12 Bit        Muxes := 1     
+	  20 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   7 Input      6 Bit        Muxes := 1     
+	  20 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
+	   5 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 29    
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 6     
+	  20 Input      1 Bit        Muxes := 3     
+	  14 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 6     
+Module fmc_one_lane__xdcDup__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module scrambler__11 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	              122 Bit    Registers := 1     
+Module gearbox66to32__11 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	              132 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input    132 Bit        Muxes := 1     
+	   2 Input    132 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	  68 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module gearbox32to66__11 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               66 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   5 Input    128 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module descrambler__11 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	               64 Bit    Registers := 1     
+	               58 Bit    Registers := 1     
+Module block_sync__11 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	              100 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 3     
+Module bitslip_fsm__11 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 3     
+	   9 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 6     
+Module ber_scrambler__11 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	               58 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ber__11 
+Detailed RTL Component Info : 
++---Adders : 
+	  65 Input     64 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module lcd__11 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 5     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 10    
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 5     
+	   6 Input     20 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 2     
+	   4 Input     12 Bit        Muxes := 1     
+	  20 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   7 Input      6 Bit        Muxes := 1     
+	  20 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
+	   5 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 29    
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 6     
+	  20 Input      1 Bit        Muxes := 3     
+	  14 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 6     
+Module fmc_one_lane__xdcDup__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module scrambler__12 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	              122 Bit    Registers := 1     
+Module gearbox66to32__12 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	              132 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input    132 Bit        Muxes := 1     
+	   2 Input    132 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	  68 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module gearbox32to66__12 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               66 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   5 Input    128 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module descrambler__12 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	               64 Bit    Registers := 1     
+	               58 Bit    Registers := 1     
+Module block_sync__12 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	              100 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 3     
+Module bitslip_fsm__12 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 3     
+	   9 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 6     
+Module ber_scrambler__12 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	               58 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ber__12 
+Detailed RTL Component Info : 
++---Adders : 
+	  65 Input     64 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module lcd__12 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 5     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 10    
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 5     
+	   6 Input     20 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 2     
+	   4 Input     12 Bit        Muxes := 1     
+	  20 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   7 Input      6 Bit        Muxes := 1     
+	  20 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
+	   5 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 29    
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 6     
+	  20 Input      1 Bit        Muxes := 3     
+	  14 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 6     
+Module fmc_one_lane__xdcDup__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module scrambler__13 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	              122 Bit    Registers := 1     
+Module gearbox66to32__13 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	              132 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input    132 Bit        Muxes := 1     
+	   2 Input    132 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	  68 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module gearbox32to66__13 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               66 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   5 Input    128 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module descrambler__13 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	               64 Bit    Registers := 1     
+	               58 Bit    Registers := 1     
+Module block_sync__13 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	              100 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 3     
+Module bitslip_fsm__13 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 3     
+	   9 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 6     
+Module ber_scrambler__13 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	               58 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ber__13 
+Detailed RTL Component Info : 
++---Adders : 
+	  65 Input     64 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module lcd__13 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 5     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 10    
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 5     
+	   6 Input     20 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 2     
+	   4 Input     12 Bit        Muxes := 1     
+	  20 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   7 Input      6 Bit        Muxes := 1     
+	  20 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
+	   5 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 29    
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 6     
+	  20 Input      1 Bit        Muxes := 3     
+	  14 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 6     
+Module fmc_one_lane__xdcDup__6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module scrambler__14 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	              122 Bit    Registers := 1     
+Module gearbox66to32__14 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	              132 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input    132 Bit        Muxes := 1     
+	   2 Input    132 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	  68 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module gearbox32to66__14 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               66 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   5 Input    128 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module descrambler__14 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	               64 Bit    Registers := 1     
+	               58 Bit    Registers := 1     
+Module block_sync__14 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	              100 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 3     
+Module bitslip_fsm__14 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 3     
+	   9 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 6     
+Module ber_scrambler__14 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	               58 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ber__14 
+Detailed RTL Component Info : 
++---Adders : 
+	  65 Input     64 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module lcd__14 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 5     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 10    
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 5     
+	   6 Input     20 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 2     
+	   4 Input     12 Bit        Muxes := 1     
+	  20 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   7 Input      6 Bit        Muxes := 1     
+	  20 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
+	   5 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 29    
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 6     
+	  20 Input      1 Bit        Muxes := 3     
+	  14 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 6     
+Module fmc_one_lane__xdcDup__7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module scrambler 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	              122 Bit    Registers := 1     
+Module gearbox66to32 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	              132 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input    132 Bit        Muxes := 1     
+	   2 Input    132 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	  68 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module gearbox32to66 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               66 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   5 Input    128 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module descrambler 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	               64 Bit    Registers := 1     
+	               58 Bit    Registers := 1     
+Module block_sync 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	              100 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 3     
+Module bitslip_fsm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 3     
+	   9 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 6     
+Module ber_scrambler 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 64    
++---Registers : 
+	               58 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     58 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module ber 
+Detailed RTL Component Info : 
++---Adders : 
+	  65 Input     64 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module lcd 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 5     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 10    
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     26 Bit        Muxes := 1     
+	   2 Input     20 Bit        Muxes := 5     
+	   6 Input     20 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 2     
+	   4 Input     12 Bit        Muxes := 1     
+	  20 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   7 Input      6 Bit        Muxes := 1     
+	  20 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
+	   5 Input      4 Bit        Muxes := 1     
+	   6 Input      4 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 29    
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 6     
+	  20 Input      1 Bit        Muxes := 3     
+	  14 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 6     
+Module fmc_one_lane 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 4 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element pdcount_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/delay_controller_wrap.v:226]
+WARNING: [Synth 8-6014] Unused sequential element state2_count_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/serdes_1_to_468_idelay_ddr.v:351]
+WARNING: [Synth 8-6014] Unused sequential element c_sweep_delay_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/serdes_1_to_468_idelay_ddr.v:125]
+WARNING: [Synth 8-3331] design fmc_one_lane__xdcDup__6 has unconnected port clk400
+WARNING: [Synth 8-3331] design fmc_one_lane__xdcDup__3 has unconnected port clk400
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_12/\sync_reg[0][1] )
+INFO: [Synth 8-3886] merging instance 'serdes_1_to_468_idelay_ddr__GC0:/clk_iserdes_data_d_reg[3]' (FDE) to 'serdes_1_to_468_idelay_ddr__GC0:/clk_iserdes_data_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'serdes_1_to_468_idelay_ddr__GC0:/clk_iserdes_data_d_reg[0]' (FDE) to 'serdes_1_to_468_idelay_ddr__GC0:/clk_iserdes_data_d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'serdes_1_to_468_idelay_ddr__GC0:/clk_iserdes_data_d_reg[1]' (FDE) to 'serdes_1_to_468_idelay_ddr__GC0:/clk_iserdes_data_d_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (serdes_1_to_468_idelay_ddr__GC0:/\clk_iserdes_data_d_reg[2] )
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gearbox_rdy" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element sync_header_invalid_count_i_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/block_sync.v:177]
+INFO: [Synth 8-5544] ROM "byte" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "digit0_r" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_1640us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_15ms" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_4100us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_100us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_40us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_txdone" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_txdone" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "O330" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_selnibble" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element digit_cnt_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:879]
+WARNING: [Synth 8-6014] Unused sequential element digit4_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:884]
+WARNING: [Synth 8-3331] design ber__8 has unconnected port data66_gb_rx[65]
+WARNING: [Synth 8-3331] design ber__8 has unconnected port data66_gb_rx[64]
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[121]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[120]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[119]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[118]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[117]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[116]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[115]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[114]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[113]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[112]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[111]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[110]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[109]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[108]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[107]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[106]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[105]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[104]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[103]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[102]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[101]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[100]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[99]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[98]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[97]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[96]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[95]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[94]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[93]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[92]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[91]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[90]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[89]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[88]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[87]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[86]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[85]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[84]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[83]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[82]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[81]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[80]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[79]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[78]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[77]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[76]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[75]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[74]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[73]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[72]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[71]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[70]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[69]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[68]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[67]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[66]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[65]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[64]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[63]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[62]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[61]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[60]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[59]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[58]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[57]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[56]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[55]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[54]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[53]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[52]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[51]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[50]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[49]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[48]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[47]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[46]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[45]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[44]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[43]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[42]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[41]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[40]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[39]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[38]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[37]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[36]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[35]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[34]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[33]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[32]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[31]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[30]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[29]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[28]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[27]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[26]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[25]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[24]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[23]) is unused and will be removed from module scrambler__8.
+WARNING: [Synth 8-3332] Sequential element (scrambler_reg[22]) is unused and will be removed from module scrambler__8.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gearbox_rdy" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element sync_header_invalid_count_i_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/block_sync.v:177]
+INFO: [Synth 8-5544] ROM "byte" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "digit0_r" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_1640us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_15ms" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_4100us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_100us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_40us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_txdone" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_txdone" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "O330" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_selnibble" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element digit_cnt_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:879]
+WARNING: [Synth 8-6014] Unused sequential element digit4_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:884]
+WARNING: [Synth 8-3331] design ber__9 has unconnected port data66_gb_rx[65]
+WARNING: [Synth 8-3331] design ber__9 has unconnected port data66_gb_rx[64]
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gearbox_rdy" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element sync_header_invalid_count_i_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/block_sync.v:177]
+INFO: [Synth 8-5544] ROM "byte" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "digit0_r" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_1640us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_15ms" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_4100us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_100us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_40us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_txdone" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_txdone" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "O330" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_selnibble" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element digit_cnt_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:879]
+WARNING: [Synth 8-6014] Unused sequential element digit4_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:884]
+WARNING: [Synth 8-3331] design ber__10 has unconnected port data66_gb_rx[65]
+WARNING: [Synth 8-3331] design ber__10 has unconnected port data66_gb_rx[64]
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gearbox_rdy" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element sync_header_invalid_count_i_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/block_sync.v:177]
+INFO: [Synth 8-5544] ROM "byte" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "digit0_r" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_1640us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_15ms" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_4100us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_100us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_40us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_txdone" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_txdone" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "O330" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_selnibble" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element digit_cnt_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:879]
+WARNING: [Synth 8-6014] Unused sequential element digit4_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:884]
+WARNING: [Synth 8-3331] design ber__11 has unconnected port data66_gb_rx[65]
+WARNING: [Synth 8-3331] design ber__11 has unconnected port data66_gb_rx[64]
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gearbox_rdy" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element sync_header_invalid_count_i_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/block_sync.v:177]
+INFO: [Synth 8-5544] ROM "byte" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "digit0_r" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_1640us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_15ms" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_4100us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_100us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "timer_40us" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_txdone" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_txdone" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_enable" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "O330" won't be mapped to RAM because it is too sparse
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-6014] Unused sequential element digit_cnt_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:879]
+WARNING: [Synth 8-6014] Unused sequential element digit4_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:884]
+WARNING: [Synth 8-3331] design ber__12 has unconnected port data66_gb_rx[65]
+WARNING: [Synth 8-3331] design ber__12 has unconnected port data66_gb_rx[64]
+WARNING: [Synth 8-6014] Unused sequential element sync_header_invalid_count_i_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/block_sync.v:177]
+INFO: [Synth 8-5544] ROM "byte" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "digit0_r" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element digit_cnt_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:879]
+WARNING: [Synth 8-6014] Unused sequential element digit4_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:884]
+WARNING: [Synth 8-3331] design ber__13 has unconnected port data66_gb_rx[65]
+WARNING: [Synth 8-3331] design ber__13 has unconnected port data66_gb_rx[64]
+WARNING: [Synth 8-6014] Unused sequential element sync_header_invalid_count_i_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/block_sync.v:177]
+INFO: [Synth 8-5544] ROM "byte" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "digit0_r" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element digit_cnt_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:879]
+WARNING: [Synth 8-6014] Unused sequential element digit4_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:884]
+WARNING: [Synth 8-3331] design ber__14 has unconnected port data66_gb_rx[65]
+WARNING: [Synth 8-3331] design ber__14 has unconnected port data66_gb_rx[64]
+WARNING: [Synth 8-6014] Unused sequential element sync_header_invalid_count_i_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/block_sync.v:177]
+INFO: [Synth 8-5544] ROM "byte" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "digit0_r" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element digit_cnt_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:879]
+WARNING: [Synth 8-6014] Unused sequential element digit4_reg was removed.  [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/lcd_driver.vhd:884]
+WARNING: [Synth 8-3331] design ber has unconnected port data66_gb_rx[65]
+WARNING: [Synth 8-3331] design ber has unconnected port data66_gb_rx[64]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:05:00 . Memory (MB): peak = 2127.941 ; gain = 775.367 ; free physical = 866 ; free virtual = 11763
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |serdes_1_to_468_idelay_ddr__GC0 |           8|       600|
+|2     |fmc_one_lane__xdcDup__1__GC0    |           1|      5015|
+|3     |fmc_one_lane__xdcDup__2__GC0    |           1|      5015|
+|4     |fmc_one_lane__xdcDup__3__GC0    |           1|      5015|
+|5     |fmc_one_lane__xdcDup__4__GC0    |           1|      5015|
+|6     |fmc_one_lane__xdcDup__5__GC0    |           1|      5015|
+|7     |fmc_one_lane__xdcDup__6__GC0    |           1|      5015|
+|8     |fmc_one_lane__xdcDup__7__GC0    |           1|      5015|
+|9     |fmc_one_lane__GC0               |           1|      5015|
+|10    |aurora_8_pair_top__GC0          |           1|      1907|
++------+--------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'pll_mid/clk_out1' to pin 'pll_mid/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'pll_mid/clk_out2' to pin 'pll_mid/bbstub_clk_out2/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'pll_mid/clk_out3' to pin 'pll_mid/bbstub_clk_out3/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'pll_mid/clk_out4' to pin 'pll_mid/bbstub_clk_out4/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'pll_mid/clk_out5' to pin 'pll_mid/bbstub_clk_out5/O'
+WARNING: [Synth 8-565] redefining clock 'sysclk_in_p'
+INFO: [Synth 8-5819] Moved 5 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:05:10 . Memory (MB): peak = 2156.211 ; gain = 803.637 ; free physical = 737 ; free virtual = 11635
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\aurora_core[7].aurora_fmc_one_lanei_11 /tx_gb/\buffer_132_reg[65] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\aurora_core[7].aurora_fmc_one_lanei_11 /tx_gb/\buffer_132_reg[131] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\aurora_core[6].aurora_fmc_one_lanei_9 /tx_gb/\buffer_132_reg[65] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\aurora_core[6].aurora_fmc_one_lanei_9 /tx_gb/\buffer_132_reg[131] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\aurora_core[4].aurora_fmc_one_lanei_7 /tx_gb/\buffer_132_reg[65] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\aurora_core[4].aurora_fmc_one_lanei_7 /tx_gb/\buffer_132_reg[131] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\aurora_core[3].aurora_fmc_one_lanei_5 /tx_gb/\buffer_132_reg[65] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\aurora_core[3].aurora_fmc_one_lanei_5 /tx_gb/\buffer_132_reg[131] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\aurora_core[1].aurora_fmc_one_lanei_3 /tx_gb/\buffer_132_reg[65] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\aurora_core[1].aurora_fmc_one_lanei_3 /tx_gb/\buffer_132_reg[131] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\aurora_core[0].aurora_fmc_one_lanei_1 /tx_gb/\buffer_132_reg[65] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\aurora_core[0].aurora_fmc_one_lanei_1 /tx_gb/\buffer_132_reg[131] )
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:05:12 . Memory (MB): peak = 2193.250 ; gain = 840.676 ; free physical = 1905 ; free virtual = 11981
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------------------+------------+----------+
+|      |RTL Partition                   |Replication |Instances |
++------+--------------------------------+------------+----------+
+|1     |serdes_1_to_468_idelay_ddr__GC0 |           8|       600|
+|2     |fmc_one_lane__xdcDup__1__GC0    |           1|      4441|
+|3     |fmc_one_lane__xdcDup__2__GC0    |           1|      4441|
+|4     |fmc_one_lane__xdcDup__3__GC0    |           1|      5015|
+|5     |fmc_one_lane__xdcDup__4__GC0    |           1|      4441|
+|6     |fmc_one_lane__xdcDup__5__GC0    |           1|      4441|
+|7     |fmc_one_lane__xdcDup__6__GC0    |           1|      5015|
+|8     |fmc_one_lane__xdcDup__7__GC0    |           1|      4441|
+|9     |fmc_one_lane__GC0               |           1|      4407|
+|10    |aurora_8_pair_top__GC0          |           1|      1907|
++------+--------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:11 ; elapsed = 00:05:18 . Memory (MB): peak = 2201.258 ; gain = 848.684 ; free physical = 2048 ; free virtual = 12126
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:12 ; elapsed = 00:05:19 . Memory (MB): peak = 2201.262 ; gain = 848.688 ; free physical = 2047 ; free virtual = 12126
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:12 ; elapsed = 00:05:19 . Memory (MB): peak = 2201.262 ; gain = 848.688 ; free physical = 2047 ; free virtual = 12126
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:13 ; elapsed = 00:05:20 . Memory (MB): peak = 2201.262 ; gain = 848.688 ; free physical = 2046 ; free virtual = 12125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:13 ; elapsed = 00:05:20 . Memory (MB): peak = 2201.262 ; gain = 848.688 ; free physical = 2046 ; free virtual = 12125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:13 ; elapsed = 00:05:20 . Memory (MB): peak = 2201.262 ; gain = 848.688 ; free physical = 2045 ; free virtual = 12124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:13 ; elapsed = 00:05:20 . Memory (MB): peak = 2201.262 ; gain = 848.688 ; free physical = 2045 ; free virtual = 12125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------------+-----------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name       | RTL Name                                            | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------------+-----------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|fmc_one_lane      | tx_buffer_reg[7]                                    | 5      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|aurora_8_pair_top | aurora_core[0].aurora_fmc_one_lane/tx_buffer_reg[7] | 5      | 48    | NO           | NO                 | YES               | 48     | 0       | 
++------------------+-----------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |cmd_oserdes   |         8|
+|2     |clk_wiz_2     |         1|
+|3     |ila_1         |         1|
+|4     |vio_0         |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |clk_wiz_2       |     1|
+|2     |cmd_oserdes     |     1|
+|3     |cmd_oserdes__10 |     1|
+|4     |cmd_oserdes__11 |     1|
+|5     |cmd_oserdes__12 |     1|
+|6     |cmd_oserdes__13 |     1|
+|7     |cmd_oserdes__14 |     1|
+|8     |cmd_oserdes__8  |     1|
+|9     |cmd_oserdes__9  |     1|
+|10    |ila_1           |     1|
+|11    |vio_0           |     1|
+|12    |BUFG            |     1|
+|13    |CARRY4          |   306|
+|14    |IDELAYCTRL      |     8|
+|15    |IDELAYE2        |    16|
+|16    |ISERDESE2       |    16|
+|17    |LUT1            |   152|
+|18    |LUT2            |   537|
+|19    |LUT3            |   808|
+|20    |LUT4            |  1350|
+|21    |LUT5            |   931|
+|22    |LUT6            |  4336|
+|23    |MUXF7           |   171|
+|24    |SRL16E          |    64|
+|25    |FDCE            |   560|
+|26    |FDPE            |    10|
+|27    |FDRE            |  6361|
+|28    |FDSE            |   320|
+|29    |IBUF            |     1|
+|30    |IBUFDS_DIFF_OUT |     8|
++------+----------------+------+
+
+Report Instance Areas: 
++------+---------------------------------------+------------------------------+------+
+|      |Instance                               |Module                        |Cells |
++------+---------------------------------------+------------------------------+------+
+|1     |top                                    |                              | 16052|
+|2     |  \aurora_core[2].aurora_fmc_one_lane  |fmc_one_lane__xdcDup__3       |  2728|
+|3     |    iserdes_inst                       |serdes_1_to_468_idelay_ddr_45 |   270|
+|4     |      \loop3[0].dc_inst                |delay_controller_wrap_50      |   248|
+|5     |    b_sync                             |block_sync_42                 |   182|
+|6     |    ber_inst                           |ber_43                        |   314|
+|7     |      ber_scr                          |ber_scrambler_51              |   297|
+|8     |    bs_fsm                             |bitslip_fsm_44                |    43|
+|9     |    lcd_debug                          |lcd_46                        |   447|
+|10    |    rx_gb                              |gearbox32to66_47              |   591|
+|11    |    tx_gb                              |gearbox66to32_48              |   519|
+|12    |    uns                                |descrambler_49                |   215|
+|13    |  \aurora_core[5].aurora_fmc_one_lane  |fmc_one_lane__xdcDup__6       |  2728|
+|14    |    iserdes_inst                       |serdes_1_to_468_idelay_ddr_37 |   270|
+|15    |      \loop3[0].dc_inst                |delay_controller_wrap_41      |   248|
+|16    |    b_sync                             |block_sync_35                 |   182|
+|17    |    ber_inst                           |ber                           |   314|
+|18    |      ber_scr                          |ber_scrambler                 |   297|
+|19    |    bs_fsm                             |bitslip_fsm_36                |    43|
+|20    |    lcd_debug                          |lcd_38                        |   447|
+|21    |    rx_gb                              |gearbox32to66_39              |   591|
+|22    |    tx_gb                              |gearbox66to32_40              |   519|
+|23    |    uns                                |descrambler                   |   215|
+|24    |  \aurora_core[0].aurora_fmc_one_lane  |fmc_one_lane__xdcDup__1       |  1561|
+|25    |    b_sync                             |block_sync_28                 |   179|
+|26    |    bs_fsm                             |bitslip_fsm_29                |    43|
+|27    |    iserdes_inst                       |serdes_1_to_468_idelay_ddr_30 |   271|
+|28    |      \loop3[0].dc_inst                |delay_controller_wrap_34      |   249|
+|29    |    lcd_debug                          |lcd_31                        |   189|
+|30    |    rx_gb                              |gearbox32to66_32              |   218|
+|31    |    tx_gb                              |gearbox66to32_33              |   517|
+|32    |  \aurora_core[1].aurora_fmc_one_lane  |fmc_one_lane__xdcDup__2       |  1566|
+|33    |    b_sync                             |block_sync_21                 |   179|
+|34    |    bs_fsm                             |bitslip_fsm_22                |    43|
+|35    |    iserdes_inst                       |serdes_1_to_468_idelay_ddr_23 |   271|
+|36    |      \loop3[0].dc_inst                |delay_controller_wrap_27      |   249|
+|37    |    lcd_debug                          |lcd_24                        |   189|
+|38    |    rx_gb                              |gearbox32to66_25              |   218|
+|39    |    tx_gb                              |gearbox66to32_26              |   522|
+|40    |  \aurora_core[3].aurora_fmc_one_lane  |fmc_one_lane__xdcDup__4       |  1561|
+|41    |    b_sync                             |block_sync_14                 |   179|
+|42    |    bs_fsm                             |bitslip_fsm_15                |    43|
+|43    |    iserdes_inst                       |serdes_1_to_468_idelay_ddr_16 |   271|
+|44    |      \loop3[0].dc_inst                |delay_controller_wrap_20      |   249|
+|45    |    lcd_debug                          |lcd_17                        |   189|
+|46    |    rx_gb                              |gearbox32to66_18              |   218|
+|47    |    tx_gb                              |gearbox66to32_19              |   517|
+|48    |  \aurora_core[4].aurora_fmc_one_lane  |fmc_one_lane__xdcDup__5       |  1563|
+|49    |    b_sync                             |block_sync_7                  |   179|
+|50    |    bs_fsm                             |bitslip_fsm_8                 |    43|
+|51    |    iserdes_inst                       |serdes_1_to_468_idelay_ddr_9  |   271|
+|52    |      \loop3[0].dc_inst                |delay_controller_wrap_13      |   249|
+|53    |    lcd_debug                          |lcd_10                        |   189|
+|54    |    rx_gb                              |gearbox32to66_11              |   218|
+|55    |    tx_gb                              |gearbox66to32_12              |   519|
+|56    |  \aurora_core[6].aurora_fmc_one_lane  |fmc_one_lane__xdcDup__7       |  1561|
+|57    |    b_sync                             |block_sync_0                  |   179|
+|58    |    bs_fsm                             |bitslip_fsm_1                 |    43|
+|59    |    iserdes_inst                       |serdes_1_to_468_idelay_ddr_2  |   271|
+|60    |      \loop3[0].dc_inst                |delay_controller_wrap_6       |   249|
+|61    |    lcd_debug                          |lcd_3                         |   189|
+|62    |    rx_gb                              |gearbox32to66_4               |   218|
+|63    |    tx_gb                              |gearbox66to32_5               |   517|
+|64    |  \aurora_core[7].aurora_fmc_one_lane  |fmc_one_lane                  |  1546|
+|65    |    b_sync                             |block_sync                    |   179|
+|66    |    bs_fsm                             |bitslip_fsm                   |    43|
+|67    |    iserdes_inst                       |serdes_1_to_468_idelay_ddr    |   272|
+|68    |      \loop3[0].dc_inst                |delay_controller_wrap         |   250|
+|69    |    lcd_debug                          |lcd                           |   173|
+|70    |    rx_gb                              |gearbox32to66                 |   218|
+|71    |    tx_gb                              |gearbox66to32                 |   517|
++------+---------------------------------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:13 ; elapsed = 00:05:20 . Memory (MB): peak = 2201.262 ; gain = 848.688 ; free physical = 2045 ; free virtual = 12124
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2750 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:03:30 . Memory (MB): peak = 2205.168 ; gain = 227.754 ; free physical = 4617 ; free virtual = 14696
+Synthesis Optimization Complete : Time (s): cpu = 00:01:14 ; elapsed = 00:05:26 . Memory (MB): peak = 2205.168 ; gain = 852.594 ; free physical = 4620 ; free virtual = 14696
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 518 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 3 inverter(s) to 16 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  IBUFDS_DIFF_OUT => IBUFDS_DIFF_OUT (IBUFDS, IBUFDS): 8 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+255 Infos, 256 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:17 ; elapsed = 00:05:29 . Memory (MB): peak = 2261.285 ; gain = 936.219 ; free physical = 4615 ; free virtual = 14690
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Common 17-1381] The checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/aurora_8_pair_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file aurora_8_pair_top_utilization_synth.rpt -pb aurora_8_pair_top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.45 . Memory (MB): peak = 2291.301 ; gain = 0.000 ; free physical = 4617 ; free virtual = 14694
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 11 16:14:42 2018...

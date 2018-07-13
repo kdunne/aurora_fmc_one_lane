@@ -12,11 +12,12 @@ module aurora_8_pair_top (
     input [num_lanes-1:0] data_in_n,
    
     output [num_lanes-1:0] data_out_p,
-    output [num_lanes-1:0] data_out_n,
+    output [num_lanes-1:0] data_out_n
  
-    output latch,
-    output clk_io,
-    output ser_in
+    // IO BUF CONFIG 
+    //output latch,
+    //output clk_io,
+    //output ser_in
     
     //output USER_SMA_CLOCK_P,
     //output USER_SMA_CLOCK_N
@@ -33,20 +34,43 @@ wire clk40;
 wire clk160;
 wire clk640;
 wire clk400;
+wire clk50;
 wire mmcm_locked;
 
 // Aurora Rx Core Signals
 wire [63:0] data_out[num_lanes];
 wire [1:0]  sync_out[num_lanes];
-wire [3:0]  blocksync_out;
-wire [3:0]  gearbox_rdy_rx;
-wire [3:0]  data_valid;
+wire [num_lanes-1:0]  blocksync_out;
+wire [num_lanes-1:0]  gearbox_rdy_rx;
+wire [num_lanes-1:0]  data_valid;
+reg [9:0] sync_header_invalid_count_i[num_lanes];
+reg sync_done_r[num_lanes];
+reg rxgearboxslip_out[num_lanes];
 
 // Aurora Tx Core Signals
 wire [num_lanes-1:0] gearbox_rdy;
 wire [num_lanes-1:0] data_next;
 reg [63:0] data_in[num_lanes];
 reg [1:0] sync[num_lanes];
+reg  [31:0] data32_iserdes[num_lanes];
+wire [7:0]  sipo[num_lanes];
+
+// Blocksync Signals
+reg         next_begin_c[num_lanes];
+reg         next_sh_invalid_c[num_lanes];
+reg         next_sh_valid_c[num_lanes];
+reg         next_slip_c[num_lanes];
+reg         next_sync_done_c[num_lanes];
+reg         next_test_sh_c[num_lanes];
+wire        sh_count_equals_max_i[num_lanes];
+wire        sh_invalid_cnt_equals_max_i[num_lanes];
+wire        sh_invalid_cnt_equals_zero_i[num_lanes];
+wire        slip_done_i[num_lanes];
+wire        sync_found_i[num_lanes];
+reg         sh_invalid_r[num_lanes];
+reg         sh_valid_r[num_lanes];
+reg  [99:0] slip_count_i[num_lanes];
+reg  [15:0] sync_header_count_i[num_lanes];
 
 
 // Aurora Channel Bonding Signals
@@ -61,7 +85,9 @@ wire        vio_en;
 wire [63:0]  vio_data;
 wire [7:0] vio_sync;
 wire vio_en_counting;
-
+wire [4:0]  vio_tap_value;
+wire        vio_tap_en;
+wire        vio_tap_set;
 
 assign rst = !mmcm_locked;
 
@@ -136,16 +162,18 @@ end
 //// WARNING: If this PLL is instantiated the clocks
 //// will run at slower frequencies, despite
 //// having names such as clk640, clk160, clk40.
-//clk_wiz_0 pll_mid(
-//   .clk_in1_p(sysclk_in_p),
-//   .clk_in1_n(sysclk_in_n),
-//   .clk_out1(clk640),
-//   .clk_out2(clk160),
-//   .clk_out3(clk40),
-//   .clk_out4(clk400),
-//   .reset(rst_in),
-//   .locked(mmcm_locked)
-//);
+///// CHANGED TO clk_wiz_2 from wlk_wiz_0
+clk_wiz_2 pll_mid(
+   .clk_in1_p(sysclk_in_p),
+   .clk_in1_n(sysclk_in_n),
+   .clk_out1(clk640),
+   .clk_out2(clk160),
+   .clk_out3(clk40),
+   .clk_out4(clk400),
+   .clk_out5(clk50),
+   .reset(rst_in),
+   .locked(mmcm_locked)
+);
 
 // Frequencies
 // clk640: 320 MHz
@@ -158,16 +186,16 @@ end
 // having names such as clk640, clk160, clk40.
 //wire clk160_forward;
 
-clk_wiz_2 pll_mid_high(
-   .clk_in1_p(sysclk_in_p),
-   .clk_in1_n(sysclk_in_n),
-   .clk_out1(clk640),
-   .clk_out2(clk160),
-   .clk_out3(clk40),
-   .clk_out4(clk400),
-   .reset(rst_in),
-   .locked(mmcm_locked)
-);
+//clk_wiz_2 pll_mid_high(
+//   .clk_in1_p(sysclk_in_p),
+//   .clk_in1_n(sysclk_in_n),
+//   .clk_out1(clk640),
+//   .clk_out2(clk160),
+//   .clk_out3(clk40),
+//   .clk_out4(clk400),
+//   .reset(rst_in),
+//   .locked(mmcm_locked)
+//);
 
 //// Frequencies
 //// clk640: 80 MHz
@@ -231,8 +259,10 @@ clk_wiz_2 pll_mid_high(
 * Uncomment aurora_rx_top_xapp block in generate loop for bitrates more than 640 Mbps.
 **/
 
+/** COMMENTED OUT SHOULD BE UNQUE TO EACH CORE - NOT CB'd**/
 wire ref_clk_bufg;
-wire idelay_rdy;
+//wire idelay_rdy;
+
 
 BUFG
  ref_clock_bufg (
@@ -240,6 +270,7 @@ BUFG
     .O (ref_clk_bufg)
 );
 
+/**
 (* IODELAY_GROUP = "xapp_idelay" *)
 IDELAYCTRL
  delayctrl (
@@ -247,12 +278,13 @@ IDELAYCTRL
     .REFCLK (ref_clk_bufg),
     .RST    (rst|vio_rst)
 );
+**/
 
 genvar j;
 
 generate
     for (j=0; j < num_lanes; j=j+1)
-        begin : rx_core
+        begin : aurora_core
             //aurora_rx_top rx_lane (
             //    .rst(rst|vio_rst),
             //    .clk40(clk40),
@@ -282,127 +314,105 @@ generate
             //    .data_out(data_out[i])
             //);
             
-            fmc_one_lane aurora_lane (
+            fmc_one_lane aurora_fmc_one_lane (
                             .rst(rst|vio_rst),
                             .clk40(clk40),
                             .clk160(clk160),
                             .clk640(clk640),
+                            .clk400(clk400),
+                            .clk50(clk50),
                             .data_in_p(data_in_p[j]),
                             .data_in_n(data_in_n[j]),
-                            .idelay_rdy(idelay_rdy),
                             .blocksync_out(blocksync_out[j]),
-                            .gearbox_rdy(gearbox_rdy_rx[j]),
                             .data_valid(data_valid[j]),
                             .sync_out(sync_out[j]),
                             .data_out(data_out[j]),
                             .data_in(data_in[j]),
                             .sync(sync[j]),
+                            .gearbox_rdy_rx(gearbox_rdy_rx[j]),
                             .gearbox_rdy(gearbox_rdy[j]),
                             .data_next(data_next[j]),
                             .data_out_p(data_out_p[j]),
-                            .data_out_n(data_out_n[j])
+                            .data_out_n(data_out_n[j]),
+                            .idelay_ref_clock(ref_clk_bufg),
+                            .sync_header_invalid_count_i(sync_header_invalid_count_i[j]),
+                            .sync_done_r(sync_done_r[j]),
+                            .rxgearboxslip_out(rxgearboxslip_out[j]),
+                            .data32_iserdes(data32_iserdes[j]),
+                            .sipo(sipo[j]),
+                            .next_begin_c(next_begin_c[j]),
+                            .next_sh_invalid_c(next_sh_invalid_c[j]),
+                            .next_sh_valid_c(next_sh_valid_c[j]),
+                            .next_slip_c(next_slip_c[j]),
+                            .next_sync_done_c(next_sync_done_c[j]),
+                            .next_test_sh_c(next_test_sh_c[j]),
+                            .sh_count_equals_max_i(sh_count_equals_max_i[j]),
+                            .sh_invalid_cnt_equals_max_i(sh_invalid_cnt_equals_max_i[j]),
+                            .sh_invalid_cnt_equals_zero_i(sh_invalid_cnt_equals_zero_i[j]),
+                            .slip_done_i(slip_done_i[j]),
+                            .sync_found_i(sync_found_i[j]),
+                            .sh_invalid_r(sh_invalid_r[j]),
+                            .sh_valid_r(sh_valid_r[j]),
+                            .slip_count_i(slip_count_i[j]),
+                            .sync_header_count_i(sync_header_count_i[j])
 
              );
     end
 endgenerate
 
 
-/**
-
-//======================================
-//      Aurora Channel Bonding
-//======================================
-//channel_bond cb (
-    .rst(rst|vio_rst),
-    .clk40(clk40),
-    .data_in(data_out),
-    .sync_in(sync_out),
-    .blocksync_out(blocksync_out),
-    .gearbox_rdy_rx(gearbox_rdy_rx),
-    .data_valid(data_valid),
-    .data_out_cb(data_out_cb),
-    .sync_out_cb(sync_out_cb),
-    .data_valid_cb(data_valid_cb),
-    .channel_bonded(channel_bonded)
-);
-
-//============================================================================
-//                       IO Buffer Configuration Driver
-//============================================================================
-reg [31:0] io_config;
-reg start;
-reg [3:0] io_rst_cnt;
-wire [31:0] vio_io_config;
-wire vio_start;
-wire vio_io_en;
-
-always @(posedge clk160) begin
-    if (rst|vio_rst) begin
-        io_config <= 32'h0000_0000;
-        start <= 1'b0;
-        io_rst_cnt <= 4'h0;
-    end
-    else begin
-        if (vio_io_en) begin
-            io_config <= vio_io_config;
-            start <= vio_start; 
-        end
-        else begin
-            if (io_rst_cnt <= 15) begin
-                io_rst_cnt <= io_rst_cnt + 1;
-            end
-            
-            if (io_rst_cnt == 10) begin
-                start <= 1'b1;
-            end
-            else begin
-                start <= 1'b0;
-            end
-            
-            io_config <= 32'hFFFF_FFFF;
-        end
-    end
-end
-
-io_buf_config_driver io_buf_config(
-    .rst(rst|vio_rst),
-    .clk160(clk160),
-    .io_config(io_config),
-    .start(start),
-    .latch(latch),
-    .clk_io(clk_io),
-    .ser_in(ser_in)
-);
-
-**/
-
 //============================================================================
 //                          Debugging & Monitoring
 //============================================================================
+
 
 // ILA
 ila_1 ila_slim (
     .clk(clk160),
     .probe0(rst|vio_rst),       // output wire [0 : 0] probe_out0
-    .probe1(blocksync_out),     // output wire [3 : 0] probe_out1
-    .probe2(data_out),          // output wire [255 : 0] probe_out2
-    .probe3(data_out_cb),       // output wire [255 : 0] probe_out3
-    .probe4(sync_out_cb),       // output wire [7 : 0] probe_out4
-    .probe5(gearbox_rdy_rx),    // output wire [3 : 0] probe_out5
-    .probe6(data_valid_cb),     // output wire [0 : 0] probe_out6
-    .probe7(channel_bonded),     // output wire [0 : 0] probe_out7
-    .probe8(latch),
-    .probe9(clk_io),
-    .probe10(ser_in)
+    .probe1(mmcm_locked),     // output wire [3 : 0] probe_out1
+    .probe2(data_in[5]),          // output wire [63 : 0] probe_out2
+    .probe3(data_out[5]),       // output wire [63 : 0] probe_out3
+    .probe4(blocksync_out[5]),       // output wire [7 : 0] probe_out4
+    .probe5(gearbox_rdy_rx[5]),    // output wire [3 : 0] probe_out5
+    .probe6(gearbox_rdy[5]),     // output wire [0 : 0] probe_out6
+    .probe7(data_valid[5]),     // output wire [0 : 0] probe_out7
+    .probe8(sync[5]),
+    .probe9(data_next[5]),
+    .probe10(data_in[2]), 
+    .probe11(data_out[2]),
+    .probe12(sync_header_invalid_count_i[5]),
+    .probe13(sync_done_r[5]),
+    .probe14(rxgearboxslip_out[5]),
+    .probe15(sipo[5]),
+    .probe16(next_sync_done_c[5]),
+    .probe17(sh_invalid_cnt_equals_zero_i[5]),
+    .probe18(sh_count_equals_max_i[5]),
+    .probe19(sh_invalid_cnt_equals_max_i[5]),
+    .probe20(next_begin_c[5]),
+    .probe21(next_sh_invalid_c[5]),
+    .probe22(next_sh_valid_c[5]),
+    .probe23(next_slip_c[5]),
+    .probe24(slip_done_i[5]),
+    .probe25(sync_found_i[5]),
+    .probe26(sh_invalid_r[5]),
+    .probe27(sh_valid_r[5]),
+    .probe28(slip_count_i[5]),
+    .probe29(sync_header_count_i[5])
 );
+
 
 // VIO
 vio_0 vio (
-  .clk(clk40),                 // input wire clk
+  .clk(clk160),                 // input wire clk
   .probe_out0(vio_rst),         // output wire [0 : 0] probe_out0
-  .probe_out1(vio_io_config),   // output wire [31:0]  probe_out1
-  .probe_out2(vio_start),       // output wire [0:0]  probe_out2
-  .probe_out3(vio_io_en)        // output wire [0:0]  probe_out3
+  .probe_out1(vio_en),
+  .probe_out2(vio_data),
+  .probe_out3(vio_en_counting),
+  .probe_out4(vio_tap_value),
+  .probe_out5(vio_tap_en),
+  .probe_out6(vio_tap_set)
 );
+
 
 endmodule

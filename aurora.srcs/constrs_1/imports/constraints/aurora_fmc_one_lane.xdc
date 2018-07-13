@@ -57,7 +57,7 @@ set_property DIFF_TERM TRUE [get_ports data_in_p[0]]
 #FMC_IN_2_P on Hardware (mistake on FMC layout)
 # FMC1_HPC_LA24_N
 set_property PACKAGE_PIN P31 [get_ports data_in_n[1]]
-set_property IOSTANDARD LVDS [get_ports data_in_n[1]
+set_property IOSTANDARD LVDS [get_ports data_in_n[1]]
 set_property DIFF_TERM TRUE [get_ports data_in_n[1]]
 #FMC_IN_2_N
 # FMC1_HPC_LA24_P

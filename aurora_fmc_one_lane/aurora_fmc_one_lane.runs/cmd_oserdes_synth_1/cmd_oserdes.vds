@@ -1,0 +1,297 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Jun 25 17:30:11 2018
+# Process ID: 11799
+# Current directory: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/cmd_oserdes_synth_1
+# Command line: vivado -log cmd_oserdes.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cmd_oserdes.tcl
+# Log file: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/cmd_oserdes_synth_1/cmd_oserdes.vds
+# Journal file: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/cmd_oserdes_synth_1/vivado.jou
+#-----------------------------------------------------------
+source cmd_oserdes.tcl -notrace
+Command: synth_design -top cmd_oserdes -part xc7vx485tffg1761-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11817 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1396.703 ; gain = 85.996 ; free physical = 3125 ; free virtual = 17079
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'cmd_oserdes' [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.v:58]
+	Parameter SYS_W bound to: 1 - type: integer 
+	Parameter DEV_W bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'cmd_oserdes_selectio_wiz' [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes_selectio_wiz.v:56]
+	Parameter SYS_W bound to: 1 - type: integer 
+	Parameter DEV_W bound to: 8 - type: integer 
+	Parameter num_serial_bits bound to: 8 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'OBUFDS' [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:27284]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: LVDS - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-256] done synthesizing module 'OBUFDS' (1#1) [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:27284]
+INFO: [Synth 8-638] synthesizing module 'OSERDESE2' [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:31221]
+	Parameter DATA_RATE_OQ bound to: SDR - type: string 
+	Parameter DATA_RATE_TQ bound to: SDR - type: string 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter INIT_OQ bound to: 1'b0 
+	Parameter INIT_TQ bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter IS_D3_INVERTED bound to: 1'b0 
+	Parameter IS_D4_INVERTED bound to: 1'b0 
+	Parameter IS_D5_INVERTED bound to: 1'b0 
+	Parameter IS_D6_INVERTED bound to: 1'b0 
+	Parameter IS_D7_INVERTED bound to: 1'b0 
+	Parameter IS_D8_INVERTED bound to: 1'b0 
+	Parameter IS_T1_INVERTED bound to: 1'b0 
+	Parameter IS_T2_INVERTED bound to: 1'b0 
+	Parameter IS_T3_INVERTED bound to: 1'b0 
+	Parameter IS_T4_INVERTED bound to: 1'b0 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_OQ bound to: 1'b0 
+	Parameter SRVAL_TQ bound to: 1'b0 
+	Parameter TBYTE_CTL bound to: FALSE - type: string 
+	Parameter TBYTE_SRC bound to: FALSE - type: string 
+	Parameter TRISTATE_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'OSERDESE2' (2#1) [/opt/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:31221]
+INFO: [Synth 8-256] done synthesizing module 'cmd_oserdes_selectio_wiz' (3#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes_selectio_wiz.v:56]
+INFO: [Synth 8-256] done synthesizing module 'cmd_oserdes' (4#1) [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.v:58]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1439.242 ; gain = 128.535 ; free physical = 3139 ; free virtual = 17094
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1439.242 ; gain = 128.535 ; free physical = 3138 ; free virtual = 17093
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7vx485tffg1761-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes_ooc.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes_ooc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cmd_oserdes_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cmd_oserdes_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/cmd_oserdes_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/cmd_oserdes_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1876.449 ; gain = 0.000 ; free physical = 2708 ; free virtual = 16649
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:38 ; elapsed = 00:02:07 . Memory (MB): peak = 1876.449 ; gain = 565.742 ; free physical = 2830 ; free virtual = 16772
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1761-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:38 ; elapsed = 00:02:07 . Memory (MB): peak = 1876.449 ; gain = 565.742 ; free physical = 2830 ; free virtual = 16772
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/cmd_oserdes_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:02:07 . Memory (MB): peak = 1876.449 ; gain = 565.742 ; free physical = 2833 ; free virtual = 16774
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:38 ; elapsed = 00:02:07 . Memory (MB): peak = 1876.449 ; gain = 565.742 ; free physical = 2833 ; free virtual = 16774
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:02:08 . Memory (MB): peak = 1876.449 ; gain = 565.742 ; free physical = 2832 ; free virtual = 16774
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:02:17 . Memory (MB): peak = 1876.449 ; gain = 565.742 ; free physical = 2707 ; free virtual = 16648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:02:17 . Memory (MB): peak = 1876.449 ; gain = 565.742 ; free physical = 2707 ; free virtual = 16648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:02:17 . Memory (MB): peak = 1876.449 ; gain = 565.742 ; free physical = 2706 ; free virtual = 16647
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:02:18 . Memory (MB): peak = 1876.449 ; gain = 565.742 ; free physical = 2706 ; free virtual = 16647
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:02:18 . Memory (MB): peak = 1876.449 ; gain = 565.742 ; free physical = 2706 ; free virtual = 16647
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:02:18 . Memory (MB): peak = 1876.449 ; gain = 565.742 ; free physical = 2706 ; free virtual = 16647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:02:18 . Memory (MB): peak = 1876.449 ; gain = 565.742 ; free physical = 2706 ; free virtual = 16647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:02:18 . Memory (MB): peak = 1876.449 ; gain = 565.742 ; free physical = 2706 ; free virtual = 16647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:02:18 . Memory (MB): peak = 1876.449 ; gain = 565.742 ; free physical = 2706 ; free virtual = 16647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |OSERDESE2 |     1|
+|2     |OBUFDS    |     1|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------+-------------------------+------+
+|      |Instance |Module                   |Cells |
++------+---------+-------------------------+------+
+|1     |top      |                         |     2|
+|2     |  inst   |cmd_oserdes_selectio_wiz |     2|
++------+---------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:02:18 . Memory (MB): peak = 1876.449 ; gain = 565.742 ; free physical = 2706 ; free virtual = 16647
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 1876.449 ; gain = 128.535 ; free physical = 2760 ; free virtual = 16701
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:02:18 . Memory (MB): peak = 1876.449 ; gain = 565.742 ; free physical = 2760 ; free virtual = 16702
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:02:19 . Memory (MB): peak = 1876.449 ; gain = 604.695 ; free physical = 2736 ; free virtual = 16677
+INFO: [Common 17-1381] The checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/cmd_oserdes_synth_1/cmd_oserdes.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xci
+INFO: [Common 17-1381] The checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/cmd_oserdes_synth_1/cmd_oserdes.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file cmd_oserdes_utilization_synth.rpt -pb cmd_oserdes_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.40 . Memory (MB): peak = 1890.453 ; gain = 0.000 ; free physical = 2739 ; free virtual = 16680
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 25 17:32:41 2018...

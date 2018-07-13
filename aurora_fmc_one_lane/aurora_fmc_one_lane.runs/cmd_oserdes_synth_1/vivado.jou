@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Jun 25 17:30:11 2018
+# Process ID: 11799
+# Current directory: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/cmd_oserdes_synth_1
+# Command line: vivado -log cmd_oserdes.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cmd_oserdes.tcl
+# Log file: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/cmd_oserdes_synth_1/cmd_oserdes.vds
+# Journal file: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/cmd_oserdes_synth_1/vivado.jou
+#-----------------------------------------------------------
+source cmd_oserdes.tcl -notrace

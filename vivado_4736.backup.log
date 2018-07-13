@@ -1,0 +1,1708 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Jun 26 15:03:42 2018
+# Process ID: 4736
+# Current directory: /home/pixdaq/kdunne/aurora_fmc_one_lane
+# Command line: vivado
+# Log file: /home/pixdaq/kdunne/aurora_fmc_one_lane/vivado.log
+# Journal file: /home/pixdaq/kdunne/aurora_fmc_one_lane/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 6235.883 ; gain = 124.758 ; free physical = 13529 ; free virtual = 22937
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -reset -force -quiet
+remove_files  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_0/ila_0.xci
+add_files -norecurse /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_0/ila_0.xci
+export_ip_user_files -of_objects  [get_files  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_0/ila_0.xci] -lib_map_path [list {modelsim=/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.cache/compile_simlib/modelsim} {questa=/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.cache/compile_simlib/questa} {ies=/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.cache/compile_simlib/ies} {vcs=/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.cache/compile_simlib/vcs} {riviera=/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.cache/compile_simlib/riviera}] -force -quiet
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -reset -force -quiet
+remove_files  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_0/ila_0.xci
+add_files -norecurse /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.xci
+export_ip_user_files -of_objects  [get_files  /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.xci] -lib_map_path [list {modelsim=/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.cache/compile_simlib/modelsim} {questa=/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.cache/compile_simlib/questa} {ies=/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.cache/compile_simlib/ies} {vcs=/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.cache/compile_simlib/vcs} {riviera=/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.cache/compile_simlib/riviera}] -force -quiet
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.xci' is already up-to-date
+[Tue Jun 26 15:13:00 2018] Launched synth_1...
+Run output will be captured here: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.xci' is already up-to-date
+[Tue Jun 26 15:16:29 2018] Launched impl_1...
+Run output will be captured here: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.xci' is already up-to-date
+[Tue Jun 26 15:25:33 2018] Launched impl_1...
+Run output will be captured here: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7vx485tffg1761-2
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.dcp' for cell 'ila_slim_rx'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.dcp' for cell 'piso0_1280'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.dcp' for cell 'pll_fast_a'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.dcp' for cell 'pll_fast_b'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/vio_0/vio_0.dcp' for cell 'vio_rx'
+INFO: [Netlist 29-17] Analyzing 298 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7vx485tffg1761-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. pll_fast_b/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'pll_fast_b/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [/home/pixdaq/kdunne/aurora_fmc_one_lane/.Xil/Vivado-4736-dhcp-130-148.ucsc.edu/dcp10/clk_wiz_5.edf:265]
+INFO: [Chipscope 16-324] Core: ila_slim_rx UUID: ae7ae68f-1746-5767-b236-e09db04ea8fe 
+INFO: [Chipscope 16-324] Core: vio_rx UUID: ec3fe438-cb4f-547c-863d-9161e7785805 
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'ila_slim_rx/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'ila_slim_rx/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila.xdc] for cell 'ila_slim_rx/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila.xdc] for cell 'ila_slim_rx/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3_board.xdc] for cell 'pll_fast_a/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3_board.xdc] for cell 'pll_fast_a/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc] for cell 'pll_fast_a/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc:57]
+get_clocks: Time (s): cpu = 00:00:14 ; elapsed = 00:00:39 . Memory (MB): peak = 7616.293 ; gain = 657.773 ; free physical = 11097 ; free virtual = 20782
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc] for cell 'pll_fast_a/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5_board.xdc] for cell 'pll_fast_b/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5_board.xdc] for cell 'pll_fast_b/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc] for cell 'pll_fast_b/inst'
+INFO: [Timing 38-2] Deriving generated clocks [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc:57]
+WARNING: [Vivado 12-2489] -input_jitter contains time 0.062500 which will be rounded to 0.063 to ensure it is an integer multiple of 1 picosecond [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc:57]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc] for cell 'pll_fast_b/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'piso0_1280/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'piso0_1280/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/vio_0/vio_0.xdc] for cell 'vio_rx'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/vio_0/vio_0.xdc] for cell 'vio_rx'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc]
+WARNING: [Constraints 18-619] A clock with name 'sysclk_in_p' already exists, overwriting the previous clock with the same name. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc:2]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 137 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 136 instances
+  IBUFDS_DIFF_OUT => IBUFDS_DIFF_OUT (IBUFDS, IBUFDS): 1 instances
+
+open_run: Time (s): cpu = 00:00:52 ; elapsed = 00:02:37 . Memory (MB): peak = 7707.133 ; gain = 1214.316 ; free physical = 11008 ; free virtual = 20686
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.xci' is already up-to-date
+[Tue Jun 26 15:32:33 2018] Launched synth_1...
+Run output will be captured here: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.xci' is already up-to-date
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jun 26 15:35:43 2018] Launched impl_1...
+Run output will be captured here: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/runme.log
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.dcp' for cell 'ila_slim_rx'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.dcp' for cell 'piso0_1280'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.dcp' for cell 'pll_fast_a'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.dcp' for cell 'pll_fast_b'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/vio_0/vio_0.dcp' for cell 'vio_rx'
+INFO: [Netlist 29-17] Analyzing 298 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. pll_fast_b/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'pll_fast_b/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [/home/pixdaq/kdunne/aurora_fmc_one_lane/.Xil/Vivado-4736-dhcp-130-148.ucsc.edu/dcp23/clk_wiz_5.edf:265]
+INFO: [Chipscope 16-324] Core: ila_slim_rx UUID: ae7ae68f-1746-5767-b236-e09db04ea8fe 
+INFO: [Chipscope 16-324] Core: vio_rx UUID: ec3fe438-cb4f-547c-863d-9161e7785805 
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'ila_slim_rx/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'ila_slim_rx/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila.xdc] for cell 'ila_slim_rx/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila.xdc] for cell 'ila_slim_rx/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3_board.xdc] for cell 'pll_fast_a/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3_board.xdc] for cell 'pll_fast_a/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc] for cell 'pll_fast_a/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc:57]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc] for cell 'pll_fast_a/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5_board.xdc] for cell 'pll_fast_b/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5_board.xdc] for cell 'pll_fast_b/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc] for cell 'pll_fast_b/inst'
+INFO: [Timing 38-2] Deriving generated clocks [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc:57]
+WARNING: [Vivado 12-2489] -input_jitter contains time 0.062500 which will be rounded to 0.063 to ensure it is an integer multiple of 1 picosecond [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc:57]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc] for cell 'pll_fast_b/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'piso0_1280/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'piso0_1280/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/vio_0/vio_0.xdc] for cell 'vio_rx'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/vio_0/vio_0.xdc] for cell 'vio_rx'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc]
+WARNING: [Constraints 18-619] A clock with name 'sysclk_in_p' already exists, overwriting the previous clock with the same name. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc:2]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 7782.160 ; gain = 73.031 ; free physical = 11151 ; free virtual = 20945
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.xci' is already up-to-date
+[Tue Jun 26 15:43:18 2018] Launched impl_1...
+Run output will be captured here: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:02:11
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210203A01D26A
+set_property PROGRAM.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/aurora_top.bit} [get_hw_devices xc7vx485t_0]
+set_property PROBES.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/aurora_top.ltx} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/aurora_top.ltx} [get_hw_devices xc7vx485t_0]
+current_hw_device [get_hw_devices xc7vx485t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+INFO: [Labtools 27-2302] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+INFO: [Labtools 27-2302] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'ila_slim_rx' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3403] Dropping logic core with cellname:'vio_rx' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7vx485t_0 and the probes file(s) /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/aurora_top.ltx.
+The device design has 2 ILA core(s) and 1 VIO core(s). The probes file(s) have 0 ILA core(s) and 0 VIO core(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+set_property PROBES.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/aurora_top.bit} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 8197.246 ; gain = 0.000 ; free physical = 11086 ; free virtual = 20938
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+INFO: [Labtools 27-2302] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-2302] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+INFO: [Labtools 27-1889] Uploading output probe values for VIO core [hw_vio_1]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes rx_lckd -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 15:54:12
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 15:54:12
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 15:54:27
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 15:54:27
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property OUTPUT_VALUE 10 [get_hw_probes vio_tap_value -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_rx"}]]
+commit_hw_vio [get_hw_probes {vio_tap_value} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_rx"}]]
+set_property OUTPUT_VALUE 1 [get_hw_probes vio_tap_en -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_rx"}]]
+commit_hw_vio [get_hw_probes {vio_tap_en} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_rx"}]]
+set_property OUTPUT_VALUE 1 [get_hw_probes vio_tap_set -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_rx"}]]
+commit_hw_vio [get_hw_probes {vio_tap_set} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_rx"}]]
+set_property OUTPUT_VALUE 18 [get_hw_probes vio_tap_value -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_rx"}]]
+commit_hw_vio [get_hw_probes {vio_tap_value} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_rx"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 15:55:24
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 15:55:24
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq1'b0 [get_hw_probes rx_lckd -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 15:55:41
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes rx_lckd -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2018-Jun-26 15:56:08
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 15:56:12
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 15:56:12
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 15:56:14
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 15:56:14
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq1'b0 [get_hw_probes rx_lckd -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 15:56:23
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes rx_lckd -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+set_property TRIGGER_COMPARE_VALUE eq64'bXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX [get_hw_probes data_out -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+set_property TRIGGER_COMPARE_VALUE eq64'hXXXX_XXXX_XXXX_XXXX [get_hw_probes data_out -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes rx_lckd -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2018-Jun-26 15:58:21
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 15:58:26
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 15:58:26
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 15:59:59
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 15:59:59
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:00:11
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:00:11
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:00:13
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:00:13
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:00:15
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:00:15
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes rx_lckd -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:01:41
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:01:41
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:01:45
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:01:45
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:01:46
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:01:46
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:01:54
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:01:54
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:01:55
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:01:55
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:01:56
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:01:56
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:01:57
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:01:57
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:01:58
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:01:58
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+save_wave_config {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'aurora_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L xil_defaultlib -prj aurora_top_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/vio_0/sim/vio_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vio_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/sim/ila_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes_selectio_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmd_oserdes_selectio_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cmd_oserdes
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_5_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_5
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_3_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/ber_scrambler.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ber_scrambler
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/block_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module block_sync
+INFO: [VRFC 10-2458] undeclared symbol slip_pulse_i, assumed default net type wire [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/block_sync.v:169]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/delay_controller_wrap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module delay_controller_wrap
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/descrambler.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module descrambler
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/gearbox_32_to_66.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gearbox32to66
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/scrambler.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module scrambler
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/serdes_1_to_468_idelay_ddr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module serdes_1_to_468_idelay_ddr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/ber.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ber
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/bitslip_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bitslip_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/aurora/gearbox_66_to_32.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gearbox66to32
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_fmc_one_lane_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aurora_top
+INFO: [VRFC 10-2458] undeclared symbol idelay_rdy, assumed default net type wire [/home/pixdaq/kdunne/aurora_fmc_one_lane/src/aurora_fmc_one_lane_top.sv:424]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto f2c5c7ccd81747e48a98fd8dfe784899 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot aurora_top_behav xil_defaultlib.aurora_top xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.v" Line 70. Module clk_wiz_3 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3_clk_wiz.v" Line 70. Module clk_wiz_3_clk_wiz has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/IBUFDS.v" Line 32. Module IBUFDS has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/MMCME2_ADV.v" Line 123. Module MMCME2_ADV(BANDWIDTH="HIGH",CLKFBOUT_MULT_F=32.0,CLKIN1_PERIOD=5.0,CLKOUT0_DIVIDE_F=2.0,CLKOUT1_DIVIDE=8,CLKOUT2_DIVIDE=32,DIVCLK_DIVIDE=5) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.v" Line 68. Module clk_wiz_5 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5_clk_wiz.v" Line 68. Module clk_wiz_5_clk_wiz has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/IBUF.v" Line 29. Module IBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/PLLE2_ADV.v" Line 48. Module PLLE2_ADV(CLKFBOUT_MULT=15,CLKIN1_PERIOD=6.25,CLKOUT0_DIVIDE=3,DIVCLK_DIVIDE=2) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/serdes_1_to_468_idelay_ddr.v" Line 60. Module serdes_1_to_468_idelay_ddr(REF_FREQ=400.0,HIGH_PERFORMANCE_MODE="TRUE",CLKIN_PERIOD=1.666) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/imports/Verilog_macros/delay_controller_wrap.v" Line 58. Module delay_controller_wrap(S=8) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/IBUFDS_DIFF_OUT.v" Line 32. Module IBUFDS_DIFF_OUT has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/IDELAYE2.v" Line 25. Module IDELAYE2(HIGH_PERFORMANCE_MODE="TRUE",IDELAY_TYPE="VAR_LOAD",REFCLK_FREQUENCY=400.0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/verilog/src/unisims/ISERDESE2.v" Line 26. Module ISERDESE2(DATA_WIDTH=8,INTERFACE_TYPE="NETWORKING",IOBDELAY="IFD",NUM_CE=1) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 3. Module B_ISERDESE2(DATA_WIDTH=8,INTERFACE_TYPE="NETWORKING",IOBDELAY="IFD",NUM_CE=1) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 151. Module vioi_inlogic_ship(DATA_WIDTH=8,INTERFACE_TYPE="NETWORKING",IOBDELAY="IFD",NUM_CE=1) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1154. Module vioi_inlogic_shell has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1943. Module xil_iserdese2_vl_mod8 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 3998. Module xil_iserdese2_vl_mod22 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 3114. Module xil_iserdese2_vl_mod15 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 3978. Module xil_iserdese2_vl_mod21 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 2924. Module xil_iserdese2_vl_mod14 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1837. Module xil_iserdese2_vl_mod5 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1837. Module xil_iserdese2_vl_mod5 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1837. Module xil_iserdese2_vl_mod5 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1837. Module xil_iserdese2_vl_mod5 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1441. Module xil_iserdese2_vl_mod1 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 5231. Module xil_iserdese2_vl_mod27 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 5231. Module xil_iserdese2_vl_mod27 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 5231. Module xil_iserdese2_vl_mod27 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 2724. Module xil_iserdese2_vl_mod13 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1850. Module xil_iserdese2_vl_mod6 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1426. Module xil_iserdese2_vl_mod0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 1441. Module xil_iserdese2_vl_mod1 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.4/nightly/2017_12_15_2086221/data/secureip/iserdese2/iserdese2_002.vp" Line 5231. Module xil_iserdese2_vl_mod27 has a timescale but at least one module in design doesn't have timescale.
+INFO: [Common 17-14] Message 'XSIM 43-4100' appears 50 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1fs
+Compiling module unisims_ver.IBUFDS
+Compiling module unisims_ver.MMCME2_ADV(BANDWIDTH="HIGH",CLKF...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_3_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_3
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=15,CLKIN...
+Compiling module xil_defaultlib.clk_wiz_5_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_5
+Compiling module xil_defaultlib.delay_controller_wrap(S=8)
+Compiling module unisims_ver.IBUFDS_DIFF_OUT
+Compiling module unisims_ver.IDELAYE2(HIGH_PERFORMANCE_MODE="...
+Compiling secureip modules ...
+Compiling module unisims_ver.ISERDESE2(DATA_WIDTH=8,INTERFACE...
+Compiling module xil_defaultlib.serdes_1_to_468_idelay_ddr(REF_F...
+Compiling module unisims_ver.IDELAYCTRL_default
+Compiling module xil_defaultlib.gearbox32to66
+Compiling module xil_defaultlib.descrambler
+Compiling module xil_defaultlib.block_sync(SH_CNT_MAX=16'b011001...
+Compiling module xil_defaultlib.bitslip_fsm
+Compiling module xil_defaultlib.ber_scrambler
+Compiling module xil_defaultlib.ber
+Compiling module xil_defaultlib.scrambler
+Compiling module xil_defaultlib.gearbox66to32
+Compiling module unisims_ver.OBUFDS(IOSTANDARD="LVDS")
+Compiling secureip modules ...
+Compiling module unisims_ver.OSERDESE2(DATA_RATE_OQ="SDR",DAT...
+Compiling module xil_defaultlib.cmd_oserdes_selectio_wiz_default
+Compiling module xil_defaultlib.cmd_oserdes
+Compiling module xil_defaultlib.ila_1
+Compiling module xil_defaultlib.vio_0
+Compiling module xil_defaultlib.aurora_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot aurora_top_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.sim/sim_1/behav/xsim/xsim.dir/aurora_top_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Jun 26 16:06:49 2018...
+run_program: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 8334.336 ; gain = 0.000 ; free physical = 10816 ; free virtual = 20797
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "aurora_top_behav -key {Behavioral:sim_1:Functional:aurora_top} -tclbatch {aurora_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 fs
+source aurora_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'aurora_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 8334.336 ; gain = 0.000 ; free physical = 10788 ; free virtual = 20775
+launch_simulation -mode post-implementation -type functional
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching post-implementation functional simulation in '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.sim/sim_1/impl/func/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [Netlist 29-17] Analyzing 303 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'pll_fast_b/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/.Xil/Vivado-10187-dhcp-130-148.ucsc.edu/dcp5/clk_wiz_5.edf:265]
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/.Xil/Vivado-4736-dhcp-130-148.ucsc.edu/dcp26/aurora_top_board.xdc]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/.Xil/Vivado-4736-dhcp-130-148.ucsc.edu/dcp26/aurora_top_board.xdc]
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/.Xil/Vivado-4736-dhcp-130-148.ucsc.edu/dcp26/aurora_top_early.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc:57]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/.Xil/Vivado-4736-dhcp-130-148.ucsc.edu/dcp26/aurora_top_early.xdc]
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/.Xil/Vivado-4736-dhcp-130-148.ucsc.edu/dcp26/aurora_top.xdc]
+WARNING: [Constraints 18-619] A clock with name 'sysclk_in_p' already exists, overwriting the previous clock with the same name. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc:2]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/.Xil/Vivado-4736-dhcp-130-148.ucsc.edu/dcp26/aurora_top.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.28 . Memory (MB): peak = 8544.148 ; gain = 2.000 ; free physical = 10620 ; free virtual = 20612
+Restored from archive | CPU: 0.290000 secs | Memory: 7.382042 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.28 . Memory (MB): peak = 8544.148 ; gain = 2.000 ; free physical = 10620 ; free virtual = 20612
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 143 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 136 instances
+  IBUFDS_DIFF_OUT => IBUFDS_DIFF_OUT (IBUFDS, IBUFDS): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+
+open_run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 8738.809 ; gain = 404.473 ; free physical = 10563 ; free virtual = 20541
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode funcsim -nolib -force -file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.sim/sim_1/impl/func/xsim/aurora_top_func_impl.v"
+INFO: [SIM-utils-36] Netlist generated:/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.sim/sim_1/impl/func/xsim/aurora_top_func_impl.v
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.sim/sim_1/impl/func/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'aurora_top' in fileset 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.sim/sim_1/impl/func/xsim'
+xvlog --incr --relax -L xil_defaultlib -prj aurora_top_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.sim/sim_1/impl/func/xsim/aurora_top_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dbg_hub_CV
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVclk_x_pntrs
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVclk_x_pntrs_8
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVdmem
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVdmem_14
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVfifo_generator_ramfifo
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVfifo_generator_ramfifo__parameterized0
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVfifo_generator_top
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVfifo_generator_top__parameterized0
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVfifo_generator_v13_1_4
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVfifo_generator_v13_1_4__parameterized0
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVfifo_generator_v13_1_4_synth
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVfifo_generator_v13_1_4_synth__parameterized0
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVltlib_v1_0_0_bscan
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVltlib_v1_0_0_generic_mux
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVmemory
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVmemory__parameterized0
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVrd_bin_cntr
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVrd_bin_cntr_18
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVrd_fwft
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVrd_logic
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVrd_logic__parameterized0
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVrd_status_flags_as
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVrd_status_flags_as_17
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVreset_blk_ramfifo
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVreset_blk_ramfifo_9
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVsynchronizer_ff
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVsynchronizer_ff_10
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVsynchronizer_ff_11
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVsynchronizer_ff_12
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVsynchronizer_ff_13
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVsynchronizer_ff_2
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVsynchronizer_ff_3
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVsynchronizer_ff_4
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVsynchronizer_ff__parameterized0
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVsynchronizer_ff__parameterized0_19
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVsynchronizer_ff__parameterized0_20
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVsynchronizer_ff__parameterized0_21
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVsynchronizer_ff__parameterized0_22
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVsynchronizer_ff__parameterized0_5
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVsynchronizer_ff__parameterized0_6
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVsynchronizer_ff__parameterized0_7
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVwr_bin_cntr
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVwr_bin_cntr_16
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVwr_logic
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVwr_logic__parameterized0
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVwr_status_flags_as
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVwr_status_flags_as_15
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_addr_ctl
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_bscan_switch
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_burst_wdlen_ctl
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_bus_ctl
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_bus_ctl_cnt
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_bus_ctl_flg
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_bus_ctl_flg__parameterized0
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_bus_mstr2sl_if
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_cmd_decode
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_ctl_reg
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_ctl_reg_1
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_ctl_reg__parameterized0
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_ctl_reg__parameterized1
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_icon
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_icon2xsdb
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_if
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_if_static_status
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_rdfifo
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_rdreg
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_stat
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_stat_reg
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_stat_reg_0
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_stat_reg__parameterized0
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_sync
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_wrfifo
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_wrreg
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_xsdbm
+INFO: [VRFC 10-311] analyzing module dbg_hub_CVxsdbm_v3_0_0_xsdbm_id
+INFO: [VRFC 10-311] analyzing module aurora_top
+INFO: [VRFC 10-311] analyzing module ber
+INFO: [VRFC 10-311] analyzing module ber_scrambler
+INFO: [VRFC 10-311] analyzing module bitslip_fsm
+INFO: [VRFC 10-311] analyzing module block_sync
+INFO: [VRFC 10-311] analyzing module clk_wiz_3
+INFO: [VRFC 10-311] analyzing module clk_wiz_3_clk_wiz_3_clk_wiz
+INFO: [VRFC 10-311] analyzing module clk_wiz_5
+INFO: [VRFC 10-311] analyzing module clk_wiz_5_clk_wiz_5_clk_wiz
+INFO: [VRFC 10-311] analyzing module cmd_oserdes
+INFO: [VRFC 10-311] analyzing module cmd_oserdes_cmd_oserdes_selectio_wiz
+INFO: [VRFC 10-311] analyzing module delay_controller_wrap
+INFO: [VRFC 10-311] analyzing module descrambler
+INFO: [VRFC 10-311] analyzing module gearbox32to66
+INFO: [VRFC 10-311] analyzing module gearbox66to32
+INFO: [VRFC 10-311] analyzing module ila_1
+INFO: [VRFC 10-311] analyzing module scrambler
+INFO: [VRFC 10-311] analyzing module serdes_1_to_468_idelay_ddr
+INFO: [VRFC 10-311] analyzing module vio_0
+INFO: [VRFC 10-311] analyzing module ila_1_blk_mem_gen_generic_cstr
+INFO: [VRFC 10-311] analyzing module ila_1_blk_mem_gen_prim_width
+INFO: [VRFC 10-311] analyzing module ila_1_blk_mem_gen_prim_width__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_1_blk_mem_gen_prim_width__parameterized1
+INFO: [VRFC 10-311] analyzing module ila_1_blk_mem_gen_prim_width__parameterized2
+INFO: [VRFC 10-311] analyzing module ila_1_blk_mem_gen_prim_width__parameterized3
+INFO: [VRFC 10-311] analyzing module ila_1_blk_mem_gen_prim_wrapper
+INFO: [VRFC 10-311] analyzing module ila_1_blk_mem_gen_prim_wrapper__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_1_blk_mem_gen_prim_wrapper__parameterized1
+INFO: [VRFC 10-311] analyzing module ila_1_blk_mem_gen_prim_wrapper__parameterized2
+INFO: [VRFC 10-311] analyzing module ila_1_blk_mem_gen_prim_wrapper__parameterized3
+INFO: [VRFC 10-311] analyzing module ila_1_blk_mem_gen_top
+INFO: [VRFC 10-311] analyzing module ila_1_blk_mem_gen_v8_3_6
+INFO: [VRFC 10-311] analyzing module ila_1_blk_mem_gen_v8_3_6_synth
+INFO: [VRFC 10-311] analyzing module ila_1_ila_v6_2_5_ila
+INFO: [VRFC 10-311] analyzing module ila_1_ila_v6_2_5_ila_cap_addrgen
+INFO: [VRFC 10-311] analyzing module ila_1_ila_v6_2_5_ila_cap_ctrl_legacy
+INFO: [VRFC 10-311] analyzing module ila_1_ila_v6_2_5_ila_cap_sample_counter
+INFO: [VRFC 10-311] analyzing module ila_1_ila_v6_2_5_ila_cap_window_counter
+INFO: [VRFC 10-311] analyzing module ila_1_ila_v6_2_5_ila_core
+INFO: [VRFC 10-311] analyzing module ila_1_ila_v6_2_5_ila_register
+INFO: [VRFC 10-311] analyzing module ila_1_ila_v6_2_5_ila_reset_ctrl
+INFO: [VRFC 10-311] analyzing module ila_1_ila_v6_2_5_ila_trace_memory
+INFO: [VRFC 10-311] analyzing module ila_1_ila_v6_2_5_ila_trig_match
+INFO: [VRFC 10-311] analyzing module ila_1_ila_v6_2_5_ila_trigger
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA__parameterized0_11
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA__parameterized0_14
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA__parameterized0_35
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA__parameterized0_38
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA__parameterized0_6
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA__parameterized1
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA__parameterized1_25
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA__parameterized2
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA__parameterized3
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA__parameterized3_67
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA__parameterized3_75
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice_16
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice_17
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice_18
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice_19
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice_20
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice_21
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice_22
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice_26
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice_27
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice_28
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice_29
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice_30
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice_31
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice_32
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice_40
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice_8
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice_9
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice__parameterized0_10
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice__parameterized0_12
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice__parameterized0_15
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice__parameterized0_23
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice__parameterized0_33
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice__parameterized0_36
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice__parameterized0_39
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice__parameterized0_41
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice__parameterized0_7
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice__parameterized1
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice__parameterized1_68
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice__parameterized1_76
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice__parameterized2
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice__parameterized2_69
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_all_typeA_slice__parameterized2_77
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_allx_typeA
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_allx_typeA__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_allx_typeA__parameterized0_13
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_allx_typeA__parameterized0_34
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_allx_typeA__parameterized0_37
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_allx_typeA__parameterized0_5
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_allx_typeA__parameterized1
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_allx_typeA__parameterized1_24
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_allx_typeA__parameterized2
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_allx_typeA__parameterized3
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_allx_typeA_nodelay
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_allx_typeA_nodelay_66
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_allx_typeA_nodelay_74
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_async_edge_xfer
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_async_edge_xfer_42
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_async_edge_xfer_43
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_async_edge_xfer_44
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_cfglut4
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_cfglut4_70
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_cfglut5
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_cfglut5_64
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_cfglut5_71
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_cfglut6
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_cfglut6_72
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_cfglut6__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_cfglut7
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_cfglut7_63
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_generic_memrd
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_match
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_match__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_match__parameterized0_0
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_match__parameterized0_2
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_match__parameterized0_3
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_match__parameterized0_4
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_match__parameterized1
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_match__parameterized1_1
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_match__parameterized2
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_match__parameterized3
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_match_nodelay
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_match_nodelay_65
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_match_nodelay_73
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_rising_edge_detection
+INFO: [VRFC 10-311] analyzing module ila_1_ltlib_v1_0_0_rising_edge_detection_45
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized27
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized28
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized29
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized30
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized42
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized43
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized44
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized45
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized46
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized47
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized48
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized49
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized50
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized51
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized52
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized53
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized55
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized57
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg__parameterized60
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_ctl
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_ctl_49
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_ctl_50
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_ctl_51
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_ctl_52
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_ctl_55
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_ctl_57
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_ctl_58
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_ctl_59
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_ctl_60
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_ctl_61
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_ctl__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_ctl__parameterized1
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_ctl__parameterized1_53
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_ctl__parameterized1_56
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_p2s
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_p2s__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_p2s__parameterized1
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_p2s__parameterized2
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_p2s__parameterized3
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_p2s__parameterized4
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_p2s__parameterized5
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_p2s__parameterized6
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_p2s__parameterized7
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_p2s__parameterized8
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_p2s__parameterized9
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_stat
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_stat_46
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_stat_47
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_stat_48
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_stat_54
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_stat_62
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_stream
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_reg_stream__parameterized0
+INFO: [VRFC 10-311] analyzing module ila_1_xsdbs_v1_0_2_xsdbs
+INFO: [VRFC 10-311] analyzing module vio_0_vio_v3_0_17_decoder
+INFO: [VRFC 10-311] analyzing module vio_0_vio_v3_0_17_probe_out_all
+INFO: [VRFC 10-311] analyzing module vio_0_vio_v3_0_17_probe_out_one
+INFO: [VRFC 10-311] analyzing module vio_0_vio_v3_0_17_probe_out_one_0
+INFO: [VRFC 10-311] analyzing module vio_0_vio_v3_0_17_probe_out_one_1
+INFO: [VRFC 10-311] analyzing module vio_0_vio_v3_0_17_probe_out_one__parameterized0
+INFO: [VRFC 10-311] analyzing module vio_0_vio_v3_0_17_probe_width
+INFO: [VRFC 10-311] analyzing module vio_0_vio_v3_0_17_vio
+INFO: [VRFC 10-311] analyzing module vio_0_xsdbs_v1_0_2_xsdbs
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.sim/sim_1/impl/func/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto f2c5c7ccd81747e48a98fd8dfe784899 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot aurora_top_func_impl xil_defaultlib.aurora_top xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.FDSE_default
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.CARRY4
+Compiling module xil_defaultlib.block_sync
+Compiling module xil_defaultlib.ber_scrambler
+Compiling module xil_defaultlib.ber
+Compiling module xil_defaultlib.bitslip_fsm
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_ctl_reg
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_stat_reg
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_stat_reg_...
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_ctl_reg__...
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_ctl_reg__...
+Compiling module unisims_ver.FDCE_default
+Compiling module xil_defaultlib.dbg_hub_CVsynchronizer_ff__param...
+Compiling module xil_defaultlib.dbg_hub_CVsynchronizer_ff__param...
+Compiling module xil_defaultlib.dbg_hub_CVsynchronizer_ff__param...
+Compiling module xil_defaultlib.dbg_hub_CVsynchronizer_ff__param...
+Compiling module xil_defaultlib.dbg_hub_CVclk_x_pntrs_8
+Compiling module unisims_ver.FDPE_default
+Compiling module xil_defaultlib.dbg_hub_CVrd_fwft
+Compiling module xil_defaultlib.dbg_hub_CVrd_status_flags_as_17
+Compiling module xil_defaultlib.dbg_hub_CVrd_bin_cntr_18
+Compiling module xil_defaultlib.dbg_hub_CVrd_logic__parameterize...
+Compiling module xil_defaultlib.dbg_hub_CVwr_status_flags_as_15
+Compiling module xil_defaultlib.dbg_hub_CVwr_bin_cntr_16
+Compiling module xil_defaultlib.dbg_hub_CVwr_logic__parameterize...
+Compiling module unisims_ver.RAM32M
+Compiling module xil_defaultlib.dbg_hub_CVdmem_14
+Compiling module xil_defaultlib.dbg_hub_CVmemory__parameterized0
+Compiling module xil_defaultlib.dbg_hub_CVsynchronizer_ff_10
+Compiling module xil_defaultlib.dbg_hub_CVsynchronizer_ff_11
+Compiling module xil_defaultlib.dbg_hub_CVsynchronizer_ff_12
+Compiling module xil_defaultlib.dbg_hub_CVsynchronizer_ff_13
+Compiling module unisims_ver.FDPE(INIT=1'b0)
+Compiling module xil_defaultlib.dbg_hub_CVreset_blk_ramfifo_9
+Compiling module xil_defaultlib.dbg_hub_CVfifo_generator_ramfifo...
+Compiling module xil_defaultlib.dbg_hub_CVfifo_generator_top__pa...
+Compiling module xil_defaultlib.dbg_hub_CVfifo_generator_v13_1_4...
+Compiling module xil_defaultlib.dbg_hub_CVfifo_generator_v13_1_4...
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_rdfifo
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_rdreg
+Compiling module xil_defaultlib.dbg_hub_CVsynchronizer_ff__param...
+Compiling module xil_defaultlib.dbg_hub_CVsynchronizer_ff__param...
+Compiling module xil_defaultlib.dbg_hub_CVsynchronizer_ff__param...
+Compiling module xil_defaultlib.dbg_hub_CVsynchronizer_ff__param...
+Compiling module xil_defaultlib.dbg_hub_CVclk_x_pntrs
+Compiling module xil_defaultlib.dbg_hub_CVrd_status_flags_as
+Compiling module xil_defaultlib.dbg_hub_CVrd_bin_cntr
+Compiling module xil_defaultlib.dbg_hub_CVrd_logic
+Compiling module xil_defaultlib.dbg_hub_CVwr_status_flags_as
+Compiling module xil_defaultlib.dbg_hub_CVwr_bin_cntr
+Compiling module xil_defaultlib.dbg_hub_CVwr_logic
+Compiling module xil_defaultlib.dbg_hub_CVdmem
+Compiling module xil_defaultlib.dbg_hub_CVmemory
+Compiling module xil_defaultlib.dbg_hub_CVsynchronizer_ff
+Compiling module xil_defaultlib.dbg_hub_CVsynchronizer_ff_2
+Compiling module xil_defaultlib.dbg_hub_CVsynchronizer_ff_3
+Compiling module xil_defaultlib.dbg_hub_CVsynchronizer_ff_4
+Compiling module xil_defaultlib.dbg_hub_CVreset_blk_ramfifo
+Compiling module xil_defaultlib.dbg_hub_CVfifo_generator_ramfifo
+Compiling module xil_defaultlib.dbg_hub_CVfifo_generator_top
+Compiling module xil_defaultlib.dbg_hub_CVfifo_generator_v13_1_4...
+Compiling module xil_defaultlib.dbg_hub_CVfifo_generator_v13_1_4
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_wrfifo
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_wrreg
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_ctl_reg_1
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_stat_reg_...
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_if_static...
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_if
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_addr_ctl
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_burst_wdl...
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_bus_ctl_f...
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_bus_ctl_f...
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_bus_ctl_c...
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_bus_ctl
+Compiling module xil_defaultlib.dbg_hub_CVltlib_v1_0_0_generic_m...
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_bus_mstr2...
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_icon2xsdb
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_cmd_decod...
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_stat
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_sync
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_icon
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.BSCANE2
+Compiling module xil_defaultlib.dbg_hub_CVltlib_v1_0_0_bscan
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_bscan_swi...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_xsdbm_id
+Compiling module xil_defaultlib.dbg_hub_CVxsdbm_v3_0_0_xsdbm
+Compiling module xil_defaultlib.dbg_hub_CV
+Compiling module unisims_ver.IDELAYCTRL_default
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(DOA_REG=1,DOB...
+Compiling module unisims_ver.RAMB36E1(DOA_REG=1,DOB_REG=1,REA...
+Compiling module xil_defaultlib.ila_1_blk_mem_gen_prim_wrapper
+Compiling module xil_defaultlib.ila_1_blk_mem_gen_prim_width
+Compiling module xil_defaultlib.ila_1_blk_mem_gen_prim_wrapper__...
+Compiling module xil_defaultlib.ila_1_blk_mem_gen_prim_width__pa...
+Compiling module xil_defaultlib.ila_1_blk_mem_gen_prim_wrapper__...
+Compiling module xil_defaultlib.ila_1_blk_mem_gen_prim_width__pa...
+Compiling module xil_defaultlib.ila_1_blk_mem_gen_prim_wrapper__...
+Compiling module xil_defaultlib.ila_1_blk_mem_gen_prim_width__pa...
+Compiling module xil_defaultlib.ila_1_blk_mem_gen_prim_wrapper__...
+Compiling module xil_defaultlib.ila_1_blk_mem_gen_prim_width__pa...
+Compiling module xil_defaultlib.ila_1_blk_mem_gen_generic_cstr
+Compiling module xil_defaultlib.ila_1_blk_mem_gen_top
+Compiling module xil_defaultlib.ila_1_blk_mem_gen_v8_3_6_synth
+Compiling module xil_defaultlib.ila_1_blk_mem_gen_v8_3_6
+Compiling module xil_defaultlib.ila_1_ila_v6_2_5_ila_trace_memor...
+Compiling module unisims_ver.SRL16E_default
+Compiling module unisims_ver.SRLC32E_default
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_cfglut6__para...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_cfglut7
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_cfglut7_63
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_cfglut6
+Compiling module unisims_ver.SRLC16E_default
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_cfglut4_70
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_cfglut5_71
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_cfglut6_72
+Compiling module unisims_ver.CFGLUT5_default
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_allx_typeA_no...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_match_nodelay...
+Compiling module xil_defaultlib.ila_1_ila_v6_2_5_ila_cap_sample_...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_cfglut4
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_cfglut5
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_cfglut5_64
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_allx_typeA_no...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_match_nodelay
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_allx_typeA_no...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_match_nodelay...
+Compiling module xil_defaultlib.ila_1_ila_v6_2_5_ila_cap_window_...
+Compiling module xil_defaultlib.ila_1_ila_v6_2_5_ila_cap_addrgen
+Compiling module xil_defaultlib.ila_1_ila_v6_2_5_ila_cap_ctrl_le...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_p2s
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_p2s__para...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_p2s__para...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_p2s__para...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_p2s__para...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_p2s__para...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_p2s__para...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_p2s__para...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_p2s__para...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_p2s__para...
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.FDRE(INIT=1'b1)
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_xsdbs
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_ctl_61
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_ctl_60
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_ctl_59
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_ctl_58
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_ctl_57
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_ctl__para...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_ctl_55
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_ctl__para...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_stat_54
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_ctl__para...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_ctl_52
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_ctl__para...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_ctl_51
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_ctl_50
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_ctl_49
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_stat_48
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_stat_47
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_stat_62
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_stat_46
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg__paramete...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_p2s__para...
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_ctl
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_stream
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_stat
+Compiling module xil_defaultlib.ila_1_xsdbs_v1_0_2_reg_stream__p...
+Compiling module xil_defaultlib.ila_1_ila_v6_2_5_ila_register
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_rising_edge_d...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_async_edge_xf...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_async_edge_xf...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_async_edge_xf...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_async_edge_xf...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_rising_edge_d...
+Compiling module xil_defaultlib.ila_1_ila_v6_2_5_ila_reset_ctrl
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_allx_typeA
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_match
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_allx_typeA__p...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_match__parame...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_allx_typeA__p...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_match__parame...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_allx_typeA__p...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_match__parame...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_allx_typeA__p...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_match__parame...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_allx_typeA__p...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_match__parame...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_allx_typeA__p...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_match__parame...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_allx_typeA__p...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_match__parame...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_allx_typeA__p...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_match__parame...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA_sli...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_all_typeA__pa...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_allx_typeA__p...
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_match__parame...
+Compiling module xil_defaultlib.ila_1_ila_v6_2_5_ila_trig_match
+Compiling module xil_defaultlib.ila_1_ila_v6_2_5_ila_trigger
+Compiling module xil_defaultlib.ila_1_ltlib_v1_0_0_generic_memrd
+Compiling module xil_defaultlib.ila_1_ila_v6_2_5_ila_core
+Compiling module xil_defaultlib.ila_1_ila_v6_2_5_ila
+Compiling module xil_defaultlib.ila_1
+Compiling module unisims_ver.IBUFDS_DIFF_OUT
+Compiling module unisims_ver.IDELAYE2(HIGH_PERFORMANCE_MODE="...
+Compiling secureip modules ...
+Compiling module unisims_ver.ISERDESE2(DATA_WIDTH=8,INTERFACE...
+Compiling module xil_defaultlib.delay_controller_wrap
+Compiling module xil_defaultlib.serdes_1_to_468_idelay_ddr
+Compiling module unisims_ver.OBUFDS
+Compiling secureip modules ...
+Compiling module unisims_ver.OSERDESE2(DATA_RATE_OQ="SDR",DAT...
+Compiling module xil_defaultlib.cmd_oserdes_cmd_oserdes_selectio...
+Compiling module xil_defaultlib.cmd_oserdes
+Compiling module unisims_ver.IBUFDS
+Compiling module unisims_ver.MMCME2_ADV(BANDWIDTH="HIGH",CLKF...
+Compiling module xil_defaultlib.clk_wiz_3_clk_wiz_3_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_3
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=15,CLKIN...
+Compiling module xil_defaultlib.clk_wiz_5_clk_wiz_5_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_5
+Compiling module unisims_ver.IBUF
+Compiling module xil_defaultlib.gearbox32to66
+Compiling module xil_defaultlib.scrambler
+Compiling module xil_defaultlib.gearbox66to32
+Compiling module xil_defaultlib.descrambler
+Compiling module xil_defaultlib.vio_0_vio_v3_0_17_decoder
+Compiling module xil_defaultlib.vio_0_vio_v3_0_17_probe_out_one
+Compiling module xil_defaultlib.vio_0_vio_v3_0_17_probe_out_one_...
+Compiling module xil_defaultlib.vio_0_vio_v3_0_17_probe_out_one_...
+Compiling module xil_defaultlib.vio_0_vio_v3_0_17_probe_out_one_...
+Compiling module xil_defaultlib.vio_0_vio_v3_0_17_probe_out_all
+Compiling module xil_defaultlib.vio_0_vio_v3_0_17_probe_width
+Compiling module xil_defaultlib.vio_0_xsdbs_v1_0_2_xsdbs
+Compiling module xil_defaultlib.vio_0_vio_v3_0_17_vio
+Compiling module xil_defaultlib.vio_0
+Compiling module xil_defaultlib.aurora_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot aurora_top_func_impl
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.sim/sim_1/impl/func/xsim/xsim.dir/aurora_top_func_impl/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Jun 26 16:08:30 2018...
+run_program: Time (s): cpu = 00:00:23 ; elapsed = 00:00:11 . Memory (MB): peak = 8738.809 ; gain = 0.000 ; free physical = 10532 ; free virtual = 20547
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.sim/sim_1/impl/func/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "aurora_top_func_impl -key {Post-Implementation:sim_1:Functional:aurora_top} -tclbatch {aurora_top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source aurora_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'aurora_top_func_impl' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:36 ; elapsed = 00:00:21 . Memory (MB): peak = 8740.383 ; gain = 406.047 ; free physical = 10428 ; free virtual = 20453
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:02:11
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210203A01D26A
+set_property PROGRAM.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/aurora_top.bit} [get_hw_devices xc7vx485t_0]
+set_property PROBES.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7vx485t_0]
+current_hw_device [get_hw_devices xc7vx485t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+INFO: [Labtools 27-2302] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-2302] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property OUTPUT_VALUE 1c [get_hw_probes vio_tap_value -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_rx"}]]
+commit_hw_vio [get_hw_probes {vio_tap_value} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_rx"}]]
+set_property OUTPUT_VALUE 1e [get_hw_probes vio_tap_value -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_rx"}]]
+commit_hw_vio [get_hw_probes {vio_tap_value} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_rx"}]]
+set_property OUTPUT_VALUE 1f [get_hw_probes vio_tap_value -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_rx"}]]
+commit_hw_vio [get_hw_probes {vio_tap_value} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_rx"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:12:09
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:12:09
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:19:55
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:19:55
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:19:58
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:19:58
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:20:26
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:20:26
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:20:27
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:20:27
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:20:29
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:20:29
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:20:31
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:20:31
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:20:32
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:20:32
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:20:34
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:20:34
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:20:35
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:20:35
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:20:37
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:20:37
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:20:38
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:20:38
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:20:40
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:20:40
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:20:42
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:20:42
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 16:20:43
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_rx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 16:20:43
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.xci' is already up-to-date
+[Tue Jun 26 16:48:17 2018] Launched synth_1...
+Run output will be captured here: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.xci' is already up-to-date
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jun 26 16:51:05 2018] Launched impl_1...
+Run output will be captured here: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/runme.log
+close_design
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.dcp' for cell 'ila_slim_tx'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.dcp' for cell 'piso0_1280'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.dcp' for cell 'pll_fast_a'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.dcp' for cell 'pll_fast_b'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/vio_0/vio_0.dcp' for cell 'vio_tx'
+INFO: [Netlist 29-17] Analyzing 286 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. pll_fast_b/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'pll_fast_b/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [/home/pixdaq/kdunne/aurora_fmc_one_lane/.Xil/Vivado-4736-dhcp-130-148.ucsc.edu/dcp37/clk_wiz_5.edf:265]
+INFO: [Chipscope 16-324] Core: ila_slim_tx UUID: 611dba6d-ce68-54d2-99fc-fc6b8bf3b212 
+INFO: [Chipscope 16-324] Core: vio_tx UUID: 660eab54-9862-5f8b-bf9d-c118a1059f55 
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'ila_slim_tx/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'ila_slim_tx/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila.xdc] for cell 'ila_slim_tx/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila.xdc] for cell 'ila_slim_tx/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3_board.xdc] for cell 'pll_fast_a/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3_board.xdc] for cell 'pll_fast_a/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc] for cell 'pll_fast_a/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc:57]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc] for cell 'pll_fast_a/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5_board.xdc] for cell 'pll_fast_b/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5_board.xdc] for cell 'pll_fast_b/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc] for cell 'pll_fast_b/inst'
+INFO: [Timing 38-2] Deriving generated clocks [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc:57]
+WARNING: [Vivado 12-2489] -input_jitter contains time 0.062500 which will be rounded to 0.063 to ensure it is an integer multiple of 1 picosecond [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc:57]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc] for cell 'pll_fast_b/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'piso0_1280/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'piso0_1280/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/vio_0/vio_0.xdc] for cell 'vio_tx'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/vio_0/vio_0.xdc] for cell 'vio_tx'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc]
+WARNING: [Constraints 18-619] A clock with name 'sysclk_in_p' already exists, overwriting the previous clock with the same name. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc:2]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 8916.387 ; gain = 10.004 ; free physical = 10453 ; free virtual = 20442
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.xci' is already up-to-date
+[Tue Jun 26 17:06:17 2018] Launched synth_1...
+Run output will be captured here: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.xci' is already up-to-date
+[Tue Jun 26 17:13:48 2018] Launched synth_1...
+Run output will be captured here: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:13 ; elapsed = 00:00:35 . Memory (MB): peak = 8916.387 ; gain = 0.000 ; free physical = 10578 ; free virtual = 20568
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.xci' is already up-to-date
+[Tue Jun 26 17:22:25 2018] Launched synth_1...
+Run output will be captured here: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:27 ; elapsed = 00:01:12 . Memory (MB): peak = 8916.387 ; gain = 0.000 ; free physical = 10568 ; free virtual = 20558
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.xci' is already up-to-date
+[Tue Jun 26 17:23:54 2018] Launched synth_1...
+Run output will be captured here: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:13 ; elapsed = 00:00:32 . Memory (MB): peak = 8916.387 ; gain = 0.000 ; free physical = 10563 ; free virtual = 20553
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.xci' is already up-to-date
+[Tue Jun 26 17:27:58 2018] Launched synth_1...
+Run output will be captured here: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:13 ; elapsed = 00:00:40 . Memory (MB): peak = 8916.387 ; gain = 0.000 ; free physical = 10561 ; free virtual = 20551
+launch_runs impl_1 -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.xci' is already up-to-date
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Jun 26 17:31:28 2018] Launched impl_1...
+Run output will be captured here: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.xci' is already up-to-date
+[Tue Jun 26 17:39:19 2018] Launched impl_1...
+Run output will be captured here: /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 255 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'pll_fast_b/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/.Xil/Vivado-21320-dhcp-130-148.ucsc.edu/dcp5/clk_wiz_5.edf:265]
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/.Xil/Vivado-4736-dhcp-130-148.ucsc.edu/dcp67/aurora_top_board.xdc]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/.Xil/Vivado-4736-dhcp-130-148.ucsc.edu/dcp67/aurora_top_board.xdc]
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/.Xil/Vivado-4736-dhcp-130-148.ucsc.edu/dcp67/aurora_top_early.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc:57]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/.Xil/Vivado-4736-dhcp-130-148.ucsc.edu/dcp67/aurora_top_early.xdc]
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/.Xil/Vivado-4736-dhcp-130-148.ucsc.edu/dcp67/aurora_top.xdc]
+WARNING: [Constraints 18-619] A clock with name 'sysclk_in_p' already exists, overwriting the previous clock with the same name. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc:2]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/.Xil/Vivado-4736-dhcp-130-148.ucsc.edu/dcp67/aurora_top.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.28 . Memory (MB): peak = 8971.410 ; gain = 0.000 ; free physical = 10134 ; free virtual = 20166
+Restored from archive | CPU: 0.290000 secs | Memory: 7.040527 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.28 . Memory (MB): peak = 8971.410 ; gain = 0.000 ; free physical = 10134 ; free virtual = 20166
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 143 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 136 instances
+  IBUFDS_DIFF_OUT => IBUFDS_DIFF_OUT (IBUFDS, IBUFDS): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 9074.902 ; gain = 158.516 ; free physical = 10047 ; free virtual = 20066
+save_wave_config {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+set_property PROBES.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/aurora_top.bit} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 9074.902 ; gain = 0.000 ; free physical = 10325 ; free virtual = 20352
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+INFO: [Labtools 27-2302] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-2302] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+ERROR: [Common 17-70] Application Exception: CORE_LOCATION mismatch
+probe_1=uuid_AE7AE68F17465767B236E09DB04EA8FE (ber_sync)
+probe_2=uuid_611DBA6DCE6854D299FCFC6B8BF3B212 (data_in[63:0])
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 17:43:58
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 17:43:58
+ERROR: [Common 17-70] Application Exception: CORE_LOCATION mismatch
+probe_1=uuid_AE7AE68F17465767B236E09DB04EA8FE (ber_sync)
+probe_2=uuid_611DBA6DCE6854D299FCFC6B8BF3B212 (data_in[63:0])
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 17:44:00
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 17:44:00
+ERROR: [Common 17-70] Application Exception: CORE_LOCATION mismatch
+probe_1=uuid_AE7AE68F17465767B236E09DB04EA8FE (ber_sync)
+probe_2=uuid_611DBA6DCE6854D299FCFC6B8BF3B212 (data_in[63:0])
+set_property OUTPUT_VALUE 1 [get_hw_probes vio_en -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_tx"}]]
+commit_hw_vio [get_hw_probes {vio_en} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_tx"}]]
+ERROR: [Designutils 20-1474] The hw_probe VIO value [] has [0] value characters. The required number of value characters for radix [HEX], is [1].
+set_property OUTPUT_VALUE 1 [get_hw_probes vio_en_counting -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_tx"}]]
+commit_hw_vio [get_hw_probes {vio_en_counting} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_tx"}]]
+set_property OUTPUT_VALUE 1 [get_hw_probes vio_data -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_tx"}]]
+commit_hw_vio [get_hw_probes {vio_data} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_tx"}]]
+ERROR: [Vivado 12-106] *** Exception: java.lang.StringIndexOutOfBoundsException: String index out of range: 0 (See /home/pixdaq/kdunne/aurora_fmc_one_lane/vivado_pid4736.debug)
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 17:44:39
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 17:44:39
+ERROR: [Common 17-70] Application Exception: CORE_LOCATION mismatch
+probe_1=uuid_AE7AE68F17465767B236E09DB04EA8FE (ber_sync)
+probe_2=uuid_611DBA6DCE6854D299FCFC6B8BF3B212 (data_in[63:0])
+set_property PROBES.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/aurora_top.bit} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 9074.902 ; gain = 0.000 ; free physical = 10302 ; free virtual = 20329
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+INFO: [Labtools 27-2302] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-2302] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+ERROR: [Common 17-70] Application Exception: CORE_LOCATION mismatch
+probe_1=uuid_AE7AE68F17465767B236E09DB04EA8FE (ber_sync)
+probe_2=uuid_611DBA6DCE6854D299FCFC6B8BF3B212 (data_in[63:0])
+current_design synth_1
+write_debug_probes -force /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/debug_nets.ltx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Chipscope 16-155] Port probe3[63] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[62] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[61] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[60] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[59] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[58] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[57] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[56] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[55] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[54] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[53] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[52] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[51] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[50] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[49] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[48] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[47] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[46] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[45] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[44] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[43] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[42] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[41] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[40] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[39] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[38] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[37] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[36] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[35] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[34] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[33] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[32] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[31] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[30] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[29] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[28] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[27] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[26] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[25] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[24] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[23] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[22] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[21] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[20] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[19] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[18] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[17] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[16] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[15] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[14] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[13] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[12] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[11] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[10] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[9] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[8] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[7] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[6] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[5] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[4] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[3] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[2] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[1] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe3[0] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe4[0] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe5[7] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe5[6] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe5[5] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe5[4] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe5[3] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe5[2] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe5[1] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe5[0] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[28] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[27] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[26] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[25] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[24] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[23] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[22] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[21] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[20] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[19] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[18] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[17] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[16] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[15] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[14] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[13] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[12] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[11] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[10] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[9] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[8] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[7] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[6] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[5] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[4] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[3] on debug core ila_slim_tx is unconnected
+WARNING: [Chipscope 16-155] Port probe6[2] on debug core ila_slim_tx is unconnected
+INFO: [Common 17-14] Message 'Chipscope 16-155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/debug_nets.ltx
+set_property PROBES.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7vx485t_0]
+set_property FULL_PROBES.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7vx485t_0]
+set_property PROGRAM.FILE {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.runs/impl_1/aurora_top.bit} [get_hw_devices xc7vx485t_0]
+program_hw_devices [get_hw_devices xc7vx485t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 9074.902 ; gain = 0.000 ; free physical = 10254 ; free virtual = 20300
+refresh_hw_device [lindex [get_hw_devices xc7vx485t_0] 0]
+INFO: [Labtools 27-2302] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-2302] Device xc7vx485t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+INFO: [Labtools 27-1967] Uploading output probe values from VIO core [hw_vio_1], for hw_probes which did not have this property set
+WARNING: [Labtools 27-1952] VIO hw_probe OUTPUT_VALUE properties for hw_vio(s) [hw_vio_1] differ from output values in the VIO core(s).
+Resolution: 
+To synchronize the hw_probes properties and the VIO core outputs choose one of the following alternatives:
+  1) Execute the command 'Commit Output Values to VIO Core', to write down the hw_probe values to the core.
+  2) Execute the command 'Refresh Input and Output Values from VIO Core', to update the hw_probe properties with the core values.
+  3) First restore initial values in the core with the command 'Reset VIO Core Outputs', and then execute the command 'Refresh Input and Output Values from VIO Core'.
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]]
+WARNING: Simulation object RST0 was not found in the design.
+WARNING: Simulation object blocksync_out was not found in the design.
+WARNING: Simulation object data_out was not found in the design.
+WARNING: Simulation object ber_cnt was not found in the design.
+WARNING: Simulation object rx_lckd was not found in the design.
+WARNING: Simulation object sipo was not found in the design.
+WARNING: Simulation object debug was not found in the design.
+WARNING: Simulation object ber_sync was not found in the design.
+WARNING: Simulation object sync_init was not found in the design.
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property OUTPUT_VALUE 4 [get_hw_probes vio_tx/probe_out1 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_tx"}]]
+commit_hw_vio [get_hw_probes {vio_tx/probe_out1} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_tx"}]]
+set_property OUTPUT_VALUE 6 [get_hw_probes vio_tx/probe_out1 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_tx"}]]
+commit_hw_vio [get_hw_probes {vio_tx/probe_out1} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_tx"}]]
+set_property OUTPUT_VALUE 7 [get_hw_probes vio_tx/probe_out1 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_tx"}]]
+commit_hw_vio [get_hw_probes {vio_tx/probe_out1} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_tx"}]]
+set_property OUTPUT_VALUE f [get_hw_probes vio_tx/probe_out1 -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_tx"}]]
+commit_hw_vio [get_hw_probes {vio_tx/probe_out1} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"vio_tx"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 17:48:51
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 17:48:51
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 17:49:20
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 17:49:20
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 17:49:33
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 17:49:33
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes ila_slim_tx/probe4 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 17:49:38
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 17:49:38
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 17:50:00
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 17:50:00
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 17:50:02
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 17:50:02
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+save_wave_config {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2018-Jun-26 17:50:46
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7vx485t_0] -filter {CELL_NAME=~"ila_slim_tx"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2018-Jun-26 17:50:46
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/backup/hw_ila_data_1.ila. Use Tcl command 'import_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+save_wave_config {/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora_fmc_one_lane/aurora_fmc_one_lane.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_1.dcp' for cell 'ila_slim_tx'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.dcp' for cell 'piso0_1280'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.dcp' for cell 'pll_fast_a'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.dcp' for cell 'pll_fast_b'
+INFO: [Project 1-454] Reading design checkpoint '/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/vio_0/vio_0.dcp' for cell 'vio_tx'
+INFO: [Netlist 29-17] Analyzing 314 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. pll_fast_b/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'pll_fast_b/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [/home/pixdaq/kdunne/aurora_fmc_one_lane/.Xil/Vivado-4736-dhcp-130-148.ucsc.edu/dcp71/clk_wiz_5.edf:265]
+INFO: [Chipscope 16-324] Core: ila_slim_tx UUID: 611dba6d-ce68-54d2-99fc-fc6b8bf3b212 
+INFO: [Chipscope 16-324] Core: vio_tx UUID: 660eab54-9862-5f8b-bf9d-c118a1059f55 
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'ila_slim_tx/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila_impl.xdc] for cell 'ila_slim_tx/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila.xdc] for cell 'ila_slim_tx/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/ila_1/ila_v6_2/constraints/ila.xdc] for cell 'ila_slim_tx/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3_board.xdc] for cell 'pll_fast_a/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3_board.xdc] for cell 'pll_fast_a/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc] for cell 'pll_fast_a/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc:57]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_3/clk_wiz_3.xdc] for cell 'pll_fast_a/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5_board.xdc] for cell 'pll_fast_b/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5_board.xdc] for cell 'pll_fast_b/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc] for cell 'pll_fast_b/inst'
+INFO: [Timing 38-2] Deriving generated clocks [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc:57]
+WARNING: [Vivado 12-2489] -input_jitter contains time 0.062500 which will be rounded to 0.063 to ensure it is an integer multiple of 1 picosecond [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc:57]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/clk_wiz_5/clk_wiz_5.xdc] for cell 'pll_fast_b/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'piso0_1280/inst'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/cmd_oserdes/cmd_oserdes.xdc] for cell 'piso0_1280/inst'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/vio_0/vio_0.xdc] for cell 'vio_tx'
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/sources_1/ip/vio_0/vio_0.xdc] for cell 'vio_tx'
+Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc]
+WARNING: [Constraints 18-619] A clock with name 'sysclk_in_p' already exists, overwriting the previous clock with the same name. [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc:2]
+Finished Parsing XDC File [/home/pixdaq/kdunne/aurora_fmc_one_lane/aurora.srcs/constrs_1/imports/constraints/aurora_fmc_one_lane.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 9135.531 ; gain = 0.000 ; free physical = 10229 ; free virtual = 20285
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 26 17:52:55 2018...
